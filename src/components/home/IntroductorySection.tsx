@@ -17,7 +17,7 @@ const IntroductorySection = () => {
             style={{ animationDelay: "0.1s" }}
           >
             <img
-              src="https://images.unsplash.com/photo-1628157588553-6d5eea4b80d4?auto=format&fit=crop&w=800&q=80"
+              src="/lovable-uploads/e39a0fde-ebe8-4306-a912-874626dda023.png"
               alt="Concerned person reviewing medical bills"
               className="rounded-xl shadow-lg object-cover w-full h-auto max-h-96"
             />
