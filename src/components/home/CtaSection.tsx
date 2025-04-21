@@ -10,7 +10,7 @@ const CtaSection = () => {
             {/* Image column */}
             <div className="relative">
               <img 
-                src="https://images.unsplash.com/photo-1581091090120-9a53572a8285?auto=format&fit=crop&q=80" 
+                src="https://images.unsplash.com/photo-1721322800607-8c38375eef04?auto=format&fit=crop&q=80" 
                 alt="Family protected by insurance" 
                 className="w-full h-full object-cover"
               />
@@ -79,3 +79,4 @@ const CtaSection = () => {
 };
 
 export default CtaSection;
+
