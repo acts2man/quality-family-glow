@@ -1,4 +1,3 @@
-
 import React, { useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -8,9 +7,9 @@ import WhyChooseUsSection from "@/components/home/WhyChooseUsSection";
 import TestimonialSection from "@/components/home/TestimonialSection";
 import CtaSection from "@/components/home/CtaSection";
 import PlansPreviewSection from "@/components/home/PlansPreviewSection";
+import IntroductorySection from "@/components/home/IntroductorySection";
 
 const Index = () => {
-  // Add smooth scroll effect when clicking on anchor links
   useEffect(() => {
     const handleAnchorClick = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
@@ -40,6 +39,7 @@ const Index = () => {
       
       <main className="flex-grow">
         <HeroSection />
+        <IntroductorySection />
         <OfferingsSection />
         <WhyChooseUsSection />
         <TestimonialSection />
