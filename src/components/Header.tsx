@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import { useLocation } from "react-router-dom";
@@ -23,7 +22,7 @@ const Header = () => {
     { name: "Accident", href: "/accident" },
     { name: "Critical Illness", href: "/critical-illness" },
     { name: "Cancer & Dread Disease", href: "/cancer-dread-disease" },
-    { name: "Life Insurance", href: "#" },
+    { name: "Life Insurance", href: "/life-insurance" },
     { name: "Benefits & Exclusions", href: "#" },
     { name: "Dental", href: "#", comingSoon: true },
     { name: "Contact", href: "#" },
@@ -33,16 +32,15 @@ const Header = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
-  // Check if the current path matches the menu item
   const isActive = (path) => {
     if (path === "/" && location.pathname === "/") return true;
     if (path !== "/" && location.pathname.startsWith(path)) return true;
+    if (path === "/life-insurance" && location.pathname === "/life-insurance") return true;
     return false;
   };
 
   return (
     <header className="fixed w-full z-50">
-      {/* Top bar */}
       <div className="bg-primary-800 text-white py-2 px-4 md:px-8">
         <div className="container mx-auto flex flex-wrap justify-between items-center">
           <div className="text-sm md:text-base">
@@ -72,7 +70,6 @@ const Header = () => {
         </div>
       </div>
       
-      {/* Main navigation */}
       <nav 
         className={cn(
           "bg-white py-4 px-4 md:px-8 transition-all duration-300 shadow-sm",
@@ -88,7 +85,6 @@ const Header = () => {
             </a>
           </div>
           
-          {/* Desktop menu */}
           <div className="hidden lg:flex items-center space-x-6">
             {menuItems.map((item) => (
               <a 
@@ -110,7 +106,6 @@ const Header = () => {
             ))}
           </div>
           
-          {/* Mobile menu button */}
           <div className="lg:hidden">
             <button 
               onClick={toggleMobileMenu}
@@ -143,7 +138,6 @@ const Header = () => {
         </div>
       </nav>
       
-      {/* Mobile menu drawer */}
       {isMobileMenuOpen && (
         <div className="lg:hidden bg-white border-t border-gray-200 shadow-xl animate-fade-in">
           <div className="container mx-auto px-4 py-3">
