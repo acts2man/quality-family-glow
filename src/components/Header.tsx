@@ -23,7 +23,7 @@ const Header = () => {
     { name: "Critical Illness", href: "/critical-illness" },
     { name: "Cancer & Dread Disease", href: "/cancer-dread-disease" },
     { name: "Life Insurance", href: "/life-insurance" },
-    { name: "Benefits & Exclusions", href: "#" },
+    { name: "Benefits & Exclusions", href: "/benefits-and-exclusions" },
     { name: "Dental", href: "#", comingSoon: true },
     { name: "Contact", href: "#" },
   ];
@@ -36,6 +36,7 @@ const Header = () => {
     if (path === "/" && location.pathname === "/") return true;
     if (path !== "/" && location.pathname.startsWith(path)) return true;
     if (path === "/life-insurance" && location.pathname === "/life-insurance") return true;
+    if (path === "/benefits-and-exclusions" && location.pathname === "/benefits-and-exclusions") return true;
     return false;
   };
 
