@@ -1,10 +1,12 @@
 
 import React, { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
+import { useLocation } from "react-router-dom";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,7 +20,7 @@ const Header = () => {
   const menuItems = [
     { name: "Home", href: "/" },
     { name: "Why QFB", href: "#" },
-    { name: "Accident", href: "#" },
+    { name: "Accident", href: "/accident" },
     { name: "Critical Illness", href: "#" },
     { name: "Cancer & Dread Disease", href: "#" },
     { name: "Life Insurance", href: "#" },
@@ -29,6 +31,13 @@ const Header = () => {
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  // Check if the current path matches the menu item
+  const isActive = (path) => {
+    if (path === "/" && location.pathname === "/") return true;
+    if (path !== "/" && location.pathname.startsWith(path)) return true;
+    return false;
   };
 
   return (
@@ -87,6 +96,7 @@ const Header = () => {
                 href={item.href}
                 className={cn(
                   "text-gray-700 hover:text-primary-500 font-medium transition-colors relative after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-primary-500 after:transition-all after:duration-300 hover:after:w-full",
+                  isActive(item.href) && "text-primary-500 after:w-full",
                   item.comingSoon && "opacity-70"
                 )}
               >
@@ -141,7 +151,10 @@ const Header = () => {
               <a 
                 key={item.name}
                 href={item.href}
-                className="block py-3 text-gray-700 hover:text-primary-500 font-medium border-b border-gray-100"
+                className={cn(
+                  "block py-3 text-gray-700 hover:text-primary-500 font-medium border-b border-gray-100",
+                  isActive(item.href) && "text-primary-500"
+                )}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 <div className="flex items-center justify-between">
