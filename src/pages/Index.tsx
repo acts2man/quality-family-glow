@@ -1,6 +1,5 @@
+
 import React, { useEffect } from "react";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import HeroSection from "@/components/home/HeroSection";
 import OfferingsSection from "@/components/home/OfferingsSection";
 import WhyChooseUsSection from "@/components/home/WhyChooseUsSection";
@@ -34,21 +33,15 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col">
-      <Header />
-      
-      <main className="flex-grow">
-        <HeroSection />
-        <IntroductorySection />
-        <OfferingsSection />
-        <WhyChooseUsSection />
-        <TestimonialSection />
-        <PlansPreviewSection />
-        <CtaSection />
-      </main>
-      
-      <Footer />
-    </div>
+    <>
+      <HeroSection />
+      <IntroductorySection />
+      <OfferingsSection />
+      <WhyChooseUsSection />
+      <TestimonialSection />
+      <PlansPreviewSection />
+      <CtaSection />
+    </>
   );
 };
 

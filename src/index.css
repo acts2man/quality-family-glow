@@ -82,6 +82,10 @@
   .glow-button span {
     @apply relative z-10;
   }
+  
+  .glow-button:hover span {
+    @apply text-white;
+  }
 
   .gold-button {
     @apply bg-accent-gold text-primary-800;
@@ -89,6 +93,10 @@
   
   .gold-button::before {
     @apply bg-gradient-to-r from-amber-400 to-accent-gold;
+  }
+  
+  .gold-button:hover span {
+    @apply text-primary-800;
   }
 
   .card-hover {

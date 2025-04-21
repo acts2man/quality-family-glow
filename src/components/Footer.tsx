@@ -1,5 +1,6 @@
 
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -8,11 +9,11 @@ const Footer = () => {
     {
       title: "Coverage",
       links: [
-        { name: "Accident", href: "#" },
-        { name: "Critical Illness", href: "#" },
-        { name: "Cancer & Dread Disease", href: "#" },
-        { name: "Life Insurance", href: "#" },
-        { name: "Benefits & Exclusions", href: "#" },
+        { name: "Accident", href: "/accident" },
+        { name: "Critical Illness", href: "/critical-illness" },
+        { name: "Cancer & Dread Disease", href: "/cancer-dread-disease" },
+        { name: "Life Insurance", href: "/life-insurance" },
+        { name: "Benefits & Exclusions", href: "/benefits-and-exclusions" },
         { name: "Dental (Coming Soon)", href: "#" },
       ],
     },
@@ -66,12 +67,21 @@ const Footer = () => {
               <ul className="space-y-3">
                 {column.links.map((link) => (
                   <li key={link.name}>
-                    <a 
-                      href={link.href}
-                      className="text-gray-300 hover:text-accent-gold transition-colors"
-                    >
-                      {link.name}
-                    </a>
+                    {link.href.startsWith('#') ? (
+                      <a 
+                        href={link.href}
+                        className="text-gray-300 hover:text-accent-gold transition-colors"
+                      >
+                        {link.name}
+                      </a>
+                    ) : (
+                      <Link 
+                        to={link.href}
+                        className="text-gray-300 hover:text-accent-gold transition-colors"
+                      >
+                        {link.name}
+                      </Link>
+                    )}
                   </li>
                 ))}
               </ul>
@@ -89,12 +99,12 @@ const Footer = () => {
               </p>
             </div>
             <div className="flex space-x-4">
-              <a href="#" className="glow-button gold-button">
+              <Link to="#" className="glow-button gold-button">
                 <span>Schedule a Call</span>
-              </a>
-              <a href="#" className="glow-button">
+              </Link>
+              <Link to="#" className="glow-button">
                 <span>Call Now</span>
-              </a>
+              </Link>
             </div>
           </div>
         </div>

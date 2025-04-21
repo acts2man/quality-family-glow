@@ -1,3 +1,4 @@
+
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -10,6 +11,8 @@ import CriticalIllness from "./pages/CriticalIllness";
 import CancerDreadDisease from "./pages/CancerDreadDisease";
 import LifeInsurance from "./pages/LifeInsurance";
 import BenefitsAndExclusions from "./pages/BenefitsAndExclusions";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 const queryClient = new QueryClient();
 
@@ -19,15 +22,21 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/accident" element={<AccidentPage />} />
-          <Route path="/critical-illness" element={<CriticalIllness />} />
-          <Route path="/cancer-dread-disease" element={<CancerDreadDisease />} />
-          <Route path="/life-insurance" element={<LifeInsurance />} />
-          <Route path="/benefits-and-exclusions" element={<BenefitsAndExclusions />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+        <div className="min-h-screen flex flex-col">
+          <Header />
+          <main className="flex-grow pt-20">
+            <Routes>
+              <Route path="/" element={<Index />} />
+              <Route path="/accident" element={<AccidentPage />} />
+              <Route path="/critical-illness" element={<CriticalIllness />} />
+              <Route path="/cancer-dread-disease" element={<CancerDreadDisease />} />
+              <Route path="/life-insurance" element={<LifeInsurance />} />
+              <Route path="/benefits-and-exclusions" element={<BenefitsAndExclusions />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </main>
+          <Footer />
+        </div>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>

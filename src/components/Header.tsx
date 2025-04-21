@@ -1,6 +1,7 @@
+
 import React, { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -15,6 +16,11 @@ const Header = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  useEffect(() => {
+    // Close mobile menu when route changes
+    setIsMobileMenuOpen(false);
+  }, [location.pathname]);
 
   const menuItems = [
     { name: "Home", href: "/" },
@@ -35,8 +41,6 @@ const Header = () => {
   const isActive = (path) => {
     if (path === "/" && location.pathname === "/") return true;
     if (path !== "/" && location.pathname.startsWith(path)) return true;
-    if (path === "/life-insurance" && location.pathname === "/life-insurance") return true;
-    if (path === "/benefits-and-exclusions" && location.pathname === "/benefits-and-exclusions") return true;
     return false;
   };
 
@@ -79,31 +83,50 @@ const Header = () => {
       >
         <div className="container mx-auto flex items-center justify-between">
           <div className="flex items-center">
-            <a href="/" className="flex items-center">
+            <Link to="/" className="flex items-center">
               <span className="text-2xl font-bold text-primary-500">
                 <span className="text-accent-gold">Quality</span> Family Benefits
               </span>
-            </a>
+            </Link>
           </div>
           
           <div className="hidden lg:flex items-center space-x-6">
             {menuItems.map((item) => (
-              <a 
-                key={item.name}
-                href={item.href}
-                className={cn(
-                  "text-gray-700 hover:text-primary-500 font-medium transition-colors relative after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-primary-500 after:transition-all after:duration-300 hover:after:w-full",
-                  isActive(item.href) && "text-primary-500 after:w-full",
-                  item.comingSoon && "opacity-70"
-                )}
-              >
-                {item.name}
-                {item.comingSoon && (
-                  <span className="ml-2 text-xs bg-accent-gold text-primary-800 px-2 py-0.5 rounded-full">
-                    Soon
-                  </span>
-                )}
-              </a>
+              item.href.startsWith('#') ? (
+                <a 
+                  key={item.name}
+                  href={item.href}
+                  className={cn(
+                    "text-gray-700 hover:text-primary-500 font-medium transition-colors relative after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-primary-500 after:transition-all after:duration-300 hover:after:w-full",
+                    isActive(item.href) && "text-primary-500 after:w-full",
+                    item.comingSoon && "opacity-70"
+                  )}
+                >
+                  {item.name}
+                  {item.comingSoon && (
+                    <span className="ml-2 text-xs bg-accent-gold text-primary-800 px-2 py-0.5 rounded-full">
+                      Soon
+                    </span>
+                  )}
+                </a>
+              ) : (
+                <Link 
+                  key={item.name}
+                  to={item.href}
+                  className={cn(
+                    "text-gray-700 hover:text-primary-500 font-medium transition-colors relative after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-primary-500 after:transition-all after:duration-300 hover:after:w-full",
+                    isActive(item.href) && "text-primary-500 after:w-full",
+                    item.comingSoon && "opacity-70"
+                  )}
+                >
+                  {item.name}
+                  {item.comingSoon && (
+                    <span className="ml-2 text-xs bg-accent-gold text-primary-800 px-2 py-0.5 rounded-full">
+                      Soon
+                    </span>
+                  )}
+                </Link>
+              )
             ))}
           </div>
           
@@ -143,24 +166,45 @@ const Header = () => {
         <div className="lg:hidden bg-white border-t border-gray-200 shadow-xl animate-fade-in">
           <div className="container mx-auto px-4 py-3">
             {menuItems.map((item) => (
-              <a 
-                key={item.name}
-                href={item.href}
-                className={cn(
-                  "block py-3 text-gray-700 hover:text-primary-500 font-medium border-b border-gray-100",
-                  isActive(item.href) && "text-primary-500"
-                )}
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                <div className="flex items-center justify-between">
-                  <span>{item.name}</span>
-                  {item.comingSoon && (
-                    <span className="text-xs bg-accent-gold text-primary-800 px-2 py-0.5 rounded-full">
-                      Soon
-                    </span>
+              item.href.startsWith('#') ? (
+                <a 
+                  key={item.name}
+                  href={item.href}
+                  className={cn(
+                    "block py-3 text-gray-700 hover:text-primary-500 font-medium border-b border-gray-100",
+                    isActive(item.href) && "text-primary-500"
                   )}
-                </div>
-              </a>
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  <div className="flex items-center justify-between">
+                    <span>{item.name}</span>
+                    {item.comingSoon && (
+                      <span className="text-xs bg-accent-gold text-primary-800 px-2 py-0.5 rounded-full">
+                        Soon
+                      </span>
+                    )}
+                  </div>
+                </a>
+              ) : (
+                <Link 
+                  key={item.name}
+                  to={item.href}
+                  className={cn(
+                    "block py-3 text-gray-700 hover:text-primary-500 font-medium border-b border-gray-100",
+                    isActive(item.href) && "text-primary-500"
+                  )}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  <div className="flex items-center justify-between">
+                    <span>{item.name}</span>
+                    {item.comingSoon && (
+                      <span className="text-xs bg-accent-gold text-primary-800 px-2 py-0.5 rounded-full">
+                        Soon
+                      </span>
+                    )}
+                  </div>
+                </Link>
+              )
             ))}
             <div className="mt-4 flex items-center space-x-4">
               <a href="#" className="text-primary-500 hover:text-primary-700 transition-colors">
