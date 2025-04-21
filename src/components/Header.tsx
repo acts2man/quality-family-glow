@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import { useLocation } from "react-router-dom";
@@ -21,7 +22,7 @@ const Header = () => {
     { name: "Why QFB", href: "#" },
     { name: "Accident", href: "/accident" },
     { name: "Critical Illness", href: "/critical-illness" },
-    { name: "Cancer & Dread Disease", href: "#" },
+    { name: "Cancer & Dread Disease", href: "/cancer-dread-disease" },
     { name: "Life Insurance", href: "#" },
     { name: "Benefits & Exclusions", href: "#" },
     { name: "Dental", href: "#", comingSoon: true },
