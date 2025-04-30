@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import { useLocation, Link } from "react-router-dom";
@@ -85,7 +84,7 @@ const Header = () => {
           <div className="flex items-center">
             <Link to="/" className="flex items-center">
               <img 
-                src="/lovable-uploads/e25a7906-c6b7-4f39-a823-4052cb1eab7c.png" 
+                src="/lovable-uploads/11685cf7-8d75-4249-b5bd-f14c01a4b056.png" 
                 alt="Quality Family Benefits Logo" 
                 className="h-12 md:h-16" 
               />
@@ -236,4 +235,3 @@ const Header = () => {
 };
 
 export default Header;
-
