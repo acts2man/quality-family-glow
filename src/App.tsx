@@ -11,6 +11,7 @@ import CriticalIllness from "./pages/CriticalIllness";
 import CancerDreadDisease from "./pages/CancerDreadDisease";
 import LifeInsurance from "./pages/LifeInsurance";
 import BenefitsAndExclusions from "./pages/BenefitsAndExclusions";
+import WhyQFB from "./pages/WhyQFB";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
@@ -27,6 +28,7 @@ const App = () => (
           <main className="flex-grow pt-20">
             <Routes>
               <Route path="/" element={<Index />} />
+              <Route path="/why-qfb" element={<WhyQFB />} />
               <Route path="/accident" element={<AccidentPage />} />
               <Route path="/critical-illness" element={<CriticalIllness />} />
               <Route path="/cancer-dread-disease" element={<CancerDreadDisease />} />

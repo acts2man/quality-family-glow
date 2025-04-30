@@ -23,7 +23,7 @@ const Header = () => {
 
   const menuItems = [
     { name: "Home", href: "/" },
-    { name: "Why QFB", href: "#" },
+    { name: "Why QFB", href: "/why-qfb" },
     { name: "Accident", href: "/accident" },
     { name: "Critical Illness", href: "/critical-illness" },
     { name: "Cancer & Dread Disease", href: "/cancer-dread-disease" },
