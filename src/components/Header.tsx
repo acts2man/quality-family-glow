@@ -85,7 +85,7 @@ const Header = () => {
           <div className="flex items-center">
             <Link to="/" className="flex items-center">
               <img 
-                src="/lovable-uploads/e39a0fde-ebe8-4306-a912-874626dda023.png" 
+                src="/lovable-uploads/e25a7906-c6b7-4f39-a823-4052cb1eab7c.png" 
                 alt="Quality Family Benefits Logo" 
                 className="h-12 md:h-16" 
               />
@@ -236,3 +236,4 @@ const Header = () => {
 };
 
 export default Header;
+
