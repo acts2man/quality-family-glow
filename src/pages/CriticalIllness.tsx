@@ -38,6 +38,55 @@ const CriticalIllness = () => {
     document.getElementById('final-cta')?.scrollIntoView({ behavior: 'smooth' });
   };
 
+  // Create a data structure for the conditions with descriptions
+  const conditions = [
+    {
+      name: "Heart Attack",
+      description: "Coverage for myocardial infarction with elevated cardiac enzymes and new EKG changes.",
+      icon: <ShieldCheck className="w-8 h-8 text-primary-500" />
+    },
+    {
+      name: "Stroke",
+      description: "Benefits for cerebrovascular events causing permanent neurological deficits.",
+      icon: <ShieldCheck className="w-8 h-8 text-primary-500" />
+    },
+    {
+      name: "Cancer",
+      description: "Coverage for malignant tumors characterized by uncontrolled growth of cells.",
+      icon: <ShieldCheck className="w-8 h-8 text-primary-500" />
+    },
+    {
+      name: "Kidney Failure",
+      description: "Protection for chronic, irreversible failure of both kidneys requiring regular dialysis.",
+      icon: <ShieldCheck className="w-8 h-8 text-primary-500" />
+    },
+    {
+      name: "Major Organ Transplant",
+      description: "Coverage when listed as a transplant candidate for heart, lung, liver, or bone marrow.",
+      icon: <ShieldCheck className="w-8 h-8 text-primary-500" />
+    },
+    {
+      name: "ALS",
+      description: "Benefits upon diagnosis of Amyotrophic Lateral Sclerosis by a qualified specialist.",
+      icon: <ShieldCheck className="w-8 h-8 text-primary-500" />
+    },
+    {
+      name: "Parkinson's",
+      description: "Coverage for confirmed Parkinson's disease with progressive motor impairment.",
+      icon: <ShieldCheck className="w-8 h-8 text-primary-500" />
+    },
+    {
+      name: "Severe Burns",
+      description: "Protection for third-degree burns covering at least 20% of the body surface.",
+      icon: <ShieldCheck className="w-8 h-8 text-primary-500" />
+    },
+    {
+      name: "Alzheimer's",
+      description: "Benefits for diagnosed Alzheimer's disease with permanent cognitive impairment.",
+      icon: <ShieldCheck className="w-8 h-8 text-primary-500" />
+    }
+  ];
+
   return (
     <div className="min-h-screen flex flex-col">
       <main className="flex-grow pt-20">
@@ -225,33 +274,24 @@ const CriticalIllness = () => {
             </motion.div>
 
             <motion.div 
-              className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6"
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
               variants={staggerContainer}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
             >
-              {[
-                "Heart Attack", 
-                "Stroke", 
-                "Cancer", 
-                "Kidney Failure", 
-                "Major Organ Transplant", 
-                "ALS", 
-                "Parkinson's", 
-                "Severe Burns",
-                "Alzheimer's"
-              ].map((condition, index) => (
+              {conditions.map((condition) => (
                 <motion.div 
-                  key={condition}
-                  className="card-hover bg-primary-50 rounded-lg p-6 text-center shadow-sm"
+                  key={condition.name}
+                  className="card-hover bg-primary-50 rounded-lg p-6 shadow-sm flex flex-col"
                   variants={fadeIn}
                   whileHover={{ y: -5, boxShadow: "0 10px 20px rgba(0,0,0,0.1)" }}
                 >
-                  <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <ShieldCheck className="w-8 h-8 text-primary-500" />
+                  <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-4">
+                    {condition.icon}
                   </div>
-                  <h3 className="font-semibold text-primary-700">{condition}</h3>
+                  <h3 className="font-semibold text-primary-700 text-xl mb-2">{condition.name}</h3>
+                  <p className="text-gray-600 mt-2 flex-grow">{condition.description}</p>
                 </motion.div>
               ))}
             </motion.div>
