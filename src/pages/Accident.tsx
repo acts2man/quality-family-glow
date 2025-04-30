@@ -121,22 +121,22 @@ const AccidentPage = () => {
             {[
               {
                 title: "Slip on Ice? Get Paid.",
-                image: "https://images.unsplash.com/photo-1513530534585-c7b1394c6d51?auto=format&fit=crop&w=500",
+                image: "/lovable-uploads/08592e29-42d6-4973-83d0-f1c5f645c6c7.png",
                 delay: "0.1s"
               },
               {
                 title: "Sports Injury? You're Covered.",
-                image: "https://images.unsplash.com/photo-1574008313813-3256c961a0dc?auto=format&fit=crop&w=500",
+                image: "/lovable-uploads/2b91ce04-33ec-46ec-9710-fc26e48b0d57.png",
                 delay: "0.2s"
               },
               {
                 title: "Victim of Crime? We've Got You.",
-                image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=500",
+                image: "/lovable-uploads/634f8a52-093f-4273-9811-e56fbf95539a.png",
                 delay: "0.3s"
               },
               {
                 title: "$200 for the Ride, $250 for the ER",
-                image: "https://images.unsplash.com/photo-1594067490723-3575bb029884?auto=format&fit=crop&w=500",
+                image: "/lovable-uploads/0e38cfb0-3899-47f4-851d-168ca8a79841.png",
                 delay: "0.4s"
               }
             ].map((card, index) => (
