@@ -1,4 +1,3 @@
-
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { ArrowDown, ShieldCheck } from "lucide-react";
@@ -7,6 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import OtherCoveragesSection from "@/components/OtherCoveragesSection";
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -530,6 +530,9 @@ const CriticalIllness = () => {
             </motion.div>
           </div>
         </section>
+
+        {/* Other Coverages Available Section */}
+        <OtherCoveragesSection />
       </main>
       <Footer />
     </div>

@@ -1,8 +1,8 @@
-
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Check, Users, Heart, FileText, Phone } from "lucide-react";
+import OtherCoveragesSection from "@/components/OtherCoveragesSection";
 
 const benefits = [
   {
@@ -18,13 +18,13 @@ const benefits = [
   {
     icon: Check,
     title: "Guaranteed Issue Plans",
-    desc: "No health questions required. Coverage options for everyone, even if you’ve been turned down before."
+    desc: "No health questions required. Coverage options for everyone, even if you've been turned down before."
   }
 ];
 
 const faqs = [
   {
-    q: "What’s the difference between term and permanent?",
+    q: "What's the difference between term and permanent?",
     a: "Term insurance lasts for a set period (like 10 or 20 years), while permanent insurance covers you for life and builds cash value."
   },
   {
@@ -33,11 +33,11 @@ const faqs = [
   },
   {
     q: "What happens if I miss a payment?",
-    a: "Most permanent policies offer a grace period. If payment isn’t made within this, coverage may lapse."
+    a: "Most permanent policies offer a grace period. If payment isn't made within this, coverage may lapse."
   },
   {
-    q: "Can I get coverage if I’ve been denied before?",
-    a: "Yes — our guaranteed issue and final expense plans help those who’ve been declined elsewhere."
+    q: "Can I get coverage if I've been denied before?",
+    a: "Yes — our guaranteed issue and final expense plans help those who've been declined elsewhere."
   }
 ];
 
@@ -146,6 +146,9 @@ export default function LifeInsurance() {
           ))}
         </Accordion>
       </section>
+
+      {/* Other Coverages Available Section */}
+      <OtherCoveragesSection />
 
       {/* Final CTA Block */}
       <section className="w-full bg-gradient-to-t from-[#FFD70020] via-[#F2FCE2] to-[#D3E4FD] py-14 px-4 animate-fade-in-up">
