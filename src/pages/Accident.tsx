@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { CheckCircle, Ambulance, User, BookOpen, CircleDollarSign, Shield } from "lucide-react";
+import { CheckCircle, Ambulance, User, BookOpen, CircleDollarSign, Shield, Cancer, HeartAttack, Stroke, Organ } from "lucide-react";
 import { 
   Accordion,
   AccordionContent,
@@ -311,25 +311,106 @@ const AccidentPage = () => {
               Want More Protection? Add a Critical Illness Rider
             </h2>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-              These plans also offer riders that pay up to <strong>$30,000</strong> if you're diagnosed with a covered condition like cancer, heart attack, stroke, or major organ failure.
+              Our plans offer riders that pay up to <strong>$30,000</strong> if you're diagnosed with a covered condition. This financial support helps when you need it most - during treatment and recovery.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
-            {["Cancer", "Heart Attack", "Stroke", "Major Organ Failure"].map((condition, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-lg p-6 text-center transition-all hover:transform hover:scale-105 duration-300 animate-fade-in-up" style={{ animationDelay: `${0.1 * index}s` }}>
-                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary-100 flex items-center justify-center">
-                  <CheckCircle className="w-8 h-8 text-primary-600" />
-                </div>
-                <h3 className="text-xl font-semibold text-primary-700">{condition}</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+            <div className="bg-white rounded-lg shadow-lg p-6 border-l-4 border-primary-600">
+              <h3 className="text-xl font-semibold text-primary-700 mb-4">Covered Conditions</h3>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-3">
+                  <Cancer className="w-5 h-5 text-primary-600 mt-1 flex-shrink-0" />
+                  <span><strong>Cancer</strong> - Including most malignant tumors and cancers</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <HeartAttack className="w-5 h-5 text-primary-600 mt-1 flex-shrink-0" />
+                  <span><strong>Heart Attack</strong> - Diagnosed acute myocardial infarction</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Stroke className="w-5 h-5 text-primary-600 mt-1 flex-shrink-0" />
+                  <span><strong>Stroke</strong> - Resulting in permanent neurological deficit</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Organ className="w-5 h-5 text-primary-600 mt-1 flex-shrink-0" />
+                  <span><strong>Major Organ Transplant</strong> - As a recipient of heart, lung, liver, kidney, pancreas, or bone marrow</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div className="bg-white rounded-lg shadow-lg p-6 border-l-4 border-primary-600">
+              <h3 className="text-xl font-semibold text-primary-700 mb-4">Additional Coverage</h3>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-primary-600 mt-1 flex-shrink-0" />
+                  <span><strong>End Stage Kidney Failure</strong> - Requiring regular dialysis</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-primary-600 mt-1 flex-shrink-0" />
+                  <span><strong>Advanced Alzheimer's Disease</strong> - Resulting in significant cognitive impairment</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-primary-600 mt-1 flex-shrink-0" />
+                  <span><strong>Coma</strong> - Resulting from severe trauma or illness</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-primary-600 mt-1 flex-shrink-0" />
+                  <span><strong>ALS (Lou Gehrig's Disease)</strong> - Progressive neurodegenerative disease</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div className="bg-white rounded-lg shadow-lg p-6 border-l-4 border-primary-600">
+              <h3 className="text-xl font-semibold text-primary-700 mb-4">More Conditions</h3>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-primary-600 mt-1 flex-shrink-0" />
+                  <span><strong>Parkinson's Disease</strong> - With permanent neurological deficit</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-primary-600 mt-1 flex-shrink-0" />
+                  <span><strong>Severe Burns</strong> - Covering significant body surface area</span>
+                </li>
+              </ul>
+              
+              <div className="mt-6 bg-gray-50 p-4 rounded-lg">
+                <h4 className="font-semibold text-primary-700 mb-2">Payment Structure</h4>
+                <ul className="space-y-2 text-sm">
+                  <li>• 100% of benefit amount to primary insured</li>
+                  <li>• 50% of benefit amount to covered spouse</li>
+                  <li>• 25% of benefit amount to covered child</li>
+                </ul>
               </div>
-            ))}
+            </div>
+          </div>
+          
+          <div className="bg-primary-50 rounded-xl p-8 shadow-inner mb-8">
+            <div className="flex flex-col md:flex-row gap-6 items-center">
+              <div className="md:w-2/3">
+                <h3 className="text-2xl font-bold mb-4 text-primary-700">How Critical Illness Coverage Works</h3>
+                <p className="mb-4">If you're diagnosed with a covered condition after your coverage begins, you'll receive a lump sum payment. This payment is:</p>
+                <ul className="list-disc pl-5 space-y-2 mb-4">
+                  <li>Paid directly to you, not your medical providers</li>
+                  <li>Available for any expenses - medical bills, mortgage, groceries, or childcare</li>
+                  <li>Not affected by any other insurance you might have</li>
+                  <li>Paid in addition to your accident coverage benefits</li>
+                </ul>
+                <p className="font-medium">Coverage amounts range from $5,000 to $30,000 depending on your selected plan.</p>
+              </div>
+              <div className="md:w-1/3 flex justify-center">
+                <div className="bg-white p-6 rounded-full shadow-lg border-2 border-primary-300 w-48 h-48 flex flex-col items-center justify-center">
+                  <span className="text-4xl font-bold text-primary-600">$30,000</span>
+                  <span className="text-sm text-center text-gray-500">Maximum Benefit Available</span>
+                </div>
+              </div>
+            </div>
           </div>
           
           <div className="text-center">
-            <Button className="glow-button text-lg">
-              <span>Explore Riders</span>
+            <Button className="glow-button text-lg px-6 py-3 h-auto">
+              <span>Add Critical Illness Coverage</span>
             </Button>
+            <p className="text-sm text-gray-500 mt-4">Speak with a licensed agent to customize your coverage</p>
           </div>
         </div>
       </section>
