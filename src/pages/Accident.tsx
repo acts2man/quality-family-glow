@@ -10,6 +10,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { Link } from "react-router-dom";
 
 const AccidentPage = () => {
   return (
@@ -485,6 +486,42 @@ const AccidentPage = () => {
             <input type="checkbox" className="w-5 h-5 rounded" />
             <span>Include my spouse on the call</span>
           </label>
+        </div>
+      </section>
+
+      {/* Other Coverages Available Section */}
+      <section className="py-20 px-4 bg-primary-900 text-white">
+        <div className="container mx-auto max-w-6xl text-center lg:text-left animate-fade-in-up">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-12 leading-tight tracking-wide">
+            DON'T FORGET TO CHECK OUT OUR<br className="hidden md:block" /> OTHER COVERAGES AVAILABLE
+          </h2>
+          
+          <div className="space-y-4 md:space-y-6 max-w-3xl mx-auto lg:mx-0">
+            <Link 
+              to="/accident" 
+              className="block text-2xl md:text-3xl hover:text-accent-gold transition-colors duration-300 tracking-wider"
+            >
+              ACCIDENT INSURANCE
+            </Link>
+            <Link 
+              to="/critical-illness" 
+              className="block text-2xl md:text-3xl hover:text-accent-gold transition-colors duration-300 tracking-wider"
+            >
+              CRITICAL ILLNESS
+            </Link>
+            <Link 
+              to="/cancer-dread-disease" 
+              className="block text-2xl md:text-3xl hover:text-accent-gold transition-colors duration-300 tracking-wider"
+            >
+              CANCER AND OTHER DREAD DISEASE
+            </Link>
+            <Link 
+              to="/life-insurance" 
+              className="block text-2xl md:text-3xl hover:text-accent-gold transition-colors duration-300 tracking-wider"
+            >
+              LIFE INSURANCE
+            </Link>
+          </div>
         </div>
       </section>
     </div>
