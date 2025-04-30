@@ -4,7 +4,13 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { CheckCircle, Ambulance, User, BookOpen, CircleDollarSign } from "lucide-react";
+import { CheckCircle, Ambulance, User, BookOpen, CircleDollarSign, Shield } from "lucide-react";
+import { 
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 const AccidentPage = () => {
   return (
@@ -79,6 +85,38 @@ const AccidentPage = () => {
             Our Fixed-Benefit Plan: Based on Your Injury and Treatment
           </h2>
           
+          <div className="bg-white rounded-xl shadow-lg p-8 mb-16">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              <div className="space-y-6">
+                <div className="flex gap-4">
+                  <div className="flex-shrink-0">
+                    <Shield className="h-12 w-12 text-primary-500" />
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-semibold text-primary-700 mb-4">How Our Plans Work</h3>
+                    <p className="text-gray-700">
+                      <span className="font-bold">The ACCIDENT FIXED BENEFIT PLAN</span> pays based on your injury and the treatment you receive.
+                    </p>
+                    <p className="text-gray-700 mt-3">
+                      <span className="font-bold">The PLAN ENHANCER and TRIOMED PLAN</span> pay based on the actual charges for your treatment. You also have the option of adding coverage for critical illnesses such as cancer, heart attack, and stroke.
+                    </p>
+                    <div className="mt-4 bg-primary-50 p-4 rounded-lg border border-primary-100">
+                      <p className="font-semibold text-primary-700">All plans can include coverage for on-the-job accidents.</p>
+                      <p className="font-bold text-primary-800 mt-2">AND THEY ALL WILL PAY IF YOU ARE INJURED AS A VICTIM OF CRIME!</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <img 
+                  src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800"
+                  alt="Insurance coverage document"
+                  className="rounded-xl shadow-md w-full h-auto object-cover"
+                />
+              </div>
+            </div>
+          </div>
+          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             {[
               {
@@ -117,27 +155,113 @@ const AccidentPage = () => {
             ))}
           </div>
           
-          <div className="bg-gray-50 rounded-xl p-8 shadow-inner animate-fade-in-up">
-            <h3 className="text-2xl font-bold mb-6 text-center text-primary-700">Sample Payouts</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {[
-                { amount: "$200", for: "Ambulance ride", icon: Ambulance },
-                { amount: "$250", for: "Emergency room", icon: BookOpen },
-                { amount: "$150", for: "Ancillary hospital charges", icon: CircleDollarSign },
-                { amount: "$500–$2,500", for: "Fractures", icon: User },
-                { amount: "$750/day", for: "Hospitalization", icon: CheckCircle },
-                { amount: "$25,000", for: "Accidental loss of one limb or eye", icon: User },
-                { amount: "$50,000", for: "Accidental death or loss of two limbs", icon: User }
-              ].map((benefit, index) => (
-                <div key={index} className="flex items-center p-4 bg-white rounded-lg shadow">
-                  <benefit.icon className="h-10 w-10 text-primary-500 mr-4" />
-                  <div>
-                    <p className="text-xl font-bold text-primary-600">{benefit.amount}</p>
-                    <p className="text-gray-600">{benefit.for}</p>
+          <div className="bg-gray-50 rounded-xl p-8 shadow-inner mb-16 animate-fade-in-up">
+            <h3 className="text-2xl font-bold mb-6 text-center text-primary-700">What You Get With Our Fixed-Benefit Plan</h3>
+            
+            <Accordion type="single" collapsible className="w-full">
+              <AccordionItem value="everyday-accidents">
+                <AccordionTrigger className="text-lg font-semibold text-primary-700">
+                  Everyday Accident Coverage
+                </AccordionTrigger>
+                <AccordionContent className="text-gray-700">
+                  <p className="mb-4">Suppose you fall down while shoveling snow, a covered family member is hurt playing amateur sports, or you're a victim of a crime...</p>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+                    <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-100">
+                      <div className="flex items-center mb-2">
+                        <Ambulance className="h-5 w-5 text-primary-500 mr-2" />
+                        <p className="font-semibold">Ambulance</p>
+                      </div>
+                      <p className="text-2xl font-bold text-primary-600">$200</p>
+                      <p className="text-xs text-gray-500">$3,000 for air ambulance!</p>
+                    </div>
+                    <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-100">
+                      <div className="flex items-center mb-2">
+                        <BookOpen className="h-5 w-5 text-primary-500 mr-2" />
+                        <p className="font-semibold">Emergency Room</p>
+                      </div>
+                      <p className="text-2xl font-bold text-primary-600">$250</p>
+                    </div>
+                    <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-100">
+                      <div className="flex items-center mb-2">
+                        <CircleDollarSign className="h-5 w-5 text-primary-500 mr-2" />
+                        <p className="font-semibold">Ancillary Charges</p>
+                      </div>
+                      <p className="text-2xl font-bold text-primary-600">$150</p>
+                    </div>
                   </div>
-                </div>
-              ))}
-            </div>
+                  <p className="mt-4 font-medium text-primary-700">And this is for a less serious accident that doesn't even cause you to miss work!</p>
+                </AccordionContent>
+              </AccordionItem>
+              
+              <AccordionItem value="fractures">
+                <AccordionTrigger className="text-lg font-semibold text-primary-700">
+                  Fracture & Hospital Benefits
+                </AccordionTrigger>
+                <AccordionContent className="text-gray-700">
+                  <p className="mb-4">But suppose they tell you "BAD NEWS! You have a fracture!"</p>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
+                    <div>
+                      <h4 className="font-semibold text-primary-600 mb-3">Fracture Payment Schedule:</h4>
+                      <ul className="space-y-2">
+                        <li className="flex justify-between">
+                          <span>Hip, neck or skull fracture</span>
+                          <span className="font-bold">$2,500</span>
+                        </li>
+                        <li className="flex justify-between">
+                          <span>Thigh fracture</span>
+                          <span className="font-bold">$1,500</span>
+                        </li>
+                        <li className="flex justify-between">
+                          <span>Less serious fractures</span>
+                          <span className="font-bold">$500+</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-primary-600 mb-3">Additional Benefits:</h4>
+                      <ul className="space-y-2">
+                        <li className="flex justify-between">
+                          <span>Hospital stay (per day)</span>
+                          <span className="font-bold">$750</span>
+                        </li>
+                        <li className="flex justify-between">
+                          <span>Rehabilitation services</span>
+                          <span className="font-bold">$150</span>
+                        </li>
+                        <li className="flex justify-between">
+                          <span>Maximum per covered accident</span>
+                          <span className="font-bold">Up to $15,000</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <p className="mt-4">The plan can also pay for concussions and dislocations.</p>
+                </AccordionContent>
+              </AccordionItem>
+              
+              <AccordionItem value="loss">
+                <AccordionTrigger className="text-lg font-semibold text-primary-700">
+                  Life & Limb Benefits
+                </AccordionTrigger>
+                <AccordionContent className="text-gray-700">
+                  <p className="mb-4">For loss of life or limb, the plan will pay:</p>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+                    <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-100">
+                      <p className="text-sm text-gray-500 mb-2">Loss of one hand, foot, or eye</p>
+                      <p className="text-2xl font-bold text-primary-600">$25,000</p>
+                    </div>
+                    <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-100">
+                      <p className="text-sm text-gray-500 mb-2">Loss of both feet, hands, or eyes</p>
+                      <p className="text-2xl font-bold text-primary-600">$50,000</p>
+                    </div>
+                    <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-100">
+                      <p className="text-sm text-gray-500 mb-2">Accidental loss of life</p>
+                      <p className="text-2xl font-bold text-primary-600">$50,000</p>
+                    </div>
+                  </div>
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
           </div>
         </div>
       </section>
