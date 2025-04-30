@@ -521,11 +521,14 @@ const AccidentPage = () => {
       <section className="py-12 px-4 bg-primary-900 text-white">
         <div className="container mx-auto max-w-6xl">
           <div className="flex flex-col lg:flex-row gap-8">
-            {/* Left Column - Other Coverages */}
+            {/* Left Column - Other Coverages with updated title */}
             <div className="w-full lg:w-1/2 animate-fade-in-up">
-              <h2 className="text-2xl md:text-3xl font-bold mb-8 leading-tight tracking-wide">
-                DON'T FORGET TO CHECK OUT OUR<br className="hidden md:block" /> OTHER COVERAGES AVAILABLE
+              <h2 className="text-2xl md:text-3xl font-bold mb-2 leading-tight tracking-wide">
+                DON'T FORGET TO CHECK OUT
               </h2>
+              <h3 className="text-xl md:text-2xl font-bold mb-8 leading-tight tracking-wide">
+                OUR OTHER COVERAGES AVAILABLE
+              </h3>
               
               <div className="space-y-4 max-w-xl">
                 <Link 
