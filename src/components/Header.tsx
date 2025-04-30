@@ -84,9 +84,11 @@ const Header = () => {
         <div className="container mx-auto flex items-center justify-between">
           <div className="flex items-center">
             <Link to="/" className="flex items-center">
-              <span className="text-2xl font-bold text-primary-500">
-                <span className="text-accent-gold">Quality</span> Family Benefits
-              </span>
+              <img 
+                src="/lovable-uploads/e39a0fde-ebe8-4306-a912-874626dda023.png" 
+                alt="Quality Family Benefits Logo" 
+                className="h-12 md:h-16" 
+              />
             </Link>
           </div>
           
