@@ -1,10 +1,9 @@
-
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { CheckCircle, Ambulance, User, BookOpen, CircleDollarSign, Shield, Cancer, HeartAttack, Stroke, Organ } from "lucide-react";
+import { CheckCircle, Ambulance, User, BookOpen, CircleDollarSign, Shield, Heart, Stethoscope, Brain, Lungs } from "lucide-react";
 import { 
   Accordion,
   AccordionContent,
@@ -320,19 +319,19 @@ const AccidentPage = () => {
               <h3 className="text-xl font-semibold text-primary-700 mb-4">Covered Conditions</h3>
               <ul className="space-y-3">
                 <li className="flex items-start gap-3">
-                  <Cancer className="w-5 h-5 text-primary-600 mt-1 flex-shrink-0" />
+                  <Heart className="w-5 h-5 text-primary-600 mt-1 flex-shrink-0" />
                   <span><strong>Cancer</strong> - Including most malignant tumors and cancers</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <HeartAttack className="w-5 h-5 text-primary-600 mt-1 flex-shrink-0" />
+                  <Heart className="w-5 h-5 text-primary-600 mt-1 flex-shrink-0" />
                   <span><strong>Heart Attack</strong> - Diagnosed acute myocardial infarction</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <Stroke className="w-5 h-5 text-primary-600 mt-1 flex-shrink-0" />
+                  <Brain className="w-5 h-5 text-primary-600 mt-1 flex-shrink-0" />
                   <span><strong>Stroke</strong> - Resulting in permanent neurological deficit</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <Organ className="w-5 h-5 text-primary-600 mt-1 flex-shrink-0" />
+                  <Lungs className="w-5 h-5 text-primary-600 mt-1 flex-shrink-0" />
                   <span><strong>Major Organ Transplant</strong> - As a recipient of heart, lung, liver, kidney, pancreas, or bone marrow</span>
                 </li>
               </ul>
