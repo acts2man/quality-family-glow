@@ -4,8 +4,6 @@ import { ArrowDown, ShieldCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
 import OtherCoveragesSection from "@/components/OtherCoveragesSection";
 
 const fadeIn = {
@@ -42,8 +40,7 @@ const CriticalIllness = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <Header />
-      <main className="flex-grow pt-32 md:pt-40">
+      <main className="flex-grow pt-20">
         {/* Hero Section */}
         <section className="bg-gradient-to-b from-primary-100 to-white">
           <div className="container mx-auto px-4 py-16 md:py-24">
@@ -79,8 +76,8 @@ const CriticalIllness = () => {
               >
                 <div className="relative rounded-lg overflow-hidden shadow-xl">
                   <img 
-                    src="/placeholder.svg" 
-                    alt="People recovering with family support" 
+                    src="/lovable-uploads/26b4e11f-d251-48cb-bd23-d3d1ed4d5e0c.png" 
+                    alt="Hospital room with medical monitoring equipment" 
                     className="w-full h-auto object-cover"
                     style={{ minHeight: "350px" }}
                   />
@@ -534,7 +531,6 @@ const CriticalIllness = () => {
         {/* Other Coverages Available Section */}
         <OtherCoveragesSection />
       </main>
-      <Footer />
     </div>
   );
 };
