@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { CheckCircle, Ambulance, User, BookOpen, CircleDollarSign, Shield, Heart, Stethoscope, Brain, Lungs } from "lucide-react";
+import { CheckCircle, Ambulance, User, BookOpen, CircleDollarSign, Shield, Heart, Stethoscope, Brain, AirVent } from "lucide-react";
 import { 
   Accordion,
   AccordionContent,
@@ -331,7 +331,7 @@ const AccidentPage = () => {
                   <span><strong>Stroke</strong> - Resulting in permanent neurological deficit</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <Lungs className="w-5 h-5 text-primary-600 mt-1 flex-shrink-0" />
+                  <AirVent className="w-5 h-5 text-primary-600 mt-1 flex-shrink-0" />
                   <span><strong>Major Organ Transplant</strong> - As a recipient of heart, lung, liver, kidney, pancreas, or bone marrow</span>
                 </li>
               </ul>
