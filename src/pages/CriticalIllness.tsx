@@ -432,6 +432,13 @@ const CriticalIllness = () => {
                 </motion.div>
               </div>
             </div>
+            
+            {/* Added bold message as requested */}
+            <div className="mt-8 text-center">
+              <p className="font-bold text-xl text-primary-700">
+                We have other plans with other companies that might suit your needs better. Call for consultation.
+              </p>
+            </div>
           </div>
         </section>
 
