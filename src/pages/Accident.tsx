@@ -18,6 +18,7 @@ import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, For
 import { Input } from "@/components/ui/input";
 import { toast } from "sonner";
 import OtherCoveragesSection from "@/components/OtherCoveragesSection";
+import TestimonialSection from "@/components/home/TestimonialSection";
 
 const questionFormSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
@@ -65,43 +66,136 @@ const AccidentPage = () => {
           </div>
           <div className="w-full lg:w-1/2 flex justify-center animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
             <img 
-              src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800"
-              alt="Person recovering from an injury"
+              src="/lovable-uploads/11685cf7-8d75-4249-b5bd-f14c01a4b056.png"
+              alt="Car accident scene"
               className="rounded-xl shadow-xl max-h-[500px] object-cover"
             />
           </div>
         </div>
-        <div className="absolute bottom-0 left-0 w-full overflow-hidden">
+        <div className="absolute bottom-0 left-0 w-full overflow-hidden translate-y-6">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" className="w-full">
             <path fill="#ffffff" fillOpacity="1" d="M0,224L80,197.3C160,171,320,117,480,117.3C640,117,800,171,960,181.3C1120,192,1280,160,1360,144L1440,128L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
           </svg>
         </div>
       </section>
 
-      {/* Grace's Story Section */}
-      <section className="py-20 px-4 bg-gray-50">
-        <div className="container mx-auto max-w-5xl">
-          <div className="flex flex-col lg:flex-row items-center gap-12 bg-white rounded-2xl shadow-lg p-8 animate-fade-in-up">
-            <div className="lg:w-1/3">
-              <div className="bg-primary-100 rounded-full p-6 mx-auto" style={{width: "220px", height: "220px"}}>
-                <img 
-                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&h=300"
-                  alt="Grace's profile"
-                  className="rounded-full w-full h-full object-cover"
-                />
+      {/* Grace's Story Section - Expanded with new content */}
+      <section className="py-20 px-4">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary-700">
+              Meet Grace: A Real Story of Recovery
+            </h2>
+            <div className="w-20 h-1 bg-accent-gold mx-auto mb-6"></div>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              When an unexpected accident happens, having the right coverage can make all the difference.
+            </p>
+          </div>
+          
+          <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
+            <div className="grid grid-cols-1 lg:grid-cols-12">
+              {/* Left column with image and highlight */}
+              <div className="lg:col-span-5 bg-gradient-to-br from-primary-50 to-primary-100 p-8 flex flex-col justify-between">
+                <div>
+                  <div className="bg-white rounded-xl shadow-lg p-4 mb-8 max-w-xs mx-auto">
+                    <img 
+                      src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&h=300"
+                      alt="Grace's profile"
+                      className="rounded-lg w-full h-auto"
+                    />
+                  </div>
+                  
+                  <div className="bg-white rounded-xl p-6 shadow-md mb-6">
+                    <div className="flex items-center mb-4">
+                      <span className="text-accent-gold text-5xl font-bold mr-2">$</span>
+                      <span className="text-5xl font-bold text-primary-700">4,000</span>
+                    </div>
+                    <p className="text-gray-700">Payout received directly to Grace</p>
+                  </div>
+                  
+                  <div className="bg-primary-100 border border-primary-200 rounded-lg p-4">
+                    <h4 className="font-semibold text-primary-700 mb-2">Grace's Policy Details:</h4>
+                    <ul className="space-y-2 text-sm text-gray-700">
+                      <li className="flex items-center">
+                        <CheckCircle className="h-4 w-4 text-primary-500 mr-2" />
+                        <span>Monthly premium: $21.95</span>
+                      </li>
+                      <li className="flex items-center">
+                        <CheckCircle className="h-4 w-4 text-primary-500 mr-2" />
+                        <span>Policy in force: Since 2022</span>
+                      </li>
+                      <li className="flex items-center">
+                        <CheckCircle className="h-4 w-4 text-primary-500 mr-2" />
+                        <span>Plan type: Fixed-Benefit Accident Plan</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                
+                <div className="mt-8 text-center">
+                  <p className="text-sm text-gray-500 italic">"I never thought I'd need it until I did."</p>
+                  <p className="font-bold text-primary-700">Grace Martinez</p>
+                </div>
               </div>
-            </div>
-            <div className="lg:w-2/3">
-              <h2 className="text-3xl font-bold mb-4 text-primary-700">Meet Grace</h2>
-              <blockquote className="text-lg text-gray-700 mb-8 italic">
-                "When I broke my ankle, I thought I'd lose everything. I couldn't work for weeks and had no income to cover rent or bills. But just when panic set in — I remembered my accident policy. My $4,000 payout arrived fast, giving me a lifeline when I needed it most."
-              </blockquote>
-              <Button 
-                className="glow-button" 
-                onClick={() => document.getElementById('plan-overview')?.scrollIntoView({behavior: 'smooth'})}
-              >
-                <span>Learn How It Works</span>
-              </Button>
+              
+              {/* Right column with story */}
+              <div className="lg:col-span-7 p-8 md:p-12">
+                <div className="space-y-6">
+                  <div className="bg-accent-gold/10 border-l-4 border-accent-gold p-4 mb-6">
+                    <h3 className="text-2xl font-bold text-primary-800 mb-2">
+                      "When I broke my ankle, I thought I'd lose everything..."
+                    </h3>
+                  </div>
+                  
+                  <div className="space-y-4 text-gray-700">
+                    <p className="text-lg leading-relaxed">
+                      <span className="font-semibold">Grace was devastated.</span> When she slipped on ice and broke her ankle badly, 
+                      she couldn't work for a month and had no idea how she would make ends meet.
+                    </p>
+                    
+                    <p>
+                      Although she had an accident plan through her job, it was so affordable that she had completely forgotten about it! 
+                      Panic set in as she realized she had no income for the next month.
+                    </p>
+                    
+                    <p>
+                      <span className="italic">Desperate, she called her friends in tears.</span>
+                    </p>
+                    
+                    <blockquote className="border-l-4 border-primary-200 pl-4 py-2 my-4 text-primary-700 italic">
+                      "I was barely scraping by before this happened. Now, I can't pay my rent… my car might get repossessed… 
+                      Can you lend me some money? Or at least help me get some cat food for my kitty?"
+                    </blockquote>
+                    
+                    <p>
+                      One friend responded bluntly, <span className="font-medium">"Grace, this is on you. You should have gotten accident insurance!"</span>
+                    </p>
+                    
+                    <p>
+                      That's when it hit her—<span className="font-semibold">she did have accident coverage!</span> She quickly filed a claim, 
+                      and just when she was at her lowest point…
+                    </p>
+                    
+                    <div className="bg-primary-50 p-6 rounded-xl border border-primary-100 my-6">
+                      <p className="text-xl font-bold text-primary-700 text-center">
+                        She received a $4,000 payout!
+                      </p>
+                    </div>
+                    
+                    <p>
+                      The money covered her rent, car payment, and even her cat's food while she recovered. 
+                      Without this coverage, she might have lost her apartment. Instead, she focused on healing without financial stress.
+                    </p>
+                  </div>
+                  
+                  <div className="mt-8">
+                    <a href="#plan-overview" className="glow-button gold-button inline-block">
+                      <span>Get Protected Like Grace</span>
+                    </a>
+                    <p className="mt-4 text-sm text-gray-500">Plans start at just $19.95/month</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

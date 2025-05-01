@@ -1,5 +1,6 @@
 
 import React from "react";
+import { Link } from "react-router-dom";
 
 const TestimonialSection = () => {
   return (
@@ -23,13 +24,13 @@ const TestimonialSection = () => {
               <div className="relative">
                 <div className="aspect-square rounded-xl overflow-hidden shadow-lg">
                   <img 
-                    src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80" 
+                    src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80" 
                     alt="Grace" 
                     className="w-full h-full object-cover"
                   />
                 </div>
                 <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-accent-gold rounded-full flex items-center justify-center text-primary-800 font-bold text-xl">
-                  $8,500
+                  $4,000
                 </div>
               </div>
               
@@ -40,13 +41,12 @@ const TestimonialSection = () => {
                 </h3>
                 <div className="space-y-4 text-white/90 mb-6">
                   <p>
-                    "Last winter, I slipped on ice and broke my ankle badly. I needed surgery and was out of work for 8 weeks. 
-                    Even with my regular health insurance, the co-pays, deductibles, and lost wages were overwhelming."
+                    "When I slipped on ice and broke my ankle, I couldn't work for a month. Even with my regular health insurance, 
+                    the co-pays, deductibles, and lost wages were overwhelming."
                   </p>
                   <p>
-                    "Thankfully, my accident policy from Quality Family Benefits paid me directly. I received $8,500 that covered 
-                    my out-of-pocket medical costs, helped with rent while I couldn't work, and even paid for food delivery since
-                    I couldn't drive to the store."
+                    "I'd completely forgotten about my accident policy! When I remembered and filed the claim, 
+                    I received $4,000 that covered my rent, bills, and even food delivery while I couldn't drive."
                   </p>
                   <p className="font-semibold text-white">
                     "Without this coverage, I might have lost my apartment. Instead, I focused on healing without financial stress."
@@ -59,9 +59,9 @@ const TestimonialSection = () => {
                   </div>
                 </div>
                 <div className="mt-8">
-                  <a href="#" className="glow-button gold-button">
+                  <Link to="/accident" className="glow-button gold-button">
                     <span>Get Protected Like Grace</span>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
