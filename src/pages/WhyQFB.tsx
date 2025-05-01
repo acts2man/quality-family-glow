@@ -127,56 +127,7 @@ const WhyQFB = () => {
       </section>
 
       {/* 4. The Grace Story Section */}
-      <section className="section-padding bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-10">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
-                This Is Grace's Story
-              </h2>
-              <div className="w-20 h-1 bg-accent-gold mx-auto mb-6"></div>
-            </div>
-            
-            <div className="bg-gray-50 rounded-xl p-8 md:p-12 shadow-lg">
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
-                {/* Image Column */}
-                <div className="relative">
-                  <div className="aspect-square rounded-xl overflow-hidden shadow-lg">
-                    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80" alt="Grace with her family" className="w-full h-full object-cover" />
-                  </div>
-                  <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-accent-gold rounded-full flex items-center justify-center text-primary-800 font-bold text-xl">
-                    $25,000
-                  </div>
-                </div>
-                
-                {/* Content Column */}
-                <div className="lg:col-span-2">
-                  <h3 className="text-2xl md:text-3xl font-bold mb-6 text-primary-800">
-                    "My supplemental policy was a financial lifesaver"
-                  </h3>
-                  <div className="space-y-4 text-gray-700 mb-6">
-                    <p>
-                      "When I was diagnosed with cancer, my health insurance helped with some bills. But what saved my family financially were the lump sum payments from my supplemental policy."
-                    </p>
-                    <p>
-                      "That gave me time to heal without the fear of falling behind. I could focus on my treatments and recovery instead of worrying about how to pay the mortgage or put food on the table."
-                    </p>
-                    <p className="font-semibold text-primary-600">
-                      "My family stayed financially stable during the hardest time of our lives. That peace of mind was priceless."
-                    </p>
-                  </div>
-                  <div className="flex items-center">
-                    <div>
-                      <p className="font-bold text-xl">Grace Martinez</p>
-                      <p className="text-gray-500">Policy holder since 2021</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      
 
       {/* 5. Coverage You Can Trust Section */}
       <section className="section-padding bg-gray-50">
