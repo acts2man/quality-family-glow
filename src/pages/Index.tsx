@@ -5,6 +5,7 @@ import OfferingsSection from "@/components/home/OfferingsSection";
 import WhyChooseUsSection from "@/components/home/WhyChooseUsSection";
 import CtaSection from "@/components/home/CtaSection";
 import IntroductorySection from "@/components/home/IntroductorySection";
+import OtherCoveragesSection from "@/components/OtherCoveragesSection";
 
 const Index = () => {
   useEffect(() => {
@@ -37,6 +38,7 @@ const Index = () => {
       <OfferingsSection />
       <WhyChooseUsSection />
       <CtaSection />
+      <OtherCoveragesSection />
     </>
   );
 };

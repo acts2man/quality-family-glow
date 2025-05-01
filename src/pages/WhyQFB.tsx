@@ -1,10 +1,10 @@
-
 import React from "react";
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { HandCoins, HandHeart, Clock, Shield, DollarSign } from "lucide-react";
 import { Link } from "react-router-dom";
+import OtherCoveragesSection from "@/components/OtherCoveragesSection";
 
 const WhyQFB = () => {
   return (
@@ -346,6 +346,9 @@ const WhyQFB = () => {
           </div>
         </div>
       </section>
+
+      {/* Other Coverages Available Section */}
+      <OtherCoveragesSection />
     </div>
   );
 };
