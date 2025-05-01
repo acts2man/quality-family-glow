@@ -6,10 +6,8 @@ import { HandCoins, HandHeart, Clock, Shield, DollarSign } from "lucide-react";
 import { Link } from "react-router-dom";
 import OtherCoveragesSection from "@/components/OtherCoveragesSection";
 import HistoryAndVisionSection from "@/components/why/HistoryAndVisionSection";
-
 const WhyQFB = () => {
-  return (
-    <div className="min-h-screen">
+  return <div className="min-h-screen">
       {/* 1. Hero Section */}
       <section className="relative min-h-[60vh] bg-gradient-to-r from-primary-800 to-primary-700 overflow-hidden">
         <div className="absolute inset-0">
@@ -22,11 +20,15 @@ const WhyQFB = () => {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6 leading-tight animate-fade-in">
               Why Families Trust Us
             </h1>
-            <p className="text-xl md:text-2xl text-white/90 mb-8 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+            <p className="text-xl md:text-2xl text-white/90 mb-8 animate-fade-in-up" style={{
+            animationDelay: "0.2s"
+          }}>
               Real Protection. Real People. Real Benefits.
             </p>
             
-            <div className="flex justify-center mb-12 animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
+            <div className="flex justify-center mb-12 animate-fade-in-up" style={{
+            animationDelay: "0.4s"
+          }}>
               <a href="#contact" className="glow-button gold-button">
                 <span>Get Protected Today</span>
               </a>
@@ -35,7 +37,9 @@ const WhyQFB = () => {
           
           {/* Animated background shapes */}
           <div className="absolute top-1/4 left-10 w-64 h-64 rounded-full bg-primary-300/10 blur-3xl animate-float"></div>
-          <div className="absolute bottom-1/4 right-10 w-80 h-80 rounded-full bg-accent-gold/10 blur-3xl animate-float" style={{ animationDelay: "2s" }}></div>
+          <div className="absolute bottom-1/4 right-10 w-80 h-80 rounded-full bg-accent-gold/10 blur-3xl animate-float" style={{
+          animationDelay: "2s"
+        }}></div>
         </div>
       </section>
 
@@ -43,53 +47,7 @@ const WhyQFB = () => {
       <HistoryAndVisionSection />
 
       {/* 2. Built For Real Life Section */}
-      <section className="section-padding bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
-                Protection That Makes Sense
-              </h2>
-              <div className="w-20 h-1 bg-primary-500 mx-auto mb-6"></div>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Life is unpredictable. Traditional insurance doesn't always cover what matters most—missed work, travel for treatment, or paying bills during recovery. That's where we come in.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mt-16">
-              <div className="flex flex-col items-center text-center animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
-                <div className="w-16 h-16 rounded-full bg-primary-100 flex items-center justify-center text-primary-500 mb-6">
-                  <HandCoins className="w-8 h-8" />
-                </div>
-                <h3 className="text-xl font-semibold mb-3">Direct Payments</h3>
-                <p className="text-gray-600">
-                  Benefits are paid directly to you, not to doctors or hospitals, giving you control over your finances.
-                </p>
-              </div>
-
-              <div className="flex flex-col items-center text-center animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-                <div className="w-16 h-16 rounded-full bg-primary-100 flex items-center justify-center text-primary-500 mb-6">
-                  <HandHeart className="w-8 h-8" />
-                </div>
-                <h3 className="text-xl font-semibold mb-3">Use Funds However You Need</h3>
-                <p className="text-gray-600">
-                  Pay for medical bills, mortgage, childcare, or anything else that helps you focus on recovery.
-                </p>
-              </div>
-
-              <div className="flex flex-col items-center text-center animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
-                <div className="w-16 h-16 rounded-full bg-primary-100 flex items-center justify-center text-primary-500 mb-6">
-                  <Clock className="w-8 h-8" />
-                </div>
-                <h3 className="text-xl font-semibold mb-3">Fast Claims Process</h3>
-                <p className="text-gray-600">
-                  Our streamlined claims process means you receive benefits quickly when you need them most.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      
 
       {/* 3. What Makes Us Different Section */}
       <section className="section-padding bg-gray-50">
@@ -184,11 +142,7 @@ const WhyQFB = () => {
                 {/* Image Column */}
                 <div className="relative">
                   <div className="aspect-square rounded-xl overflow-hidden shadow-lg">
-                    <img 
-                      src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80" 
-                      alt="Grace with her family" 
-                      className="w-full h-full object-cover"
-                    />
+                    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80" alt="Grace with her family" className="w-full h-full object-cover" />
                   </div>
                   <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-accent-gold rounded-full flex items-center justify-center text-primary-800 font-bold text-xl">
                     $25,000
@@ -353,8 +307,6 @@ const WhyQFB = () => {
 
       {/* Other Coverages Available Section */}
       <OtherCoveragesSection />
-    </div>
-  );
+    </div>;
 };
-
 export default WhyQFB;
