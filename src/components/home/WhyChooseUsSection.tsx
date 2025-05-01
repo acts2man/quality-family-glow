@@ -67,8 +67,8 @@ const WhyChooseUsSection = () => {
                 <div className="absolute -top-8 -left-8 w-40 h-40 bg-primary-100 rounded-full opacity-70"></div>
                 <div className="absolute -bottom-8 -right-8 w-40 h-40 bg-accent-gold/20 rounded-full"></div>
                 <img 
-                  src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?auto=format&fit=crop&q=80"
-                  alt="Family protected by insurance"
+                  src="/lovable-uploads/4c15b59c-6650-473d-bcce-b9b66019c916.png"
+                  alt="Family enjoying time together"
                   className="rounded-xl shadow-xl relative z-10 w-full h-auto"
                 />
               </div>

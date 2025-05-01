@@ -10,7 +10,7 @@ const CtaSection = () => {
             {/* Image column */}
             <div className="relative">
               <img 
-                src="/lovable-uploads/e39a0fde-ebe8-4306-a912-874626dda023.png" 
+                src="/lovable-uploads/8d778188-0f08-4753-b07a-4c1f2ba8d4de.png" 
                 alt="Person relaxing on couch" 
                 className="w-full h-full object-cover"
               />
