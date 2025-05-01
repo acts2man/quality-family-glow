@@ -15,14 +15,14 @@ const OfferingsSection = () => {
     {
       title: "Critical Illness",
       description: "Financial support during serious health challenges.",
-      imageSrc: "/lovable-uploads/3e0fa4db-490e-4eb2-93d9-c61683935293.png", // Doctor and patient consultation image
+      imageSrc: "/lovable-uploads/1ba8b422-8262-44db-bff8-26c8f96d205a.png", // Swapped with Cancer & Dread Disease image
       href: "/critical-illness",
       features: ["Heart attack", "Stroke", "Major organ transplant"]
     },
     {
       title: "Cancer & Dread Disease",
       description: "Specialized coverage for cancer diagnosis and treatment.",
-      imageSrc: "/lovable-uploads/1ba8b422-8262-44db-bff8-26c8f96d205a.png", // Hospital bed with monitoring equipment image
+      imageSrc: "/lovable-uploads/3e0fa4db-490e-4eb2-93d9-c61683935293.png", // Swapped with Critical Illness image
       href: "/cancer-dread-disease",
       features: ["Cancer diagnosis", "Treatment support", "Recovery assistance"]
     },
