@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { HandCoins, HandHeart, Clock, Shield, DollarSign } from "lucide-react";
 import { Link } from "react-router-dom";
 import OtherCoveragesSection from "@/components/OtherCoveragesSection";
+import HistoryAndVisionSection from "@/components/why/HistoryAndVisionSection";
 
 const WhyQFB = () => {
   return (
@@ -37,6 +38,9 @@ const WhyQFB = () => {
           <div className="absolute bottom-1/4 right-10 w-80 h-80 rounded-full bg-accent-gold/10 blur-3xl animate-float" style={{ animationDelay: "2s" }}></div>
         </div>
       </section>
+
+      {/* New History and Vision Section */}
+      <HistoryAndVisionSection />
 
       {/* 2. Built For Real Life Section */}
       <section className="section-padding bg-white">
