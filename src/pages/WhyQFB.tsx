@@ -1,11 +1,11 @@
 import React from "react";
-import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { HandCoins, HandHeart, Clock, Shield, DollarSign } from "lucide-react";
 import { Link } from "react-router-dom";
 import OtherCoveragesSection from "@/components/OtherCoveragesSection";
 import HistoryAndVisionSection from "@/components/why/HistoryAndVisionSection";
+
 const WhyQFB = () => {
   return <div className="min-h-screen">
       {/* 1. Hero Section */}
@@ -63,65 +63,47 @@ const WhyQFB = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <HoverCard>
-              <HoverCardTrigger asChild>
-                <div className="bg-white rounded-xl shadow-lg p-6 text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-1 cursor-pointer">
-                  <div className="w-16 h-16 rounded-full bg-primary-100 flex items-center justify-center text-primary-500 mx-auto mb-6">
-                    <Shield className="w-8 h-8" />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-3">Guaranteed Issue Policies</h3>
-                  <p className="text-gray-600">No health questions required for many of our policies.</p>
-                </div>
-              </HoverCardTrigger>
-              <HoverCardContent className="w-80">
-                <div className="space-y-2">
-                  <h4 className="text-lg font-medium">Guaranteed Issue</h4>
-                  <p className="text-sm text-gray-600">
-                    Many of our policies are available with no medical exam or health questions, ensuring that everyone can get the coverage they need regardless of pre-existing conditions.
-                  </p>
-                </div>
-              </HoverCardContent>
-            </HoverCard>
+            <div className="bg-white rounded-xl shadow-lg p-6 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+              <div className="w-16 h-16 rounded-full bg-primary-100 flex items-center justify-center text-primary-500 mx-auto mb-6">
+                <Shield className="w-8 h-8" />
+              </div>
+              <h3 className="text-xl font-semibold mb-3 text-center">Guaranteed Issue Policies</h3>
+              <p className="text-gray-600 text-center mb-4">No health questions required for many of our policies.</p>
+              <div className="border-t border-gray-100 pt-4 mt-2">
+                <h4 className="text-lg font-medium mb-2">Guaranteed Issue</h4>
+                <p className="text-sm text-gray-600">
+                  Many of our policies are available with no medical exam or health questions, ensuring that everyone can get the coverage they need regardless of pre-existing conditions.
+                </p>
+              </div>
+            </div>
 
-            <HoverCard>
-              <HoverCardTrigger asChild>
-                <div className="bg-white rounded-xl shadow-lg p-6 text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-1 cursor-pointer">
-                  <div className="w-16 h-16 rounded-full bg-primary-100 flex items-center justify-center text-primary-500 mx-auto mb-6">
-                    <DollarSign className="w-8 h-8" />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-3">Direct Payments to You</h3>
-                  <p className="text-gray-600">Benefits are paid directly to you, not hospitals or doctors.</p>
-                </div>
-              </HoverCardTrigger>
-              <HoverCardContent className="w-80">
-                <div className="space-y-2">
-                  <h4 className="text-lg font-medium">Cash in Your Hands</h4>
-                  <p className="text-sm text-gray-600">
-                    Unlike traditional health insurance, our benefits are paid directly to you, allowing you to use the funds wherever they're needed most in your life.
-                  </p>
-                </div>
-              </HoverCardContent>
-            </HoverCard>
+            <div className="bg-white rounded-xl shadow-lg p-6 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+              <div className="w-16 h-16 rounded-full bg-primary-100 flex items-center justify-center text-primary-500 mx-auto mb-6">
+                <DollarSign className="w-8 h-8" />
+              </div>
+              <h3 className="text-xl font-semibold mb-3 text-center">Direct Payments to You</h3>
+              <p className="text-gray-600 text-center mb-4">Benefits are paid directly to you, not hospitals or doctors.</p>
+              <div className="border-t border-gray-100 pt-4 mt-2">
+                <h4 className="text-lg font-medium mb-2">Cash in Your Hands</h4>
+                <p className="text-sm text-gray-600">
+                  Unlike traditional health insurance, our benefits are paid directly to you, allowing you to use the funds wherever they're needed most in your life.
+                </p>
+              </div>
+            </div>
 
-            <HoverCard>
-              <HoverCardTrigger asChild>
-                <div className="bg-white rounded-xl shadow-lg p-6 text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-1 cursor-pointer">
-                  <div className="w-16 h-16 rounded-full bg-primary-100 flex items-center justify-center text-primary-500 mx-auto mb-6">
-                    <HandHeart className="w-8 h-8" />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-3">Flexible Use of Benefits</h3>
-                  <p className="text-gray-600">Pay rent, groceries, childcare—your choice.</p>
-                </div>
-              </HoverCardTrigger>
-              <HoverCardContent className="w-80">
-                <div className="space-y-2">
-                  <h4 className="text-lg font-medium">Use Benefits Your Way</h4>
-                  <p className="text-sm text-gray-600">
-                    When you receive a benefit payment, there are no restrictions on how you use it. Pay medical bills, mortgage, utilities, childcare, or any other expenses.
-                  </p>
-                </div>
-              </HoverCardContent>
-            </HoverCard>
+            <div className="bg-white rounded-xl shadow-lg p-6 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+              <div className="w-16 h-16 rounded-full bg-primary-100 flex items-center justify-center text-primary-500 mx-auto mb-6">
+                <HandHeart className="w-8 h-8" />
+              </div>
+              <h3 className="text-xl font-semibold mb-3 text-center">Flexible Use of Benefits</h3>
+              <p className="text-gray-600 text-center mb-4">Pay rent, groceries, childcare—your choice.</p>
+              <div className="border-t border-gray-100 pt-4 mt-2">
+                <h4 className="text-lg font-medium mb-2">Use Benefits Your Way</h4>
+                <p className="text-sm text-gray-600">
+                  When you receive a benefit payment, there are no restrictions on how you use it. Pay medical bills, mortgage, utilities, childcare, or any other expenses.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
