@@ -1,5 +1,6 @@
 
 import React from "react";
+import { Button } from "../ui/button";
 
 const IntroductorySection = () => {
   return (
@@ -36,13 +37,15 @@ const IntroductorySection = () => {
             <p className="text-lg text-gray-700 mb-8">
               But you're here now — and that means you're already on the path to peace of mind. At Quality Family Benefits, we help you get the cash payouts you need to face life's hardest moments head-on. Plans are affordable, flexible, and built for real life.
             </p>
-            <a
-              href="#what-we-offer"
-              className="inline-block bg-primary-500 text-white font-semibold text-lg px-8 py-3 rounded-md transition-transform hover:bg-primary-600"
-              aria-label="Schedule a consultation today"
-            >
-              Schedule a consultation today
-            </a>
+            <div className="flex justify-center lg:justify-start">
+              <a
+                href="#what-we-offer"
+                className="inline-block bg-primary-500 text-white font-semibold text-lg px-8 py-3 rounded-md transition-transform hover:bg-primary-600"
+                aria-label="Schedule a consultation today"
+              >
+                Schedule a consultation today
+              </a>
+            </div>
           </div>
         </div>
       </div>
