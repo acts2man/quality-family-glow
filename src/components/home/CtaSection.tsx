@@ -1,3 +1,4 @@
+
 import React from "react";
 
 const CtaSection = () => {
@@ -9,8 +10,8 @@ const CtaSection = () => {
             {/* Image column */}
             <div className="relative">
               <img 
-                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80" 
-                alt="Family protected by insurance" 
+                src="/public/lovable-uploads/29041bd1-29f5-4f34-80b0-fa6ed267892a.png" 
+                alt="Person relaxing on couch" 
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-b from-primary-500/40 to-primary-800/80 flex items-center justify-center">
@@ -43,23 +44,6 @@ const CtaSection = () => {
                   <a href="#" className="glow-button gold-button w-full sm:w-auto text-center">
                     <span>Schedule a Consultation</span>
                   </a>
-                </div>
-                
-                <div className="pt-6 border-t border-gray-200">
-                  <p className="text-gray-600 mb-4">
-                    Would you like to include your spouse or another family member on the call?
-                  </p>
-                  <div className="flex flex-wrap gap-3">
-                    <button className="px-4 py-2 border-2 border-primary-500 text-primary-500 rounded-md font-medium hover:bg-primary-50 transition-colors">
-                      Yes, my spouse
-                    </button>
-                    <button className="px-4 py-2 border-2 border-primary-500 text-primary-500 rounded-md font-medium hover:bg-primary-50 transition-colors">
-                      Yes, someone else
-                    </button>
-                    <button className="px-4 py-2 border-2 border-primary-500 text-primary-500 rounded-md font-medium hover:bg-primary-50 transition-colors">
-                      No, just me
-                    </button>
-                  </div>
                 </div>
               </div>
               
