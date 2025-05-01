@@ -31,17 +31,17 @@ const IntroductorySection = () => {
               Struggling With High Deductibles, Lost Wages, or Uncovered Expenses?
             </h2>
             <p className="text-lg text-gray-700 mb-6">
-              You're not alone. Every day, families face the financial shock of medical emergencies that traditional health insurance just doesn't cover. Whether it’s a sudden accident, a critical illness, or the overwhelming costs of cancer care — the stress hits hard and fast. And when you can’t work, the bills don’t stop.
+              You're not alone. Every day, families face the financial shock of medical emergencies that traditional health insurance just doesn't cover. Whether it's a sudden accident, a critical illness, or the overwhelming costs of cancer care — the stress hits hard and fast. And when you can't work, the bills don't stop.
             </p>
             <p className="text-lg text-gray-700 mb-8">
-              But you're here now — and that means you're already on the path to peace of mind. At Quality Family Benefits, we help you get the cash payouts you need to face life’s hardest moments head-on. Plans are affordable, flexible, and built for real life.
+              But you're here now — and that means you're already on the path to peace of mind. At Quality Family Benefits, we help you get the cash payouts you need to face life's hardest moments head-on. Plans are affordable, flexible, and built for real life.
             </p>
             <a
               href="#what-we-offer"
-              className="inline-block glow-button gold-button text-white font-semibold text-lg px-8 py-3 rounded-md transition-transform hover:scale-105"
-              aria-label="See how we can help you today"
+              className="inline-block bg-primary-500 text-white font-semibold text-lg px-8 py-3 rounded-md transition-transform hover:bg-primary-600"
+              aria-label="Schedule a consultation today"
             >
-              See How We Can Help You Today
+              Schedule a consultation today
             </a>
           </div>
         </div>
