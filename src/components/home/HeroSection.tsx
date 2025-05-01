@@ -1,6 +1,7 @@
 
 import React from "react";
 import { cn } from "@/lib/utils";
+import { Separator } from "@/components/ui/separator";
 
 const HeroSection = () => {
   return (
@@ -46,6 +47,11 @@ const HeroSection = () => {
         {/* Animated background shapes */}
         <div className="absolute top-1/4 left-10 w-64 h-64 rounded-full bg-primary-300/10 blur-3xl animate-float"></div>
         <div className="absolute bottom-1/4 right-10 w-80 h-80 rounded-full bg-accent-gold/10 blur-3xl animate-float" style={{ animationDelay: "2s" }}></div>
+      </div>
+      
+      {/* Straight line separator instead of wavy line */}
+      <div className="absolute bottom-0 left-0 w-full">
+        <Separator className="h-1 bg-white" />
       </div>
     </section>
   );
