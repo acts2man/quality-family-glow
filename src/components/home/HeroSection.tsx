@@ -22,7 +22,7 @@ const HeroSection = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center gap-4 mb-12 animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
-            <a href="tel:7088665057" className="glow-button gold-button">
+            <a href="tel:7083304516" className="glow-button gold-button">
               <span>Call Now</span>
             </a>
             <a href="#schedule" className="glow-button">
@@ -49,7 +49,7 @@ const HeroSection = () => {
         <div className="absolute bottom-1/4 right-10 w-80 h-80 rounded-full bg-accent-gold/10 blur-3xl animate-float" style={{ animationDelay: "2s" }}></div>
       </div>
       
-      {/* Straight line separator instead of wavy line */}
+      {/* Straight line separator */}
       <div className="absolute bottom-0 left-0 w-full">
         <Separator className="h-1 bg-white" />
       </div>

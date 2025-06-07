@@ -4,20 +4,39 @@ import React from "react";
 const WhyChooseUsSection = () => {
   const benefits = [
     {
-      title: "We Pay YOU Directly",
-      description: "Payments go straight to you, not to doctors or hospitals, giving you complete financial freedom."
+      title: "Decades of Experience",
+      description: "We have decades of experience working with insurance companies for our clients"
     },
     {
-      title: "Guaranteed Coverage Options",
-      description: "We have plans with guaranteed acceptance for eligible applicants, regardless of health conditions."
+      title: "Multiple Company Options",
+      description: "We offer plans from many companies and help clients select the plans that suit them best"
     },
     {
-      title: "Keep Your Plan, Even if You Change Jobs",
-      description: "Our coverage stays with you regardless of employment changes, providing continuous protection."
+      title: "Financially Strong Companies",
+      description: "All our companies are financially strong with top ratings"
     },
     {
-      title: "Covers Victims of Crime",
-      description: "We provide special coverage options for unexpected situations, including crime-related injuries."
+      title: "State Protection",
+      description: "All are protected by state guarantee associations"
+    },
+    {
+      title: "Quality Service",
+      description: "All have good records for customer service"
+    }
+  ];
+
+  const employerComparison = [
+    {
+      description: "Employers often change coverage levels with insurance companies and brokers. The coverage you thought you had coming might wind up different when claim time comes"
+    },
+    {
+      description: "When you leave your employer you might remember to continue the coverage on your own, but it might just \"FALL THROUGH THE CRACKS!\""
+    },
+    {
+      description: "YOU DON'T HAVE YOUR CAR INSURANCE THROUGH YOUR EMPLOYER, DO YOU? OR YOUR HOMEOWNERS OR MORTGAGE THROUGH THE BOSS, DO YOU?"
+    },
+    {
+      description: "SO WHY HAVE YOUR SUPPLEMENTAL COVERAGES THROUGH THE JOB?"
     }
   ];
   
@@ -53,12 +72,6 @@ const WhyChooseUsSection = () => {
                   </div>
                 ))}
               </div>
-              
-              <div className="mt-8">
-                <a href="#" className="glow-button">
-                  <span>See Why Thousands Trust QFB</span>
-                </a>
-              </div>
             </div>
             
             {/* Right Column - Image */}
@@ -71,6 +84,38 @@ const WhyChooseUsSection = () => {
                   alt="Family enjoying time together"
                   className="rounded-xl shadow-xl relative z-10 w-full h-auto"
                 />
+              </div>
+            </div>
+          </div>
+
+          {/* New subsection: How Are We Better Than Getting Benefits On The Job? */}
+          <div className="mt-16 pt-16 border-t border-gray-200">
+            <div className="text-center mb-12">
+              <h3 className="text-2xl md:text-3xl font-bold mb-4 text-gray-900">
+                How Are We Better Than Getting Benefits On The Job?
+              </h3>
+            </div>
+            
+            <div className="max-w-4xl mx-auto">
+              <div className="space-y-6">
+                {employerComparison.map((point, index) => (
+                  <div 
+                    key={index}
+                    className="flex items-start animate-fade-in-up p-6 bg-gray-50 rounded-lg"
+                    style={{ animationDelay: `${index * 0.1 + 0.4}s` }}
+                  >
+                    <div className="flex-shrink-0 mt-1">
+                      <div className="w-6 h-6 rounded-full bg-primary-500 flex items-center justify-center">
+                        <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                      </div>
+                    </div>
+                    <div className="ml-4">
+                      <p className="text-gray-700 text-lg">{point.description}</p>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
           </div>

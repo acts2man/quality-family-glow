@@ -8,30 +8,30 @@ const OfferingsSection = () => {
     {
       title: "Accident Coverage",
       description: "Protection for life's unexpected moments with direct payments to you.",
-      imageSrc: "/lovable-uploads/061b14db-72d9-48b7-bbca-fc93677535c1.png", // Car accident image
+      imageSrc: "/lovable-uploads/061b14db-72d9-48b7-bbca-fc93677535c1.png",
       href: "/accident",
-      features: ["Coverage for injuries", "Hospital stays", "Emergency treatment"]
+      features: ["Payment depending on injuries and treatments to use as you choose", "OR payments to match the cost of your treatments for accidents", "Emergency treatment"]
     },
     {
       title: "Critical Illness",
-      description: "Financial support during serious health challenges.",
-      imageSrc: "/lovable-uploads/1ba8b422-8262-44db-bff8-26c8f96d205a.png", // Swapped with Cancer & Dread Disease image
+      description: "Cash lump sums paid on diagnosis of CANCER HEART ATTACK STROKE",
+      imageSrc: "/lovable-uploads/1ba8b422-8262-44db-bff8-26c8f96d205a.png",
       href: "/critical-illness",
       features: ["Heart attack", "Stroke", "Major organ transplant"]
     },
     {
       title: "Cancer & Dread Disease",
       description: "Specialized coverage for cancer diagnosis and treatment.",
-      imageSrc: "/lovable-uploads/3e0fa4db-490e-4eb2-93d9-c61683935293.png", // Swapped with Critical Illness image
+      imageSrc: "/lovable-uploads/3e0fa4db-490e-4eb2-93d9-c61683935293.png",
       href: "/cancer-dread-disease",
       features: ["Cancer diagnosis", "Treatment support", "Recovery assistance"]
     },
     {
       title: "Life Insurance",
       description: "Secure your family's future with reliable life coverage.",
-      imageSrc: "/lovable-uploads/19106bf6-1dda-457a-a9fc-71c500914a2a.png", // Insurance document with toy cars image
+      imageSrc: "/lovable-uploads/19106bf6-1dda-457a-a9fc-71c500914a2a.png",
       href: "/life-insurance",
-      features: ["Term life options", "Whole life coverage", "Death benefits"]
+      features: ["Affordable Permanent Plans for all levels of health", "Even guaranteed coverage for people ordinarily uninsurable", "Death benefits"]
     }
   ];
 
@@ -44,7 +44,7 @@ const OfferingsSection = () => {
           </h2>
           <div className="w-20 h-1 bg-primary-500 mx-auto mb-6"></div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Our supplemental insurance plans are designed to provide financial 
+            The supplemental insurance plans we offer are designed to provide financial 
             support when you need it most - paying directly to you, not to doctors or hospitals.
           </p>
         </div>
