@@ -1,45 +1,7 @@
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Check, Users, Heart, FileText, Phone } from "lucide-react";
+import { Check, Users, Heart, FileText, Phone, Shield, ShieldCheck } from "lucide-react";
 import OtherCoveragesSection from "@/components/OtherCoveragesSection";
-
-const benefits = [
-  {
-    icon: Heart,
-    title: "Final Expense Insurance",
-    desc: "Fixed premiums designed to cover funeral and burial costs. Simple, permanent, and affordable."
-  },
-  {
-    icon: FileText,
-    title: "Permanent Coverage",
-    desc: "Protection for life — your coverage never reduces or expires due to age or health changes."
-  },
-  {
-    icon: Check,
-    title: "Guaranteed Issue Plans",
-    desc: "No health questions required. Coverage options for everyone, even if you've been turned down before."
-  }
-];
-
-const faqs = [
-  {
-    q: "What's the difference between term and permanent?",
-    a: "Term insurance lasts for a set period (like 10 or 20 years), while permanent insurance covers you for life and builds cash value."
-  },
-  {
-    q: "Do I need a medical exam?",
-    a: "Our guaranteed issue plans require no health exam. Other options may consider your health for better pricing."
-  },
-  {
-    q: "What happens if I miss a payment?",
-    a: "Most permanent policies offer a grace period. If payment isn't made within this, coverage may lapse."
-  },
-  {
-    q: "Can I get coverage if I've been denied before?",
-    a: "Yes — our guaranteed issue and final expense plans help those who've been declined elsewhere."
-  }
-];
 
 export default function LifeInsurance() {
   const [includeSpouse, setIncludeSpouse] = useState(false);
@@ -54,13 +16,10 @@ export default function LifeInsurance() {
               Life Insurance That Leaves a Legacy — Not a Bill
             </h1>
             <h2 className="text-lg md:text-2xl text-primary-700 mb-7 font-inter">
-              Protect your loved ones with permanent, affordable coverage — even if your health isn’t perfect.
+              Protect your loved ones with permanent, affordable coverage — even if your health isn't perfect.
             </h2>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button className="glow-button" size="lg">
-                Find a Plan
-              </Button>
-              <Button className="glow-button gold-button" size="lg" variant="secondary">
+              <Button className="glow-button gold-button" size="lg">
                 Schedule a No-Pressure Call
               </Button>
             </div>
@@ -74,77 +33,104 @@ export default function LifeInsurance() {
         </div>
       </section>
 
-      {/* Why Life Insurance Matters */}
-      <section className="container mx-auto px-4 py-12 md:py-16 max-w-4xl">
-        <p className="mb-7 text-lg text-primary-900 text-center font-inter">
-          Most people don’t want life insurance to leave someone rich — they just want to make sure their family isn’t stuck with a funeral bill. Our policies are built around that exact need: <span className="font-bold text-accent-gold">affordable final expense coverage</span> that’s simple, permanent, and easy to qualify for.
-        </p>
-        <div className="bg-white/60 border border-accent-gold rounded-xl p-6 flex flex-col items-center shadow card-hover transition-all duration-300 max-w-lg mx-auto mb-6">
-          <span className="italic text-gray-700 text-sm mb-2">“Not for someone to hit the jackpot… just to give them peace when I’m gone.”</span>
-          <div className="flex items-center mt-4 gap-3">
-            <Users className="text-primary-700" />
-            <div className="font-bold text-lg text-primary-800 hover:text-accent-gold transition-colors duration-200 cursor-pointer">
-              Average funeral costs: <span className="text-accent-gold">$8,000–$12,000</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Our Life Insurance Solutions */}
-      <section className="container mx-auto py-10 md:py-16">
-        <h3 className="text-center text-2xl font-montserrat text-primary-800 mb-8">Affordable. Permanent. No Surprises.</h3>
-        <div className="grid gap-6 md:grid-cols-3">
-          {benefits.map((b, i) => (
-            <div
-              key={b.title}
-              className="group card-hover bg-white/70 border border-primary-200 p-6 rounded-xl transition-all hover:shadow-lg hover:bg-primary-50 flex flex-col items-center text-center relative"
-            >
-              <b.icon className="mb-4 text-accent-gold group-hover:text-primary-700 transition-colors" size={38} />
-              <div className="font-bold text-xl text-primary-800 mb-2">{b.title}</div>
-              <div className="text-primary-700">{b.desc}</div>
-              <div className="absolute top-0 left-0 h-1 w-full bg-accent-gold rounded-t-xl opacity-0 group-hover:opacity-100 transition-opacity" />
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Plan Customization Section */}
-      <section className="bg-gradient-to-r from-[#FEF7CD]/70 to-[#FFD700]/20 py-12 md:py-16 px-4">
-        <div className="container mx-auto text-center">
-          <h3 className="text-2xl mb-4 font-bold text-primary-900">We Work With the Top Carriers to Find What Fits YOU</h3>
-          <p className="mb-6 mx-auto max-w-2xl text-lg text-primary-800">
-            As <span className="font-bold text-accent-gold">independent agents</span>, we aren’t locked into one company. We shop top-rated life insurance providers to find you the best options — based on your age, health, and budget.
+      {/* Main Content Section */}
+      <section className="container mx-auto px-4 py-12 md:py-16 max-w-5xl">
+        {/* Introduction */}
+        <div className="text-center mb-12">
+          <p className="text-lg text-primary-900 mb-8 leading-relaxed">
+            Many insurance agents are out there selling different types of coverages.<br />
+            Some are used for investments and are very sophisticated and good but very expensive
           </p>
-          <Button className="glow-button gold-button" size="lg">
-            Get Matched With a Plan
-          </Button>
         </div>
-      </section>
 
-      {/* Testimonial/Comforting Callout */}
-      <section className="container mx-auto py-12 md:py-20 px-4">
-        <div className="bg-primary-800/90 text-white rounded-xl p-7 max-w-2xl mx-auto relative animate-fade-in flex items-center shadow-md">
-          <div className="mr-5">
-            <Heart className="stroke-accent-gold" size={40} />
-          </div>
-          <div>
-            <span className="italic font-montserrat text-lg md:text-xl block mb-1">
-              “I couldn’t qualify anywhere else… but this plan gave my family peace of mind.”
-            </span>
+        {/* Focus Statement */}
+        <div className="bg-gradient-to-r from-primary-800 to-primary-700 text-white rounded-2xl p-8 md:p-12 mb-12 shadow-xl">
+          <div className="flex flex-col md:flex-row items-center gap-6">
+            <div className="flex-shrink-0">
+              <Heart className="w-16 h-16 text-accent-gold" />
+            </div>
+            <div className="text-center md:text-left">
+              <h3 className="text-2xl md:text-3xl font-bold mb-4 text-white">
+                OUR FOCUS IS ON HELPING PEOPLE WHO JUST WANT TO MAKE SURE THEIR FINAL EXPENSES ARE PAID.
+              </h3>
+              <p className="text-xl text-white/90 leading-relaxed">
+                YOU DON'T WANT ANYONE TO "HIT THE JACKPOT" AND BECOME RICH AT YOUR PASSING; YOU JUST WANT TO LEAVE HAPPY MEMORIES BEHIND INSTEAD OF A FUNERAL BILL!
+              </p>
+            </div>
           </div>
         </div>
-      </section>
 
-      {/* FAQ Accordion (Common Questions) */}
-      <section className="container mx-auto px-4 py-6 md:py-12 max-w-2xl">
-        <Accordion type="single" collapsible className="bg-white/60 rounded-lg shadow divide-y divide-accent-gold">
-          {faqs.map((faq, i) => (
-            <AccordionItem value={`faq${i}`} key={faq.q}>
-              <AccordionTrigger className="text-primary-800 font-semibold text-base md:text-lg hover:text-accent-gold transition-colors">{faq.q}</AccordionTrigger>
-              <AccordionContent className="text-primary-900">{faq.a}</AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
+        {/* Our Promise Section */}
+        <div className="grid md:grid-cols-2 gap-8 mb-12">
+          <div className="bg-white/70 rounded-xl p-6 shadow-lg card-hover">
+            <div className="flex items-center gap-4 mb-4">
+              <ShieldCheck className="w-8 h-8 text-accent-gold" />
+              <h4 className="text-xl font-bold text-primary-800">Permanent Protection</h4>
+            </div>
+            <p className="text-primary-700 leading-relaxed">
+              We offer plans that are permanent, that cannot be cancelled by the insurance companies regardless of any health issues that develop. The price will also be locked in for life!
+            </p>
+          </div>
+          
+          <div className="bg-white/70 rounded-xl p-6 shadow-lg card-hover">
+            <div className="flex items-center gap-4 mb-4">
+              <Shield className="w-8 h-8 text-accent-gold" />
+              <h4 className="text-xl font-bold text-primary-800">Trusted Companies</h4>
+            </div>
+            <p className="text-primary-700 leading-relaxed">
+              And we only represent companies that are financially sound, protected by state guarantee associations and have a history of great customer service.
+            </p>
+          </div>
+        </div>
+
+        {/* Who We Help Section */}
+        <div className="bg-gradient-to-r from-[#FEF7CD]/70 to-[#FFD700]/20 rounded-2xl p-8 md:p-12 mb-12">
+          <div className="text-center mb-8">
+            <Users className="w-12 h-12 text-primary-700 mx-auto mb-4" />
+            <h3 className="text-2xl md:text-3xl font-bold text-primary-800 mb-4">
+              We Help People of All Ages
+            </h3>
+            <p className="text-lg text-primary-700 mb-6">
+              Including those who are older and have health issues that most insurance people consider uninsurable.
+            </p>
+          </div>
+          
+          <div className="bg-white/60 rounded-xl p-6 mb-6">
+            <h4 className="text-xl font-bold text-primary-800 mb-4 text-center">
+              We are thrilled to help people with serious conditions such as:
+            </h4>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-3 text-primary-700">
+              <div className="flex items-center gap-2">
+                <Check className="w-4 h-4 text-accent-gold flex-shrink-0" />
+                <span>HIV</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Check className="w-4 h-4 text-accent-gold flex-shrink-0" />
+                <span>COPD</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Check className="w-4 h-4 text-accent-gold flex-shrink-0" />
+                <span>Histories of cancer</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Check className="w-4 h-4 text-accent-gold flex-shrink-0" />
+                <span>Heart attack</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Check className="w-4 h-4 text-accent-gold flex-shrink-0" />
+                <span>Stroke</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Check className="w-4 h-4 text-accent-gold flex-shrink-0" />
+                <span>And much more</span>
+              </div>
+            </div>
+          </div>
+          
+          <p className="text-center text-primary-800 font-semibold">
+            While it is certainly best to get coverage when you are young and healthy, we are certain that the plans we offer will be the best way available to plan for your inevitable final expenses.
+          </p>
+        </div>
       </section>
 
       {/* Other Coverages Available Section */}
@@ -153,14 +139,16 @@ export default function LifeInsurance() {
       {/* Final CTA Block */}
       <section className="w-full bg-gradient-to-t from-[#FFD70020] via-[#F2FCE2] to-[#D3E4FD] py-14 px-4 animate-fade-in-up">
         <div className="container mx-auto flex flex-col items-center gap-6">
-          <h3 className="text-2xl md:text-3xl font-bold text-primary-800 mb-2">Leave a Legacy — Not a Burden</h3>
+          <h3 className="text-2xl md:text-3xl font-bold text-primary-800 mb-2 text-center">
+            Call or Schedule a No Pressure Consultation
+          </h3>
           <p className="text-primary-800 text-lg md:text-xl text-center max-w-2xl mb-4">
-            Let’s help you find the coverage that fits your life, your budget, and your values.
+            With a trained licensed professional
           </p>
           <div className="flex flex-col sm:flex-row gap-4 w-full justify-center">
-            <Button className="glow-button gold-button" size="lg">
-              <Phone className="mr-2" /> Call Now
-            </Button>
+            <a href="tel:7083304516" className="glow-button gold-button text-center">
+              <Phone className="mr-2" /> Call Now - 708-330-4516
+            </a>
             <Button className="glow-button" size="lg" variant="secondary">
               Schedule a Call
             </Button>
