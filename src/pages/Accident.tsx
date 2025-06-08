@@ -1,48 +1,11 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { CheckCircle, Ambulance, User, BookOpen, CircleDollarSign, Shield, Heart, Stethoscope, Brain, AirVent } from "lucide-react";
-import { 
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+import { CheckCircle } from "lucide-react";
 import { Link } from "react-router-dom";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
-import * as z from "zod";
-import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { toast } from "sonner";
 import OtherCoveragesSection from "@/components/OtherCoveragesSection";
-import TestimonialSection from "@/components/home/TestimonialSection";
-
-const questionFormSchema = z.object({
-  name: z.string().min(2, { message: "Name must be at least 2 characters." }),
-  email: z.string().email({ message: "Please enter a valid email address." }),
-  question: z.string().min(5, { message: "Please provide your question." }),
-});
-
-type QuestionFormValues = z.infer<typeof questionFormSchema>;
 
 const AccidentPage = () => {
-  const form = useForm<QuestionFormValues>({
-    resolver: zodResolver(questionFormSchema),
-    defaultValues: {
-      name: "",
-      email: "",
-      question: "",
-    },
-  });
-
-  function onSubmit(data: QuestionFormValues) {
-    toast.success("Your question has been submitted. We'll get back to you soon!");
-    form.reset();
-  }
-
   return (
     <div className="w-full">
       {/* Hero Section */}
@@ -72,18 +35,50 @@ const AccidentPage = () => {
             />
           </div>
         </div>
-        {/* Straight line separator instead of wavy line */}
+        {/* Straight line separator */}
         <div className="absolute bottom-0 left-0 w-full">
           <hr className="border-0 h-1 bg-white" />
         </div>
       </section>
 
-      {/* Grace's Story Section - Expanded with new content */}
+      {/* Introductory Section */}
       <section className="py-20 px-4">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-8 text-primary-700">
+              OVER TWENTY MILLION PEOPLE A YEAR SUFFER ACCIDENTAL INJURIES, FROM MINOR TO FATAL!
+            </h2>
+            <div className="w-20 h-1 bg-accent-gold mx-auto mb-8"></div>
+            <div className="max-w-4xl mx-auto space-y-6 text-lg text-gray-700">
+              <p>
+                Part of what makes them so devastating is that there is no advance notice or way to prepare.
+              </p>
+              <p>
+                Medical insurance covers most of the cost (minus <strong>HUGE DEDUCTIBLES AND COPAYS!</strong>) but there is also loss of work time and other out of pocket costs.
+              </p>
+              <p>
+                So Medical Insurance pays the doctors (except for deductibles!) and car insurance will pay mechanics to fix your car
+              </p>
+              <p className="text-2xl font-bold text-primary-800">
+                BUT WHO PAYS YOU FOR YOUR ECONOMIC HURT?
+              </p>
+              <p className="text-2xl font-bold text-accent-gold">
+                THE PLANS WE OFFER WILL!
+              </p>
+              <p className="text-base italic text-gray-600 bg-gray-50 p-4 rounded-lg">
+                (Our joke is that medical insurance will pay the doctor so he can make payments on his BMW while our plans will keep you from having your Ford or Chevy repossessed!)
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Maria's Story Section */}
+      <section className="py-20 px-4 bg-gray-50">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary-700">
-              Meet Grace: A Real Story of Recovery
+              Meet Maria: A Real Story of Recovery
             </h2>
             <div className="w-20 h-1 bg-accent-gold mx-auto mb-6"></div>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
@@ -99,7 +94,7 @@ const AccidentPage = () => {
                   <div className="bg-white rounded-xl shadow-lg p-4 mb-8 max-w-xs mx-auto">
                     <img 
                       src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&h=300"
-                      alt="Grace's profile"
+                      alt="Maria's profile"
                       className="rounded-lg w-full h-auto"
                     />
                   </div>
@@ -109,11 +104,11 @@ const AccidentPage = () => {
                       <span className="text-accent-gold text-5xl font-bold mr-2">$</span>
                       <span className="text-5xl font-bold text-primary-700">4,000</span>
                     </div>
-                    <p className="text-gray-700">Payout received directly to Grace</p>
+                    <p className="text-gray-700">Payout received directly to Maria</p>
                   </div>
                   
                   <div className="bg-primary-100 border border-primary-200 rounded-lg p-4">
-                    <h4 className="font-semibold text-primary-700 mb-2">Grace's Policy Details:</h4>
+                    <h4 className="font-semibold text-primary-700 mb-2">Maria's Policy Details:</h4>
                     <ul className="space-y-2 text-sm text-gray-700">
                       <li className="flex items-center">
                         <CheckCircle className="h-4 w-4 text-primary-500 mr-2" />
@@ -133,7 +128,7 @@ const AccidentPage = () => {
                 
                 <div className="mt-8 text-center">
                   <p className="text-sm text-gray-500 italic">"I never thought I'd need it until I did."</p>
-                  <p className="font-bold text-primary-700">Grace Martinez</p>
+                  <p className="font-bold text-primary-700">Maria Martinez</p>
                 </div>
               </div>
               
@@ -148,7 +143,7 @@ const AccidentPage = () => {
                   
                   <div className="space-y-4 text-gray-700">
                     <p className="text-lg leading-relaxed">
-                      <span className="font-semibold">Grace was devastated.</span> When she slipped on ice and broke her ankle badly, 
+                      <span className="font-semibold">Maria was devastated.</span> When she slipped on ice and broke her ankle badly, 
                       she couldn't work for a month and had no idea how she would make ends meet.
                     </p>
                     
@@ -167,7 +162,7 @@ const AccidentPage = () => {
                     </blockquote>
                     
                     <p>
-                      One friend responded bluntly, <span className="font-medium">"Grace, this is on you. You should have gotten accident insurance!"</span>
+                      One friend responded bluntly, <span className="font-medium">"Maria, this is on you. You should have gotten accident insurance!"</span>
                     </p>
                     
                     <p>
@@ -189,7 +184,7 @@ const AccidentPage = () => {
                   
                   <div className="mt-8">
                     <a href="#plan-overview" className="glow-button gold-button inline-block">
-                      <span>Get Protected Like Grace</span>
+                      <span>Get Protected Like Maria</span>
                     </a>
                     <p className="mt-4 text-sm text-gray-500">Plans start at just $19.95/month</p>
                   </div>
@@ -200,33 +195,28 @@ const AccidentPage = () => {
         </div>
       </section>
 
-      {/* Fixed-Benefit Plan Overview */}
+      {/* Two Types of Accident Plans Section */}
       <section id="plan-overview" className="py-20 px-4">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-primary-800">
-            Our Fixed-Benefit Plan: Based on Your Injury and Treatment
+            THERE ARE TWO TYPES OF ACCIDENT PLANS WE OFFER:
           </h2>
           
           <div className="bg-white rounded-xl shadow-lg p-8 mb-16">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               <div className="space-y-6">
-                <div className="flex gap-4">
-                  <div className="flex-shrink-0">
-                    <Shield className="h-12 w-12 text-primary-500" />
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-semibold text-primary-700 mb-4">How Our Plans Work</h3>
-                    <p className="text-gray-700">
-                      <span className="font-bold">The ACCIDENT FIXED BENEFIT PLAN</span> pays based on your injury and the treatment you receive.
-                    </p>
-                    <p className="text-gray-700 mt-3">
-                      <span className="font-bold">The PLAN ENHANCER and TRIOMED PLAN</span> pay based on the actual charges for your treatment. You also have the option of adding coverage for critical illnesses such as cancer, heart attack, and stroke.
-                    </p>
-                    <div className="mt-4 bg-primary-50 p-4 rounded-lg border border-primary-100">
-                      <p className="font-semibold text-primary-700">All plans can include coverage for on-the-job accidents.</p>
-                      <p className="font-bold text-primary-800 mt-2">AND THEY ALL WILL PAY IF YOU ARE INJURED AS A VICTIM OF CRIME!</p>
-                    </div>
-                  </div>
+                <div>
+                  <h3 className="text-2xl font-semibold text-primary-700 mb-4">Two Plan Types:</h3>
+                  <ul className="space-y-3 text-lg text-gray-700">
+                    <li className="flex items-start">
+                      <span className="font-bold text-primary-600 mr-2">1.</span>
+                      <span>One pays depending on the nature of the injury and treatment</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="font-bold text-primary-600 mr-2">2.</span>
+                      <span>The other will just pay the bill for accidental treatments, depending on the limits of the policy you have chosen.</span>
+                    </li>
+                  </ul>
                 </div>
               </div>
               <div>
@@ -239,366 +229,102 @@ const AccidentPage = () => {
             </div>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-            {[
-              {
-                title: "Slip on Ice? Get Paid.",
-                image: "/lovable-uploads/08592e29-42d6-4973-83d0-f1c5f645c6c7.png",
-                delay: "0.1s"
-              },
-              {
-                title: "Sports Injury? You're Covered.",
-                image: "/lovable-uploads/2b91ce04-33ec-46ec-9710-fc26e48b0d57.png",
-                delay: "0.2s"
-              },
-              {
-                title: "Victim of Crime? We've Got You.",
-                image: "/lovable-uploads/634f8a52-093f-4273-9811-e56fbf95539a.png",
-                delay: "0.3s"
-              },
-              {
-                title: "$200 for the Ride, $250 for the ER",
-                image: "/lovable-uploads/0e38cfb0-3899-47f4-851d-168ca8a79841.png",
-                delay: "0.4s"
-              }
-            ].map((card, index) => (
-              <Card key={index} className="overflow-hidden transform transition-all hover:scale-105 duration-300 h-full shadow-lg animate-fade-in-up" style={{ animationDelay: card.delay }}>
-                <div className="h-48 overflow-hidden">
+          <div className="mb-16">
+            <h3 className="text-2xl font-bold mb-8 text-primary-700">In the first case, suppose you or a covered member:</h3>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+              <div className="text-center">
+                <div className="mb-4">
                   <img 
-                    src={card.image}
-                    alt={card.title}
-                    className="w-full h-full object-cover"
+                    src="/lovable-uploads/08592e29-42d6-4973-83d0-f1c5f645c6c7.png"
+                    alt="Person shoveling snow"
+                    className="w-full h-48 object-cover rounded-lg shadow-md"
                   />
                 </div>
-                <CardContent className="p-6 bg-white">
-                  <h3 className="text-xl font-semibold text-primary-600">{card.title}</h3>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-          
-          <div className="bg-gray-50 rounded-xl p-8 shadow-inner mb-16 animate-fade-in-up">
-            <h3 className="text-2xl font-bold mb-8 text-center text-primary-700">What You Get With Our Fixed-Benefit Plan</h3>
-            
-            {/* Everyday Accident Coverage - Now expanded instead of accordion */}
-            <div className="mb-10">
-              <h4 className="text-lg font-semibold text-primary-700 mb-4 border-b border-gray-200 pb-2">
-                Everyday Accident Coverage
-              </h4>
-              <div className="text-gray-700">
-                <p className="mb-4">Suppose you fall down while shoveling snow, a covered family member is hurt playing amateur sports, or you're a victim of a crime...</p>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
-                  <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-100">
-                    <div className="flex items-center mb-2">
-                      <Ambulance className="h-5 w-5 text-primary-500 mr-2" />
-                      <p className="font-semibold">Ambulance</p>
-                    </div>
-                    <p className="text-2xl font-bold text-primary-600">$200</p>
-                    <p className="text-xs text-gray-500">$3,000 for air ambulance!</p>
-                  </div>
-                  <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-100">
-                    <div className="flex items-center mb-2">
-                      <BookOpen className="h-5 w-5 text-primary-500 mr-2" />
-                      <p className="font-semibold">Emergency Room</p>
-                    </div>
-                    <p className="text-2xl font-bold text-primary-600">$250</p>
-                  </div>
-                  <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-100">
-                    <div className="flex items-center mb-2">
-                      <CircleDollarSign className="h-5 w-5 text-primary-500 mr-2" />
-                      <p className="font-semibold">Ancillary Charges</p>
-                    </div>
-                    <p className="text-2xl font-bold text-primary-600">$150</p>
-                  </div>
+                <h4 className="text-lg font-semibold text-primary-600">Slipped while shoveling snow</h4>
+              </div>
+              
+              <div className="text-center">
+                <div className="mb-4">
+                  <img 
+                    src="/lovable-uploads/2b91ce04-33ec-46ec-9710-fc26e48b0d57.png"
+                    alt="Sports injury"
+                    className="w-full h-48 object-cover rounded-lg shadow-md"
+                  />
                 </div>
-                <p className="mt-4 font-medium text-primary-700">And this is for a less serious accident that doesn't even cause you to miss work!</p>
+                <h4 className="text-lg font-semibold text-primary-600">Fell down while playing amateur sports</h4>
+              </div>
+              
+              <div className="text-center">
+                <div className="mb-4">
+                  <img 
+                    src="/lovable-uploads/634f8a52-093f-4273-9811-e56fbf95539a.png"
+                    alt="Crime victim"
+                    className="w-full h-48 object-cover rounded-lg shadow-md"
+                  />
+                </div>
+                <h4 className="text-lg font-semibold text-primary-600">Were a crime victim</h4>
               </div>
             </div>
             
-            {/* Fracture & Hospital Benefits - Now expanded instead of accordion */}
-            <div className="mb-10">
-              <h4 className="text-lg font-semibold text-primary-700 mb-4 border-b border-gray-200 pb-2">
-                Fracture & Hospital Benefits
-              </h4>
-              <div className="text-gray-700">
-                <p className="mb-4">But suppose they tell you "BAD NEWS! You have a fracture!"</p>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
-                  <div>
-                    <h4 className="font-semibold text-primary-600 mb-3">Fracture Payment Schedule:</h4>
-                    <ul className="space-y-2">
-                      <li className="flex justify-between">
-                        <span>Hip, neck or skull fracture</span>
-                        <span className="font-bold">$2,500</span>
-                      </li>
-                      <li className="flex justify-between">
-                        <span>Thigh fracture</span>
-                        <span className="font-bold">$1,500</span>
-                      </li>
-                      <li className="flex justify-between">
-                        <span>Less serious fractures</span>
-                        <span className="font-bold">$500+</span>
-                      </li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-primary-600 mb-3">Additional Benefits:</h4>
-                    <ul className="space-y-2">
-                      <li className="flex justify-between">
-                        <span>Hospital stay (per day)</span>
-                        <span className="font-bold">$750</span>
-                      </li>
-                      <li className="flex justify-between">
-                        <span>Rehabilitation services</span>
-                        <span className="font-bold">$150</span>
-                      </li>
-                      <li className="flex justify-between">
-                        <span>Maximum per covered accident</span>
-                        <span className="font-bold">Up to $15,000</span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <p className="mt-4">The plan can also pay for concussions and dislocations.</p>
-              </div>
-            </div>
-            
-            {/* Life & Limb Benefits - Now expanded instead of accordion */}
-            <div>
-              <h4 className="text-lg font-semibold text-primary-700 mb-4 border-b border-gray-200 pb-2">
-                Life & Limb Benefits
-              </h4>
-              <div className="text-gray-700">
-                <p className="mb-4">For loss of life or limb, the plan will pay:</p>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
-                  <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-100">
-                    <p className="text-sm text-gray-500 mb-2">Loss of one hand, foot, or eye</p>
-                    <p className="text-2xl font-bold text-primary-600">$25,000</p>
-                  </div>
-                  <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-100">
-                    <p className="text-sm text-gray-500 mb-2">Loss of both feet, hands, or eyes</p>
-                    <p className="text-2xl font-bold text-primary-600">$50,000</p>
-                  </div>
-                  <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-100">
-                    <p className="text-sm text-gray-500 mb-2">Accidental loss of life</p>
-                    <p className="text-2xl font-bold text-primary-600">$50,000</p>
-                  </div>
-                </div>
+            <div className="bg-gray-50 rounded-xl p-8 space-y-6">
+              <p className="text-lg text-gray-700">
+                You could have chosen a plan that would pay you for a set amount for an ambulance ride to the hospital, and set amounts for emergency room or office treatments, X-Rays and other services.
+              </p>
+              <p className="text-lg text-gray-700">
+                If you are lucky you might find that there were no broken bones, but you could still receive hundreds of dollars.
+              </p>
+              
+              <div className="bg-white p-6 rounded-lg border-l-4 border-primary-500">
+                <h4 className="text-xl font-bold text-primary-700 mb-4">But let's say you weren't so lucky!</h4>
+                <p className="text-lg text-gray-700 mb-4">You have suffered a major fracture!</p>
+                <ul className="space-y-2 text-gray-700">
+                  <li>• In that case, you could get several thousand for the fracture (depending on which bone and the treatment)</li>
+                  <li>• More money for hospital admission.</li>
+                  <li>• More money for every day in the hospital</li>
+                  <li>• More money for outpatient rehab and much more!</li>
+                  <li>• And in a worst-case scenario, would even pay for accidental death.</li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Plan Enhancer & Triomed Plan Section */}
+      {/* Reimbursement-Based Plans Section */}
       <section className="py-20 px-4 bg-gradient-to-br from-primary-50 to-white">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-6 text-primary-800">
-            Prefer Simplicity? We'll Pay Your Bills — Up to $10,000
-          </h2>
-          <p className="text-xl text-gray-700 text-center max-w-4xl mx-auto mb-16">
-            The Plan Enhancer and Triomed options pay based on the <strong>actual costs</strong> of your treatment — not just injury types. If your insurance leaves you with a deductible or uncovered expenses, we help close the gap with direct payments.
-          </p>
-          
-          <div className="bg-white rounded-xl shadow-lg p-8 mb-10 animate-fade-in-up">
-            <h3 className="text-2xl font-bold mb-6 text-primary-700 text-center">How It Works: A Real Example</h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              <div className="bg-primary-50 rounded-lg p-6 text-center">
-                <p className="text-sm uppercase font-semibold text-gray-500 mb-2">Medical Bill</p>
-                <p className="text-3xl font-bold text-primary-700">$4,500</p>
-              </div>
-              <div className="bg-primary-50 rounded-lg p-6 text-center">
-                <p className="text-sm uppercase font-semibold text-gray-500 mb-2">Your Deductible</p>
-                <p className="text-3xl font-bold text-primary-700">$2,000</p>
-              </div>
-              <div className="bg-primary-50 rounded-lg p-6 text-center">
-                <p className="text-sm uppercase font-semibold text-gray-500 mb-2">QFB Plan Pays</p>
-                <p className="text-3xl font-bold text-accent-gold">$4,250</p>
-                <p className="text-xs text-gray-500">minus $250 first-year deductible</p>
-              </div>
-              <div className="bg-accent-gold/10 rounded-lg p-6 text-center border-2 border-accent-gold">
-                <p className="text-sm uppercase font-semibold text-gray-700 mb-2">You Keep</p>
-                <p className="text-3xl font-bold text-primary-800">$2,250</p>
-                <p className="text-xs text-gray-500">to cover bills, rent, or whatever you need</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Riders & Add-Ons Section */}
-      <section className="py-20 px-4">
-        <div className="container mx-auto max-w-5xl">
-          <div className="text-center mb-12 animate-fade-in-up">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary-800 mb-6">
-              Want More Protection? Add a Critical Illness Rider
-            </h2>
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-              Our plans offer riders that pay up to <strong>$30,000</strong> if you're diagnosed with a covered condition. This financial support helps when you need it most - during treatment and recovery.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
-            <div className="bg-white rounded-lg shadow-lg p-6 border-l-4 border-primary-600">
-              <h3 className="text-xl font-semibold text-primary-700 mb-4">Covered Conditions</h3>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-3">
-                  <Heart className="w-5 h-5 text-primary-600 mt-1 flex-shrink-0" />
-                  <span><strong>Cancer</strong> - Including most malignant tumors and cancers</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <Heart className="w-5 h-5 text-primary-600 mt-1 flex-shrink-0" />
-                  <span><strong>Heart Attack</strong> - Diagnosed acute myocardial infarction</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <Brain className="w-5 h-5 text-primary-600 mt-1 flex-shrink-0" />
-                  <span><strong>Stroke</strong> - Resulting in permanent neurological deficit</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <AirVent className="w-5 h-5 text-primary-600 mt-1 flex-shrink-0" />
-                  <span><strong>Major Organ Transplant</strong> - As a recipient of heart, lung, liver, kidney, pancreas, or bone marrow</span>
-                </li>
-              </ul>
-            </div>
-            
-            <div className="bg-white rounded-lg shadow-lg p-6 border-l-4 border-primary-600">
-              <h3 className="text-xl font-semibold text-primary-700 mb-4">Additional Coverage</h3>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-primary-600 mt-1 flex-shrink-0" />
-                  <span><strong>End Stage Kidney Failure</strong> - Requiring regular dialysis</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-primary-600 mt-1 flex-shrink-0" />
-                  <span><strong>Advanced Alzheimer's Disease</strong> - Resulting in significant cognitive impairment</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-primary-600 mt-1 flex-shrink-0" />
-                  <span><strong>Coma</strong> - Resulting from severe trauma or illness</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-primary-600 mt-1 flex-shrink-0" />
-                  <span><strong>ALS (Lou Gehrig's Disease)</strong> - Progressive neurodegenerative disease</span>
-                </li>
-              </ul>
-            </div>
-            
-            <div className="bg-white rounded-lg shadow-lg p-6 border-l-4 border-primary-600">
-              <h3 className="text-xl font-semibold text-primary-700 mb-4">More Conditions</h3>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-primary-600 mt-1 flex-shrink-0" />
-                  <span><strong>Parkinson's Disease</strong> - With permanent neurological deficit</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-primary-600 mt-1 flex-shrink-0" />
-                  <span><strong>Severe Burns</strong> - Covering significant body surface area</span>
-                </li>
-              </ul>
-              
-              <div className="mt-6 bg-gray-50 p-4 rounded-lg">
-                <h4 className="font-semibold text-primary-700 mb-2">Payment Structure</h4>
-                <ul className="space-y-2 text-sm">
-                  <li>• 100% of benefit amount to primary insured</li>
-                  <li>• 50% of benefit amount to covered spouse</li>
-                  <li>• 25% of benefit amount to covered child</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          
-          <div className="bg-primary-50 rounded-xl p-8 shadow-inner mb-8">
-            <div className="flex flex-col md:flex-row gap-6 items-center">
-              <div className="md:w-2/3">
-                <h3 className="text-2xl font-bold mb-4 text-primary-700">How Critical Illness Coverage Works</h3>
-                <p className="mb-4">If you're diagnosed with a covered condition after your coverage begins, you'll receive a lump sum payment. This payment is:</p>
-                <ul className="list-disc pl-5 space-y-2 mb-4">
-                  <li>Paid directly to you, not your medical providers</li>
-                  <li>Available for any expenses - medical bills, mortgage, groceries, or childcare</li>
-                  <li>Not affected by any other insurance you might have</li>
-                  <li>Paid in addition to your accident coverage benefits</li>
-                </ul>
-                <p className="font-medium">Coverage amounts range from $5,000 to $30,000 depending on your selected plan.</p>
-              </div>
-              <div className="md:w-1/3 flex justify-center">
-                <div className="bg-white p-6 rounded-full shadow-lg border-2 border-primary-300 w-48 h-48 flex flex-col items-center justify-center">
-                  <span className="text-4xl font-bold text-primary-600">$30,000</span>
-                  <span className="text-sm text-center text-gray-500">Maximum Benefit Available</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div className="text-center">
-            <Button className="glow-button text-lg px-6 py-3 h-auto">
-              <span>Add Critical Illness Coverage</span>
-            </Button>
-            <p className="text-sm text-gray-500 mt-4">Speak with a licensed agent to customize your coverage</p>
-          </div>
-        </div>
-      </section>
-
-      {/* Legal & Fine Print Section */}
-      <section className="py-20 px-4 bg-gray-50">
-        <div className="container mx-auto max-w-4xl">
-          <h2 className="text-3xl font-bold text-center mb-10 text-primary-800">
-            Exclusions & Limitations — What You Need to Know
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-primary-800">
+            Reimbursement-Based Plans
           </h2>
           
-          <Tabs defaultValue="fixed" className="w-full">
-            <TabsList className="grid w-full grid-cols-2 mb-8">
-              <TabsTrigger value="fixed">Allstate Fixed Benefit Plan</TabsTrigger>
-              <TabsTrigger value="enhancer">Plan Enhancer & Triomed Plans</TabsTrigger>
-            </TabsList>
-            
-            <TabsContent value="fixed" className="bg-white rounded-xl p-6 shadow-md">
-              <div className="prose max-w-none">
-                <h3 className="text-xl font-semibold mb-4">Benefits</h3>
-                <p>Benefits include emergency care, hospital confinement, fractures, surgery, follow-up care, accidental death, and dismemberment. The Allstate Benefits plan pays a fixed amount directly to you based on the type of injury and treatment received.</p>
-                
-                <h3 className="text-xl font-semibold mt-6 mb-4">Exclusions</h3>
-                <p>The policy does not pay for losses caused by or resulting from:</p>
-                <ul className="list-disc pl-5 space-y-2">
-                  <li>Self-inflicted injuries</li>
-                  <li>War or act of war, declared or undeclared</li>
-                  <li>Commission of a felony</li>
-                  <li>Injuries incurred while intoxicated</li>
-                  <li>Injuries sustained while participating in professional sports</li>
-                  <li>Pre-existing conditions (limitations apply)</li>
-                </ul>
-              </div>
-            </TabsContent>
-            
-            <TabsContent value="enhancer" className="bg-white rounded-xl p-6 shadow-md">
-              <div className="prose max-w-none">
-                <h3 className="text-xl font-semibold mb-4">Benefits</h3>
-                <p>These plans pay benefits based on the actual costs of your treatment, not just by injury type. They help cover deductibles, copays, and out-of-pocket expenses. Benefits are paid directly to you unless you specify otherwise.</p>
-                
-                <h3 className="text-xl font-semibold mt-6 mb-4">Exclusions</h3>
-                <p>These plans typically do not cover:</p>
-                <ul className="list-disc pl-5 space-y-2">
-                  <li>Pre-existing conditions (within 12 months prior to coverage)</li>
-                  <li>Cosmetic or elective procedures</li>
-                  <li>Mental health or substance abuse treatment</li>
-                  <li>Self-inflicted injuries</li>
-                  <li>Pregnancy or childbirth (except for complications)</li>
-                </ul>
-                <p className="text-sm mt-4"><em>*This is a summary of plan exclusions. Please refer to the policy documents for complete details.</em></p>
-              </div>
-            </TabsContent>
-          </Tabs>
+          <div className="bg-white rounded-xl shadow-lg p-8 mb-10">
+            <div className="space-y-6 text-lg text-gray-700">
+              <p>
+                Another type of coverage is preferred by many.
+              </p>
+              <p>
+                In that case, the insurance carrier will simply pay the costs of whatever medical costs you have received.
+              </p>
+              <p className="text-xl font-bold text-primary-700">
+                If those costs are covered by your health insurance, you can just take additional money and use it for loss of work time or whatever you need!
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Call to Action Footer Section */}
+      {/* Final Call to Action Section */}
       <section className="py-16 bg-gradient-to-r from-primary-800 to-primary-600 text-white px-4">
-        <div className="container mx-auto max-w-4xl text-center animate-fade-in-up">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Want To See What You Qualify For?</h2>
-          <p className="text-xl opacity-90 mb-8">It only takes a few minutes to speak with a licensed advisor.</p>
+        <div className="container mx-auto max-w-4xl text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-8 leading-tight">
+            GIVE US A CALL AND A LICENSED EXPERIENCED COUNSELOR WILL HAVE A NO PRESSURE PROFESSIONAL DISCUSSION ABOUT WHAT COVERAGE WILL WORK BEST FOR YOU!
+          </h2>
           
           <div className="flex flex-wrap justify-center gap-4 mb-8">
-            <Button className="glow-button gold-button text-lg px-6 py-3 h-auto" size="lg">
-              <span>Call Now</span>
-            </Button>
+            <a href="tel:7083304516" className="glow-button gold-button text-lg px-6 py-3 h-auto inline-block">
+              <span>Call 708-330-4516</span>
+            </a>
             <Button variant="outline" className="text-lg px-6 py-3 h-auto bg-white/10 hover:bg-white/20 border-white" size="lg">
               <span>Schedule My Call</span>
             </Button>
