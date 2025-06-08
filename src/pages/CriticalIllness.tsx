@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
+import { Heart, DollarSign, Shield, Clock, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import OtherCoveragesSection from "@/components/OtherCoveragesSection";
 
@@ -9,6 +10,15 @@ const fadeIn = {
     opacity: 1, 
     y: 0,
     transition: { duration: 0.6 }
+  }
+};
+
+const iconFloat = {
+  hidden: { opacity: 0, scale: 0.8 },
+  visible: { 
+    opacity: 1, 
+    scale: 1,
+    transition: { duration: 0.8, ease: "easeOut" }
   }
 };
 
@@ -25,8 +35,15 @@ const CriticalIllness = () => {
     <div className="min-h-screen flex flex-col">
       <main className="flex-grow pt-20">
         {/* Hero Section - Keep existing but remove "Explore Plan Options" button */}
-        <section className="bg-gradient-to-b from-primary-100 to-white">
-          <div className="container mx-auto px-4 py-16 md:py-24">
+        <section className="bg-gradient-to-b from-primary-100 to-white relative overflow-hidden">
+          {/* Background decorative elements */}
+          <div className="absolute inset-0 opacity-10">
+            <div className="absolute top-20 left-10 w-20 h-20 bg-primary-300 rounded-full animate-float"></div>
+            <div className="absolute top-40 right-20 w-16 h-16 bg-accent-gold rounded-full animate-float" style={{ animationDelay: '2s' }}></div>
+            <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-primary-400 rounded-full animate-float" style={{ animationDelay: '4s' }}></div>
+          </div>
+          
+          <div className="container mx-auto px-4 py-16 md:py-24 relative z-10">
             <div className="flex flex-col md:flex-row items-center">
               <motion.div 
                 className="md:w-1/2 mb-8 md:mb-0"
@@ -67,49 +84,170 @@ const CriticalIllness = () => {
           </div>
         </section>
 
-        {/* Main Content Section - Replace with client content */}
-        <section className="py-16 md:py-24 bg-white">
+        {/* Statistics Section with Icons */}
+        <section className="py-16 md:py-24 bg-gradient-to-br from-gray-50 to-white">
           <div className="container mx-auto px-4">
-            <motion.div 
-              className="max-w-4xl mx-auto text-center"
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={fadeIn}
-            >
-              <div className="text-lg md:text-xl text-gray-700 space-y-6 leading-relaxed">
-                <p>
-                  The American Cancer Society estimates that <strong>40% of the population will develop cancer at some time in their life!</strong>
-                </p>
-                <p>
-                  The expenses are <strong>HUGE</strong> and <strong>60% are not covered by medical insurance!</strong>
-                </p>
-                <p>
-                  And most of us will eventually experience heart attacks and strokes
-                </p>
-                <p className="pt-4">
-                  We represent companies who offer plans that can put <strong>MONEY</strong> in your pocket at a time when you desperately need it!
-                </p>
-                <p>
-                  We represent a number of different companies with different levels of coverage.
-                </p>
-                <p>
-                  All will pay on diagnosis for <strong>CANCER HEART ATTACKS AND STROKES</strong>. Some cover other illnesses.
-                </p>
-                <p className="pt-4">
-                  With all the plans, <strong>prices are locked in and will not go up with age!</strong>
-                </p>
-                <p>
-                  To get the coverage when you are young and healthy is like buying on sale before prices go up!
-                </p>
-                <p className="pt-6 text-primary-700 font-semibold">
-                  Give us a call and we can discuss the coverage that will best fit <strong>YOU</strong> and <strong>YOUR BUDGET!</strong>
-                </p>
-                <p className="text-destructive font-bold text-xl pt-4">
+            <div className="max-w-6xl mx-auto">
+              {/* Opening Statistics with Visual Impact */}
+              <motion.div 
+                className="text-center mb-16"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fadeIn}
+              >
+                <div className="grid md:grid-cols-3 gap-8 mb-12">
+                  <motion.div 
+                    className="bg-white p-8 rounded-2xl shadow-lg border border-primary-100 card-hover"
+                    variants={iconFloat}
+                    transition={{ delay: 0.1 }}
+                  >
+                    <div className="flex justify-center mb-4">
+                      <div className="w-16 h-16 bg-destructive/10 rounded-full flex items-center justify-center">
+                        <Heart className="w-8 h-8 text-destructive" />
+                      </div>
+                    </div>
+                    <p className="text-3xl font-bold text-destructive mb-2">40%</p>
+                    <p className="text-gray-700">
+                      The American Cancer Society estimates that <strong>40% of the population will develop cancer at some time in their life!</strong>
+                    </p>
+                  </motion.div>
+
+                  <motion.div 
+                    className="bg-white p-8 rounded-2xl shadow-lg border border-primary-100 card-hover"
+                    variants={iconFloat}
+                    transition={{ delay: 0.2 }}
+                  >
+                    <div className="flex justify-center mb-4">
+                      <div className="w-16 h-16 bg-accent-gold/10 rounded-full flex items-center justify-center">
+                        <DollarSign className="w-8 h-8 text-accent-gold" />
+                      </div>
+                    </div>
+                    <p className="text-3xl font-bold text-accent-gold mb-2">60%</p>
+                    <p className="text-gray-700">
+                      The expenses are <strong>HUGE</strong> and <strong>60% are not covered by medical insurance!</strong>
+                    </p>
+                  </motion.div>
+
+                  <motion.div 
+                    className="bg-white p-8 rounded-2xl shadow-lg border border-primary-100 card-hover"
+                    variants={iconFloat}
+                    transition={{ delay: 0.3 }}
+                  >
+                    <div className="flex justify-center mb-4">
+                      <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center">
+                        <Heart className="w-8 h-8 text-primary-600" />
+                      </div>
+                    </div>
+                    <p className="text-lg font-bold text-primary-600 mb-2">Most of Us</p>
+                    <p className="text-gray-700">
+                      And most of us will eventually experience heart attacks and strokes
+                    </p>
+                  </motion.div>
+                </div>
+              </motion.div>
+
+              {/* Solution Section with Icons */}
+              <motion.div 
+                className="bg-gradient-to-r from-primary-700 to-primary-900 p-8 md:p-12 rounded-3xl text-white mb-12"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fadeIn}
+              >
+                <div className="text-center mb-8">
+                  <div className="flex justify-center mb-4">
+                    <div className="w-20 h-20 bg-accent-gold/20 rounded-full flex items-center justify-center">
+                      <Shield className="w-10 h-10 text-accent-gold" />
+                    </div>
+                  </div>
+                  <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Solution</h2>
+                </div>
+                
+                <div className="grid md:grid-cols-2 gap-8 text-lg">
+                  <div className="space-y-4">
+                    <p>
+                      We represent companies who offer plans that can put <strong className="text-accent-gold">MONEY</strong> in your pocket at a time when you desperately need it!
+                    </p>
+                    <p>
+                      We represent a number of different companies with different levels of coverage.
+                    </p>
+                  </div>
+                  <div className="space-y-4">
+                    <p>
+                      All will pay on diagnosis for <strong className="text-accent-gold">CANCER HEART ATTACKS AND STROKES</strong>. Some cover other illnesses.
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Benefits Section with Timeline */}
+              <motion.div 
+                className="bg-white p-8 md:p-12 rounded-3xl shadow-xl border border-gray-100 mb-12"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fadeIn}
+              >
+                <div className="text-center mb-8">
+                  <div className="flex justify-center mb-4">
+                    <div className="w-20 h-20 bg-primary-100 rounded-full flex items-center justify-center">
+                      <Clock className="w-10 h-10 text-primary-600" />
+                    </div>
+                  </div>
+                  <h2 className="text-3xl md:text-4xl font-bold text-primary-800 mb-6">Lock In Your Rates Today</h2>
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-8 items-center">
+                  <div className="space-y-6 text-lg text-gray-700">
+                    <div className="flex items-start gap-4">
+                      <div className="w-8 h-8 bg-accent-gold rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                        <span className="text-white font-bold text-sm">1</span>
+                      </div>
+                      <p>
+                        With all the plans, <strong>prices are locked in and will not go up with age!</strong>
+                      </p>
+                    </div>
+                    
+                    <div className="flex items-start gap-4">
+                      <div className="w-8 h-8 bg-accent-gold rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                        <span className="text-white font-bold text-sm">2</span>
+                      </div>
+                      <p>
+                        To get the coverage when you are young and healthy is like buying on sale before prices go up!
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div className="bg-gradient-to-br from-primary-50 to-primary-100 p-6 rounded-2xl">
+                    <div className="flex justify-center mb-4">
+                      <Calendar className="w-12 h-12 text-primary-600" />
+                    </div>
+                    <p className="text-center text-primary-700 font-semibold text-lg">
+                      Give us a call and we can discuss the coverage that will best fit <strong>YOU</strong> and <strong>YOUR BUDGET!</strong>
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Urgent Call to Action */}
+              <motion.div 
+                className="bg-gradient-to-r from-destructive to-red-600 p-8 md:p-12 rounded-3xl text-white text-center"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fadeIn}
+              >
+                <div className="flex justify-center mb-6">
+                  <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center animate-pulse">
+                    <Clock className="w-10 h-10 text-white" />
+                  </div>
+                </div>
+                <p className="text-2xl md:text-3xl font-bold">
                   Get covered <strong>BEFORE YOU NEED IT! IF YOU WAIT TILL YOU NEED IT YOU WILL BE TOO LATE!</strong>
                 </p>
-              </div>
-            </motion.div>
+              </motion.div>
+            </div>
           </div>
         </section>
 
@@ -130,7 +268,7 @@ const CriticalIllness = () => {
                 Let's build a plan that protects your future.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="tel:7083304516" className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-accent-gold text-primary-800 hover:bg-accent-gold/90 h-10 px-4 py-2 glow-button">
+                <a href="tel:7083304516" className="glow-button gold-button">
                   <span>Call 708-330-4516</span>
                 </a>
                 <Button className="glow-button">
