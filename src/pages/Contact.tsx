@@ -113,7 +113,7 @@ const Contact = () => {
                           href="tel:7083304516" 
                           className="text-2xl font-bold text-primary-600 hover:text-primary-700 transition-colors"
                         >
-                          708-330-4516
+                          708.330.4516
                         </a>
                         <p className="text-gray-600 mt-1">(Available Monday–Friday, 9am to 5pm CST)</p>
                       </div>
@@ -156,7 +156,7 @@ const Contact = () => {
                     <strong>Prefer to book a time?</strong>
                   </p>
                   <p className="text-gray-600 mb-6">
-                    We'll soon have online scheduling available — check back soon or call us directly at 708-330-4516.
+                    We'll soon have online scheduling available — check back soon or call us directly at 708.330.4516.
                   </p>
                   <Button asChild className="glow-button">
                     <a href="tel:7083304516">

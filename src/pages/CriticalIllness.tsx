@@ -34,7 +34,7 @@ const CriticalIllness = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <main className="flex-grow pt-20">
-        {/* Hero Section - Keep existing but remove "Explore Plan Options" button */}
+        {/* Hero Section */}
         <section className="bg-gradient-to-b from-primary-100 to-white relative overflow-hidden">
           {/* Background decorative elements */}
           <div className="absolute inset-0 opacity-10">
@@ -58,9 +58,9 @@ const CriticalIllness = () => {
                   Heart attacks. Stroke. Cancer. Our Critical Illness plans pay you directly — so you can focus on recovery, not bills.
                 </p>
                 <div className="flex flex-wrap gap-4">
-                  <Button onClick={scrollToContact} variant="outline" className="border-primary-500 text-primary-500 hover:bg-primary-50">
+                  <a href="https://calendly.com" className="glow-button gold-button">
                     <span>Speak With an Advisor</span>
-                  </Button>
+                  </a>
                 </div>
               </motion.div>
               <motion.div 
@@ -269,11 +269,11 @@ const CriticalIllness = () => {
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
                 <a href="tel:7083304516" className="glow-button gold-button">
-                  <span>Call 708-330-4516</span>
+                  <span>Call 708.330.4516</span>
                 </a>
-                <Button className="glow-button">
+                <a href="https://calendly.com" className="glow-button">
                   <span>Schedule a Call</span>
-                </Button>
+                </a>
               </div>
               <div className="mt-6 flex justify-center">
                 <label className="flex items-center cursor-pointer">

@@ -222,10 +222,10 @@ const WhyQFB = () => {
               </p>
               
               <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8">
-                <a href="tel:7088665057" className="glow-button gold-button">
-                  <span>Call Now: 708.866.5057</span>
+                <a href="tel:7083304516" className="glow-button gold-button">
+                  <span>Call Now: 708.330.4516</span>
                 </a>
-                <a href="#schedule" className="glow-button">
+                <a href="https://calendly.com" className="glow-button">
                   <span>Schedule a Free Consultation</span>
                 </a>
               </div>
@@ -243,3 +243,5 @@ const WhyQFB = () => {
     </div>;
 };
 export default WhyQFB;
+
+</initial_code>

@@ -19,9 +19,9 @@ export default function LifeInsurance() {
               Protect your loved ones with permanent, affordable coverage — even if your health isn't perfect.
             </h2>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button className="glow-button gold-button" size="lg">
+              <a href="https://calendly.com" className="glow-button gold-button" >
                 Schedule a No-Pressure Call
-              </Button>
+              </a>
             </div>
           </div>
           <div className="hidden md:block md:w-5/12">
@@ -147,11 +147,11 @@ export default function LifeInsurance() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 w-full justify-center">
             <a href="tel:7083304516" className="glow-button gold-button text-center">
-              <Phone className="mr-2" /> Call Now - 708-330-4516
+              <Phone className="mr-2" /> Call Now - 708.330.4516
             </a>
-            <Button className="glow-button" size="lg" variant="secondary">
+            <a href="https://calendly.com" className="glow-button text-center">
               Schedule a Call
-            </Button>
+            </a>
           </div>
           <label className="flex items-center gap-2 mt-4 cursor-pointer text-primary-900">
             <input

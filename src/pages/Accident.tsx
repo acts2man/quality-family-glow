@@ -183,7 +183,7 @@ const AccidentPage = () => {
                   </div>
                   
                   <div className="mt-8">
-                    <a href="#plan-overview" className="glow-button gold-button inline-block">
+                    <a href="https://calendly.com" className="glow-button gold-button inline-block">
                       <span>Get Protected Like Maria</span>
                     </a>
                     <p className="mt-4 text-sm text-gray-500">Plans start at just $19.95/month</p>
@@ -323,11 +323,11 @@ const AccidentPage = () => {
           
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             <a href="tel:7083304516" className="glow-button gold-button text-lg px-6 py-3 h-auto inline-block">
-              <span>Call 708-330-4516</span>
+              <span>Call 708.330.4516</span>
             </a>
-            <Button variant="outline" className="text-lg px-6 py-3 h-auto bg-white/10 hover:bg-white/20 border-white" size="lg">
+            <a href="https://calendly.com" className="glow-button text-lg px-6 py-3 h-auto inline-block bg-white/10 hover:bg-white/20 border-white">
               <span>Schedule My Call</span>
-            </Button>
+            </a>
           </div>
           
           <label className="flex items-center justify-center space-x-2 cursor-pointer">

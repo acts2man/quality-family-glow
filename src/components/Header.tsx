@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import { useLocation, Link } from "react-router-dom";
@@ -50,14 +49,14 @@ const Header = () => {
         <div className="container mx-auto flex flex-wrap justify-between items-center">
           <div className="text-sm md:text-base">
             <span className="mr-4">
-              <strong>Call:</strong> 708.866.5057
+              <strong>Call:</strong> 708.330.4516
             </span>
             <span className="hidden md:inline">
               <strong>Email:</strong> info@qualityfamilybenefits.com
             </span>
           </div>
           <div className="hidden md:flex items-center space-x-4">
-            <a href="#" className="text-white hover:text-accent-gold transition-colors">
+            <a href="https://www.facebook.com/profile.php?id=61574028545289#" className="text-white hover:text-accent-gold transition-colors">
               <svg
                 className="w-5 h-5"
                 fill="currentColor"
@@ -209,7 +208,7 @@ const Header = () => {
               )
             ))}
             <div className="mt-4 flex items-center space-x-4">
-              <a href="#" className="text-primary-500 hover:text-primary-700 transition-colors">
+              <a href="https://www.facebook.com/profile.php?id=61574028545289#" className="text-primary-500 hover:text-primary-700 transition-colors">
                 <svg
                   className="w-6 h-6"
                   fill="currentColor"
@@ -224,7 +223,7 @@ const Header = () => {
                 </svg>
               </a>
               <div className="text-sm">
-                <div><strong>Call:</strong> 708.866.5057</div>
+                <div><strong>Call:</strong> 708.330.4516</div>
                 <div><strong>Email:</strong> info@qualityfamilybenefits.com</div>
               </div>
             </div>

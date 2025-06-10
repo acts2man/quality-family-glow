@@ -135,14 +135,14 @@ const LongTermCare = () => {
             Don't let long-term care costs devastate your savings. Let's discuss innovative solutions that work for you.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link to="#" className="glow-button gold-button flex items-center">
+            <a href="https://calendly.com" className="glow-button gold-button flex items-center">
               <Calendar className="mr-2 h-5 w-5" />
               <span>Schedule a Consultation</span>
-            </Link>
-            <Link to="tel:7083304516" className="glow-button flex items-center">
+            </a>
+            <a href="tel:7083304516" className="glow-button flex items-center">
               <Phone className="mr-2 h-5 w-5" />
-              <span>Call 708-330-4516</span>
-            </Link>
+              <span>Call 708.330.4516</span>
+            </a>
           </div>
         </div>
       </section>

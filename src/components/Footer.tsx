@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 
@@ -99,7 +98,7 @@ const Footer = () => {
               </p>
             </div>
             <div className="flex space-x-4">
-              <Link to="#" className="glow-button gold-button">
+              <Link to="https://calendly.com" className="glow-button gold-button">
                 <span>Schedule a Call</span>
               </Link>
               <Link to="tel:7083304516" className="glow-button">
@@ -121,7 +120,7 @@ const Footer = () => {
             </div>
             <div className="flex space-x-4">
               <a 
-                href="#"
+                href="https://www.facebook.com/profile.php?id=61574028545289#"
                 className="text-gray-400 hover:text-accent-gold transition-colors"
                 aria-label="Facebook"
               >

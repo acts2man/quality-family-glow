@@ -158,12 +158,13 @@ export default function CancerDreadDisease() {
                 className="glow-button gold-button text-lg px-8 py-4"
                 onClick={() => window.open('tel:7083304516', '_self')}
               >
-                <span>Call 708-330-4516</span>
+                <span>Call 708.330.4516</span>
               </Button>
               <Button 
                 size="lg" 
                 variant="outline" 
                 className="bg-white/10 border-white/30 text-white hover:bg-white/20 text-lg px-8 py-4"
+                onClick={() => window.open('https://calendly.com', '_blank')}
               >
                 <span>Schedule a Conference</span>
               </Button>
