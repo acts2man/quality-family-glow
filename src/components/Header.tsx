@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import { useLocation, Link } from "react-router-dom";
@@ -235,5 +236,3 @@ const Header = () => {
 };
 
 export default Header;
-
-}
