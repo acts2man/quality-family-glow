@@ -28,6 +28,7 @@ const Header = () => {
     { name: "Critical Illness", href: "/critical-illness" },
     { name: "Cancer & Dread Disease", href: "/cancer-dread-disease" },
     { name: "Life Insurance", href: "/life-insurance" },
+    { name: "Long Term Care", href: "/long-term-care" },
     { name: "Dental", href: "#", comingSoon: true },
     { name: "Contact", href: "#" },
   ];
@@ -234,3 +235,5 @@ const Header = () => {
 };
 
 export default Header;
+
+}
