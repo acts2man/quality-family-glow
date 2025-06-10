@@ -7,7 +7,8 @@ import OtherCoveragesSection from "@/components/OtherCoveragesSection";
 import HistoryAndVisionSection from "@/components/why/HistoryAndVisionSection";
 
 const WhyQFB = () => {
-  return <div className="min-h-screen">
+  return (
+    <div className="min-h-screen">
       {/* 1. Hero Section */}
       <section className="relative min-h-[60vh] bg-gradient-to-r from-primary-800 to-primary-700 overflow-hidden">
         <div className="absolute inset-0">
@@ -47,7 +48,51 @@ const WhyQFB = () => {
       <HistoryAndVisionSection />
 
       {/* 2. Built For Real Life Section */}
-      
+      <section className="section-padding">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-14">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
+              Built For Real Life
+            </h2>
+            <div className="w-20 h-1 bg-primary-500 mx-auto mb-6"></div>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Quality Family Benefits understands the challenges families face. Our plans are designed to provide financial support when you need it most.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <div className="flex items-center space-x-6">
+              <div className="w-16 h-16 rounded-full bg-primary-100 flex items-center justify-center text-primary-500">
+                <Clock className="w-8 h-8" />
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold mb-2 text-gray-900">Fast Claim Payments</h3>
+                <p className="text-gray-600">Quick access to funds when you need them.</p>
+              </div>
+            </div>
+
+            <div className="flex items-center space-x-6">
+              <div className="w-16 h-16 rounded-full bg-primary-100 flex items-center justify-center text-primary-500">
+                <HandCoins className="w-8 h-8" />
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold mb-2 text-gray-900">Affordable Coverage</h3>
+                <p className="text-gray-600">Quality protection that fits your budget.</p>
+              </div>
+            </div>
+
+            <div className="flex items-center space-x-6">
+              <div className="w-16 h-16 rounded-full bg-primary-100 flex items-center justify-center text-primary-500">
+                <HandHeart className="w-8 h-8" />
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold mb-2 text-gray-900">Family-First Approach</h3>
+                <p className="text-gray-600">Coverage designed with your loved ones in mind.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* 3. What Makes Us Different Section */}
       <section className="section-padding bg-gray-50">
@@ -109,7 +154,30 @@ const WhyQFB = () => {
       </section>
 
       {/* 4. The Grace Story Section */}
-      
+      <section className="section-padding">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center max-w-5xl mx-auto">
+            <div className="md:order-2">
+              <img
+                src="https://images.unsplash.com/photo-1560786499-b5f348f05339?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+                alt="Grace and her family"
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+            <div className="md:order-1">
+              <h2 className="text-3xl font-bold mb-4 text-gray-900">
+                Meet Grace: A Story of Real Protection
+              </h2>
+              <p className="text-lg text-gray-600 mb-6">
+                When Grace was diagnosed with a critical illness, her Quality Family Benefits plan provided the financial support she needed to focus on recovery, not bills.
+              </p>
+              <Button asChild variant="secondary">
+                <Link to="/stories">Read Grace's Full Story</Link>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* 5. Coverage You Can Trust Section */}
       <section className="section-padding bg-gray-50">
@@ -240,8 +308,8 @@ const WhyQFB = () => {
 
       {/* Other Coverages Available Section */}
       <OtherCoveragesSection />
-    </div>;
+    </div>
+  );
 };
-export default WhyQFB;
 
-</initial_code>
+export default WhyQFB;
