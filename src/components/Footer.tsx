@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Link } from "react-router-dom";
 
@@ -21,7 +22,7 @@ const Footer = () => {
       links: [
         { name: "Why QFB", href: "/why-qfb" },
         { name: "About Us", href: "#" },
-        { name: "Contact", href: "#" },
+        { name: "Contact", href: "/contact" },
         { name: "Privacy Policy", href: "#" },
       ],
     },
