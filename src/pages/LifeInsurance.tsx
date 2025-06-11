@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Check, Users, Heart, FileText, Phone, Shield, ShieldCheck } from "lucide-react";
@@ -19,9 +20,12 @@ export default function LifeInsurance() {
               Protect your loved ones with permanent, affordable coverage — even if your health isn't perfect.
             </h2>
             <div className="flex flex-col sm:flex-row gap-4">
-              <a href="https://calendly.com" className="glow-button gold-button" >
+              <Button 
+                className="bg-accent-gold text-primary-800 hover:bg-accent-gold/90 font-semibold py-3 px-6 text-lg shadow-md hover:shadow-lg transition-all duration-300"
+                onClick={() => window.open('https://calendly.com', '_blank')}
+              >
                 Schedule a No-Pressure Call
-              </a>
+              </Button>
             </div>
           </div>
           <div className="hidden md:block md:w-5/12">
@@ -146,22 +150,20 @@ export default function LifeInsurance() {
             With a trained licensed professional
           </p>
           <div className="flex flex-col sm:flex-row gap-4 w-full justify-center">
-            <a href="tel:7083304516" className="glow-button gold-button text-center">
-              <Phone className="mr-2" /> Call Now - 708.330.4516
-            </a>
-            <a href="https://calendly.com" className="glow-button text-center">
+            <Button 
+              className="bg-accent-gold text-primary-800 hover:bg-accent-gold/90 font-semibold px-8 py-3 text-lg shadow-md hover:shadow-lg transition-all duration-300 flex items-center gap-2"
+              onClick={() => window.open('tel:7083304516', '_blank')}
+            >
+              <Phone className="w-5 h-5" />
+              Call Now - 708.330.4516
+            </Button>
+            <Button 
+              className="bg-primary-500 text-white hover:bg-primary-600 font-semibold px-8 py-3 text-lg shadow-md hover:shadow-lg transition-all duration-300"
+              onClick={() => window.open('https://calendly.com', '_blank')}
+            >
               Schedule a Call
-            </a>
+            </Button>
           </div>
-          <label className="flex items-center gap-2 mt-4 cursor-pointer text-primary-900">
-            <input
-              type="checkbox"
-              checked={includeSpouse}
-              onChange={e => setIncludeSpouse(e.target.checked)}
-              className="form-checkbox accent-primary-600 w-5 h-5 rounded focus:ring-2 focus:ring-primary"
-            />
-            <span className="select-none">Include My Spouse or Family Member</span>
-          </label>
         </div>
       </section>
     </div>
