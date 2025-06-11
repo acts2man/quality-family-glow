@@ -22,9 +22,6 @@ const AccidentPage = () => {
               <Button className="glow-button text-lg px-6 py-3 h-auto" size="lg">
                 <span>Get Covered Today</span>
               </Button>
-              <Button variant="outline" className="text-lg px-6 py-3 h-auto bg-white/10 hover:bg-white/20 border-white" size="lg">
-                <span>See Plan Types</span>
-              </Button>
             </div>
           </div>
           <div className="w-full lg:w-1/2 flex justify-center animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
@@ -292,7 +289,7 @@ const AccidentPage = () => {
       </section>
 
       {/* Reimbursement-Based Plans Section */}
-      <section className="py-20 px-4 bg-gradient-to-br from-primary-50 to-white">
+      <section className="py-12 px-4 bg-gradient-to-br from-primary-50 to-white">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-primary-800">
             Reimbursement-Based Plans
@@ -329,11 +326,6 @@ const AccidentPage = () => {
               <span>Schedule My Call</span>
             </a>
           </div>
-          
-          <label className="flex items-center justify-center space-x-2 cursor-pointer">
-            <input type="checkbox" className="w-5 h-5 rounded" />
-            <span>Include my spouse on the call</span>
-          </label>
         </div>
       </section>
 
@@ -344,3 +336,5 @@ const AccidentPage = () => {
 };
 
 export default AccidentPage;
+
+</edits_to_apply>
