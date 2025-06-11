@@ -3,7 +3,7 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-import { Shield, Heart, Hospital, Plus, CircleDollarSign } from "lucide-react";
+import { Shield, Heart, Hospital, Plus, CircleDollarSign, Phone, Calendar } from "lucide-react";
 import OtherCoveragesSection from "@/components/OtherCoveragesSection";
 
 export default function CancerDreadDisease() {
@@ -26,16 +26,52 @@ export default function CancerDreadDisease() {
   ];
 
   return (
-    <div className="bg-gradient-to-r from-primary-50 to-white min-h-screen">
+    <div className="bg-gradient-to-tl from-[#F2FCE2] via-white to-[#D3E4FD] min-h-screen flex flex-col">
       {/* Hero Section */}
-      <div className="container mx-auto px-4 pt-20 pb-16">
+      <section className="relative pt-20 pb-12 md:py-28 px-4 md:px-0">
+        <div className="container mx-auto flex flex-col md:flex-row gap-8 items-center">
+          <div className="md:w-7/12 animate-fade-in-up">
+            <h1 className="text-3xl md:text-5xl font-montserrat font-bold text-primary-800 mb-5">
+              Cancer Coverage That Pays You Directly
+            </h1>
+            <h2 className="text-lg md:text-2xl text-primary-700 mb-7 font-inter">
+              Comprehensive protection against cancer and critical illnesses — because peace of mind shouldn't wait for perfect health.
+            </h2>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button 
+                className="bg-accent-gold text-primary-800 hover:bg-accent-gold/90 font-semibold py-3 px-6 text-lg shadow-md hover:shadow-lg transition-all duration-300"
+                onClick={() => window.open('https://calendly.com', '_blank')}
+              >
+                Schedule a Consultation
+              </Button>
+              <Button 
+                className="bg-primary-500 text-white hover:bg-primary-600 font-semibold py-3 px-6 text-lg shadow-md hover:shadow-lg transition-all duration-300 flex items-center gap-2"
+                onClick={() => window.open('tel:7083304516', '_blank')}
+              >
+                <Phone className="w-5 h-5" />
+                Call Now
+              </Button>
+            </div>
+          </div>
+          <div className="hidden md:block md:w-5/12">
+            <img
+              src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=500&q=80"
+              alt="Medical Protection"
+              className="rounded-2xl shadow-lg w-full object-cover" 
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Introduction Section - moved from original hero */}
+      <section className="container mx-auto px-4 py-12 md:py-16 max-w-5xl">
         <div className="text-center max-w-4xl mx-auto">
           <div className="inline-flex items-center justify-center w-20 h-20 bg-primary-100 rounded-full mb-6">
             <Shield className="h-10 w-10 text-primary-600" />
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold text-primary-800 mb-8 leading-tight">
+          <h2 className="text-3xl md:text-4xl font-bold text-primary-800 mb-8 leading-tight">
             Cancer and Dread Disease Coverage
-          </h1>
+          </h2>
           <div className="bg-white rounded-xl shadow-lg p-8 mb-12 animate-fade-in-up">
             <p className="text-xl text-gray-700 mb-6 leading-relaxed">
               The critical illness plans that pay lump sums upon diagnosis are more and more popular
@@ -48,7 +84,7 @@ export default function CancerDreadDisease() {
             </p>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Additional Protection Section */}
       <div className="bg-primary-900 text-white py-16">
@@ -155,18 +191,18 @@ export default function CancerDreadDisease() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button 
                 size="lg" 
-                className="glow-button gold-button text-lg px-8 py-4"
+                className="bg-accent-gold text-primary-800 hover:bg-accent-gold/90 font-semibold px-8 py-3 text-lg shadow-md hover:shadow-lg transition-all duration-300 flex items-center gap-2"
                 onClick={() => window.open('tel:7083304516', '_self')}
               >
-                <span>Call 708.330.4516</span>
+                <Phone className="w-5 h-5" />
+                Call 708.330.4516
               </Button>
               <Button 
                 size="lg" 
-                variant="outline" 
-                className="bg-white/10 border-white/30 text-white hover:bg-white/20 text-lg px-8 py-4"
+                className="bg-white/10 border-white/30 text-white hover:bg-white/20 font-semibold px-8 py-3 text-lg shadow-md hover:shadow-lg transition-all duration-300 border"
                 onClick={() => window.open('https://calendly.com', '_blank')}
               >
-                <span>Schedule a Consultation</span>
+                Schedule a Consultation
               </Button>
             </div>
             
