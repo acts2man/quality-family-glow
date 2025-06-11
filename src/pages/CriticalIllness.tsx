@@ -3,54 +3,60 @@ import { motion } from "framer-motion";
 import { Heart, DollarSign, Shield, Clock, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import OtherCoveragesSection from "@/components/OtherCoveragesSection";
-
 const fadeIn = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { 
-    opacity: 1, 
+  hidden: {
+    opacity: 0,
+    y: 20
+  },
+  visible: {
+    opacity: 1,
     y: 0,
-    transition: { duration: 0.6 }
+    transition: {
+      duration: 0.6
+    }
   }
 };
-
 const iconFloat = {
-  hidden: { opacity: 0, scale: 0.8 },
-  visible: { 
-    opacity: 1, 
+  hidden: {
+    opacity: 0,
+    scale: 0.8
+  },
+  visible: {
+    opacity: 1,
     scale: 1,
-    transition: { duration: 0.8, ease: "easeOut" }
+    transition: {
+      duration: 0.8,
+      ease: "easeOut"
+    }
   }
 };
-
 const CriticalIllness = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
   const scrollToContact = () => {
-    document.getElementById('final-cta')?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById('final-cta')?.scrollIntoView({
+      behavior: 'smooth'
+    });
   };
-
-  return (
-    <div className="min-h-screen flex flex-col">
+  return <div className="min-h-screen flex flex-col">
       <main className="flex-grow pt-20">
         {/* Hero Section */}
         <section className="bg-gradient-to-b from-primary-100 to-white relative overflow-hidden">
           {/* Background decorative elements */}
           <div className="absolute inset-0 opacity-10">
             <div className="absolute top-20 left-10 w-20 h-20 bg-primary-300 rounded-full animate-float"></div>
-            <div className="absolute top-40 right-20 w-16 h-16 bg-accent-gold rounded-full animate-float" style={{ animationDelay: '2s' }}></div>
-            <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-primary-400 rounded-full animate-float" style={{ animationDelay: '4s' }}></div>
+            <div className="absolute top-40 right-20 w-16 h-16 bg-accent-gold rounded-full animate-float" style={{
+            animationDelay: '2s'
+          }}></div>
+            <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-primary-400 rounded-full animate-float" style={{
+            animationDelay: '4s'
+          }}></div>
           </div>
           
           <div className="container mx-auto px-4 py-16 md:py-24 relative z-10">
             <div className="flex flex-col md:flex-row items-center">
-              <motion.div 
-                className="md:w-1/2 mb-8 md:mb-0"
-                initial="hidden"
-                animate="visible"
-                variants={fadeIn}
-              >
+              <motion.div className="md:w-1/2 mb-8 md:mb-0" initial="hidden" animate="visible" variants={fadeIn}>
                 <h1 className="text-4xl md:text-5xl font-bold mb-4 text-primary-800">
                   When the Diagnosis Comes, Be Ready
                 </h1>
@@ -63,20 +69,13 @@ const CriticalIllness = () => {
                   </a>
                 </div>
               </motion.div>
-              <motion.div 
-                className="md:w-1/2"
-                initial="hidden"
-                animate="visible"
-                variants={fadeIn}
-                transition={{ delay: 0.3 }}
-              >
+              <motion.div className="md:w-1/2" initial="hidden" animate="visible" variants={fadeIn} transition={{
+              delay: 0.3
+            }}>
                 <div className="relative rounded-lg overflow-hidden shadow-xl">
-                  <img 
-                    src="/lovable-uploads/26b4e11f-d251-48cb-bd23-d3d1ed4d5e0c.png" 
-                    alt="Hospital room with medical monitoring equipment" 
-                    className="w-full h-auto object-cover"
-                    style={{ minHeight: "350px" }}
-                  />
+                  <img src="/lovable-uploads/26b4e11f-d251-48cb-bd23-d3d1ed4d5e0c.png" alt="Hospital room with medical monitoring equipment" className="w-full h-auto object-cover" style={{
+                  minHeight: "350px"
+                }} />
                   <div className="absolute inset-0 bg-gradient-to-t from-primary-800/30 to-transparent"></div>
                 </div>
               </motion.div>
@@ -89,19 +88,13 @@ const CriticalIllness = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               {/* Opening Statistics with Visual Impact */}
-              <motion.div 
-                className="text-center mb-16"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                variants={fadeIn}
-              >
+              <motion.div className="text-center mb-16" initial="hidden" whileInView="visible" viewport={{
+              once: true
+            }} variants={fadeIn}>
                 <div className="grid md:grid-cols-3 gap-8 mb-12">
-                  <motion.div 
-                    className="bg-white p-8 rounded-2xl shadow-lg border border-primary-100 card-hover"
-                    variants={iconFloat}
-                    transition={{ delay: 0.1 }}
-                  >
+                  <motion.div className="bg-white p-8 rounded-2xl shadow-lg border border-primary-100 card-hover" variants={iconFloat} transition={{
+                  delay: 0.1
+                }}>
                     <div className="flex justify-center mb-4">
                       <div className="w-16 h-16 bg-destructive/10 rounded-full flex items-center justify-center">
                         <Heart className="w-8 h-8 text-destructive" />
@@ -113,11 +106,9 @@ const CriticalIllness = () => {
                     </p>
                   </motion.div>
 
-                  <motion.div 
-                    className="bg-white p-8 rounded-2xl shadow-lg border border-primary-100 card-hover"
-                    variants={iconFloat}
-                    transition={{ delay: 0.2 }}
-                  >
+                  <motion.div className="bg-white p-8 rounded-2xl shadow-lg border border-primary-100 card-hover" variants={iconFloat} transition={{
+                  delay: 0.2
+                }}>
                     <div className="flex justify-center mb-4">
                       <div className="w-16 h-16 bg-accent-gold/10 rounded-full flex items-center justify-center">
                         <DollarSign className="w-8 h-8 text-accent-gold" />
@@ -129,11 +120,9 @@ const CriticalIllness = () => {
                     </p>
                   </motion.div>
 
-                  <motion.div 
-                    className="bg-white p-8 rounded-2xl shadow-lg border border-primary-100 card-hover"
-                    variants={iconFloat}
-                    transition={{ delay: 0.3 }}
-                  >
+                  <motion.div className="bg-white p-8 rounded-2xl shadow-lg border border-primary-100 card-hover" variants={iconFloat} transition={{
+                  delay: 0.3
+                }}>
                     <div className="flex justify-center mb-4">
                       <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center">
                         <Heart className="w-8 h-8 text-primary-600" />
@@ -148,13 +137,9 @@ const CriticalIllness = () => {
               </motion.div>
 
               {/* Solution Section with Icons */}
-              <motion.div 
-                className="bg-gradient-to-r from-primary-700 to-primary-900 p-8 md:p-12 rounded-3xl text-white mb-12"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                variants={fadeIn}
-              >
+              <motion.div className="bg-gradient-to-r from-primary-700 to-primary-900 p-8 md:p-12 rounded-3xl text-white mb-12" initial="hidden" whileInView="visible" viewport={{
+              once: true
+            }} variants={fadeIn}>
                 <div className="text-center mb-8">
                   <div className="flex justify-center mb-4">
                     <div className="w-20 h-20 bg-accent-gold/20 rounded-full flex items-center justify-center">
@@ -182,13 +167,9 @@ const CriticalIllness = () => {
               </motion.div>
 
               {/* Benefits Section with Timeline */}
-              <motion.div 
-                className="bg-white p-8 md:p-12 rounded-3xl shadow-xl border border-gray-100 mb-12"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                variants={fadeIn}
-              >
+              <motion.div className="bg-white p-8 md:p-12 rounded-3xl shadow-xl border border-gray-100 mb-12" initial="hidden" whileInView="visible" viewport={{
+              once: true
+            }} variants={fadeIn}>
                 <div className="text-center mb-8">
                   <div className="flex justify-center mb-4">
                     <div className="w-20 h-20 bg-primary-100 rounded-full flex items-center justify-center">
@@ -231,13 +212,9 @@ const CriticalIllness = () => {
               </motion.div>
 
               {/* Urgent Call to Action */}
-              <motion.div 
-                className="bg-gradient-to-r from-destructive to-red-600 p-8 md:p-12 rounded-3xl text-white text-center"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                variants={fadeIn}
-              >
+              <motion.div className="bg-gradient-to-r from-destructive to-red-600 p-8 md:p-12 rounded-3xl text-white text-center" initial="hidden" whileInView="visible" viewport={{
+              once: true
+            }} variants={fadeIn}>
                 <div className="flex justify-center mb-6">
                   <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center animate-pulse">
                     <Clock className="w-10 h-10 text-white" />
@@ -254,13 +231,9 @@ const CriticalIllness = () => {
         {/* Final CTA Section */}
         <section id="final-cta" className="py-16 bg-gradient-to-br from-primary-700 to-primary-900 text-white">
           <div className="container mx-auto px-4">
-            <motion.div 
-              className="text-center max-w-2xl mx-auto"
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={fadeIn}
-            >
+            <motion.div className="text-center max-w-2xl mx-auto" initial="hidden" whileInView="visible" viewport={{
+            once: true
+          }} variants={fadeIn}>
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
                 Ready to Take the First Step?
               </h2>
@@ -276,10 +249,7 @@ const CriticalIllness = () => {
                 </a>
               </div>
               <div className="mt-6 flex justify-center">
-                <label className="flex items-center cursor-pointer">
-                  <input type="checkbox" className="rounded border-gray-300 text-primary-500 shadow-sm focus:border-primary-300 focus:ring focus:ring-primary-200 focus:ring-opacity-50" />
-                  <span className="ml-2 text-primary-100">Include My Spouse on the Call</span>
-                </label>
+                
               </div>
             </motion.div>
           </div>
@@ -288,8 +258,6 @@ const CriticalIllness = () => {
         {/* Other Coverages Available Section */}
         <OtherCoveragesSection />
       </main>
-    </div>
-  );
+    </div>;
 };
-
 export default CriticalIllness;
