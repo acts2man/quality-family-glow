@@ -213,7 +213,7 @@ const AccidentPage = () => {
           </div>
           
           <div className="mb-16">
-            <h3 className="text-2xl font-bold mb-8 text-primary-700">suppose you or a covered member:</h3>
+            <h3 className="text-2xl font-bold mb-8 text-primary-700">Suppose you or a covered member:</h3>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
               <div className="text-center">
