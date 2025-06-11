@@ -4,10 +4,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import OtherCoveragesSection from "@/components/OtherCoveragesSection";
-
 const AccidentPage = () => {
-  return (
-    <div className="w-full">
+  return <div className="w-full">
       {/* Hero Section */}
       <section className="relative bg-gradient-to-r from-primary-800 to-primary-600 text-white py-28 px-4">
         <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between">
@@ -24,12 +22,10 @@ const AccidentPage = () => {
               </Button>
             </div>
           </div>
-          <div className="w-full lg:w-1/2 flex justify-center animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
-            <img 
-              src="/lovable-uploads/83371fda-d166-41b4-8be2-d26ad26ded5b.png"
-              alt="Woman with neck pain after car accident"
-              className="rounded-xl shadow-xl max-h-[500px] object-cover"
-            />
+          <div className="w-full lg:w-1/2 flex justify-center animate-fade-in-up" style={{
+          animationDelay: "0.3s"
+        }}>
+            <img src="/lovable-uploads/83371fda-d166-41b4-8be2-d26ad26ded5b.png" alt="Woman with neck pain after car accident" className="rounded-xl shadow-xl max-h-[500px] object-cover" />
           </div>
         </div>
         {/* Straight line separator */}
@@ -89,11 +85,7 @@ const AccidentPage = () => {
               <div className="lg:col-span-5 bg-gradient-to-br from-primary-50 to-primary-100 p-8 flex flex-col justify-between">
                 <div>
                   <div className="bg-white rounded-xl shadow-lg p-4 mb-8 max-w-xs mx-auto">
-                    <img 
-                      src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&h=300"
-                      alt="Maria's profile"
-                      className="rounded-lg w-full h-auto"
-                    />
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&h=300" alt="Maria's profile" className="rounded-lg w-full h-auto" />
                   </div>
                   
                   <div className="bg-white rounded-xl p-6 shadow-md mb-6">
@@ -217,48 +209,32 @@ const AccidentPage = () => {
                 </div>
               </div>
               <div>
-                <img 
-                  src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800"
-                  alt="Insurance coverage document"
-                  className="rounded-xl shadow-md w-full h-auto object-cover"
-                />
+                <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800" alt="Insurance coverage document" className="rounded-xl shadow-md w-full h-auto object-cover" />
               </div>
             </div>
           </div>
           
           <div className="mb-16">
-            <h3 className="text-2xl font-bold mb-8 text-primary-700">In the first case, suppose you or a covered member:</h3>
+            <h3 className="text-2xl font-bold mb-8 text-primary-700">suppose you or a covered member:</h3>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
               <div className="text-center">
                 <div className="mb-4">
-                  <img 
-                    src="/lovable-uploads/08592e29-42d6-4973-83d0-f1c5f645c6c7.png"
-                    alt="Person shoveling snow"
-                    className="w-full h-48 object-cover rounded-lg shadow-md"
-                  />
+                  <img src="/lovable-uploads/08592e29-42d6-4973-83d0-f1c5f645c6c7.png" alt="Person shoveling snow" className="w-full h-48 object-cover rounded-lg shadow-md" />
                 </div>
                 <h4 className="text-lg font-semibold text-primary-600">Slipped while shoveling snow</h4>
               </div>
               
               <div className="text-center">
                 <div className="mb-4">
-                  <img 
-                    src="/lovable-uploads/2b91ce04-33ec-46ec-9710-fc26e48b0d57.png"
-                    alt="Sports injury"
-                    className="w-full h-48 object-cover rounded-lg shadow-md"
-                  />
+                  <img src="/lovable-uploads/2b91ce04-33ec-46ec-9710-fc26e48b0d57.png" alt="Sports injury" className="w-full h-48 object-cover rounded-lg shadow-md" />
                 </div>
                 <h4 className="text-lg font-semibold text-primary-600">Fell down while playing amateur sports</h4>
               </div>
               
               <div className="text-center">
                 <div className="mb-4">
-                  <img 
-                    src="/lovable-uploads/634f8a52-093f-4273-9811-e56fbf95539a.png"
-                    alt="Crime victim"
-                    className="w-full h-48 object-cover rounded-lg shadow-md"
-                  />
+                  <img src="/lovable-uploads/634f8a52-093f-4273-9811-e56fbf95539a.png" alt="Crime victim" className="w-full h-48 object-cover rounded-lg shadow-md" />
                 </div>
                 <h4 className="text-lg font-semibold text-primary-600">Were a crime victim</h4>
               </div>
@@ -290,25 +266,7 @@ const AccidentPage = () => {
 
       {/* Reimbursement-Based Plans Section */}
       <section className="py-12 px-4 bg-gradient-to-br from-primary-50 to-white">
-        <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-primary-800">
-            Reimbursement-Based Plans
-          </h2>
-          
-          <div className="bg-white rounded-xl shadow-lg p-8 mb-10">
-            <div className="space-y-6 text-lg text-gray-700">
-              <p>
-                Another type of coverage is preferred by many.
-              </p>
-              <p>
-                In that case, the insurance carrier will simply pay the costs of whatever medical costs you have received.
-              </p>
-              <p className="text-xl font-bold text-primary-700">
-                If those costs are covered by your health insurance, you can just take additional money and use it for loss of work time or whatever you need!
-              </p>
-            </div>
-          </div>
-        </div>
+        
       </section>
 
       {/* Final Call to Action Section */}
@@ -331,8 +289,6 @@ const AccidentPage = () => {
 
       {/* Other Coverages Available Section */}
       <OtherCoveragesSection />
-    </div>
-  );
+    </div>;
 };
-
 export default AccidentPage;
