@@ -55,8 +55,8 @@ export default function CancerDreadDisease() {
           </div>
           <div className="hidden md:block md:w-5/12">
             <img
-              src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=500&q=80"
-              alt="Healthcare Support and Consultation"
+              src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&w=500&q=80"
+              alt="Healthcare Provider Assisting Patient"
               className="rounded-2xl shadow-lg w-full object-cover" 
             />
           </div>
