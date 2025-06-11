@@ -187,9 +187,7 @@ const AccidentPage = () => {
       {/* Two Types of Accident Plans Section */}
       <section id="plan-overview" className="py-20 px-4">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-primary-800">
-            THERE ARE TWO TYPES OF ACCIDENT PLANS WE OFFER:
-          </h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-primary-800">THE ACCIDENT PLAN WE OFFER:</h2>
           
           <div className="bg-white rounded-xl shadow-lg p-8 mb-16">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
