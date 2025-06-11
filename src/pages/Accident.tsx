@@ -336,5 +336,3 @@ const AccidentPage = () => {
 };
 
 export default AccidentPage;
-
-</edits_to_apply>
