@@ -34,6 +34,16 @@ export default function CancerDreadDisease() {
             <h1 className="text-3xl md:text-5xl font-montserrat font-bold text-primary-800 mb-5">
               Cancer Coverage That Pays You Directly
             </h1>
+            
+            {/* Mobile image - shown only on mobile */}
+            <div className="block md:hidden mb-6">
+              <img
+                src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&w=400&q=80"
+                alt="Healthcare Provider Assisting Patient"
+                className="rounded-2xl shadow-lg w-full max-h-64 object-cover mx-auto" 
+              />
+            </div>
+            
             <h2 className="text-lg md:text-2xl text-primary-700 mb-7 font-inter">
               Comprehensive protection against cancer and critical illnesses — because peace of mind shouldn't wait for perfect health.
             </h2>
@@ -53,6 +63,7 @@ export default function CancerDreadDisease() {
               </Button>
             </div>
           </div>
+          {/* Desktop image - shown only on desktop */}
           <div className="hidden md:block md:w-5/12">
             <img
               src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&w=400&q=80"
