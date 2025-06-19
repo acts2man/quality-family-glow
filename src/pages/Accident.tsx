@@ -4,8 +4,10 @@ import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import OtherCoveragesSection from "@/components/OtherCoveragesSection";
+
 const AccidentPage = () => {
-  return <div className="w-full">
+  return (
+    <div className="w-full">
       {/* Hero Section */}
       <section className="relative bg-gradient-to-r from-primary-800 to-primary-600 text-white py-28 px-4">
         <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between">
@@ -184,8 +186,115 @@ const AccidentPage = () => {
         </div>
       </section>
 
+      {/* Suppose You or a Covered Member Section */}
+      <section className="py-20 px-4">
+        <div className="container mx-auto max-w-6xl">
+          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-primary-700">
+            Suppose you or a covered member:
+          </h2>
+          
+          {/* Three Scenario Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            {/* Scenario 1: Slipped while shoveling snow */}
+            <Card className="text-center p-6">
+              <CardContent className="p-0">
+                <div className="mb-6">
+                  <img 
+                    src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?auto=format&fit=crop&w=400&h=300" 
+                    alt="Person slipping on snow" 
+                    className="w-full h-48 object-cover rounded-lg mb-4"
+                  />
+                </div>
+                <h3 className="text-xl font-semibold text-primary-600 mb-2">
+                  Slipped while shoveling snow
+                </h3>
+              </CardContent>
+            </Card>
+
+            {/* Scenario 2: Fell down while playing amateur sports */}
+            <Card className="text-center p-6">
+              <CardContent className="p-0">
+                <div className="mb-6">
+                  <img 
+                    src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=400&h=300" 
+                    alt="Person playing sports" 
+                    className="w-full h-48 object-cover rounded-lg mb-4"
+                  />
+                </div>
+                <h3 className="text-xl font-semibold text-primary-600 mb-2">
+                  Fell down while playing amateur sports
+                </h3>
+              </CardContent>
+            </Card>
+
+            {/* Scenario 3: Were a crime victim */}
+            <Card className="text-center p-6">
+              <CardContent className="p-0">
+                <div className="mb-6">
+                  <img 
+                    src="https://images.unsplash.com/photo-1568515045052-f9a854d70bfd?auto=format&fit=crop&w=400&h=300" 
+                    alt="Crime scene" 
+                    className="w-full h-48 object-cover rounded-lg mb-4"
+                  />
+                </div>
+                <h3 className="text-xl font-semibold text-primary-600 mb-2">
+                  Were a crime victim
+                </h3>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Benefits Information */}
+          <div className="bg-gray-50 rounded-xl p-8">
+            <p className="text-lg text-gray-700 mb-6">
+              You could have chosen a plan that would pay you for a set amount for an ambulance ride to the hospital, and set amounts for emergency room or office treatments, X-Rays and other services.
+            </p>
+            
+            <p className="text-lg text-gray-700 mb-8">
+              If you are lucky you might find that there were no broken bones, but you could still receive hundreds of dollars.
+            </p>
+
+            {/* Highlighted Section */}
+            <div className="bg-primary-50 border-l-4 border-primary-500 p-6 rounded-r-lg">
+              <h3 className="text-2xl font-bold text-primary-700 mb-4">
+                But let's say you weren't so lucky!
+              </h3>
+              
+              <p className="text-lg text-gray-700 mb-4 font-semibold">
+                You have suffered a major fracture!
+              </p>
+              
+              <ul className="space-y-3 text-gray-700">
+                <li className="flex items-start">
+                  <span className="text-primary-500 mr-2">•</span>
+                  <span>In that case, you could get several thousand for the fracture (depending on which bone and the treatment)</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-primary-500 mr-2">•</span>
+                  <span>More money for hospital admission.</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-primary-500 mr-2">•</span>
+                  <span>More money for every day in the hospital</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-primary-500 mr-2">•</span>
+                  <span>More money for outpatient rehab and much more!</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-primary-500 mr-2">•</span>
+                  <span>And in a worst-case scenario, would even pay for accidental death.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Two Types of Accident Plans Section */}
-      
+      <section className="py-12 px-4 bg-gradient-to-br from-primary-50 to-white">
+        
+      </section>
 
       {/* Reimbursement-Based Plans Section */}
       <section className="py-12 px-4 bg-gradient-to-br from-primary-50 to-white">
@@ -212,6 +321,8 @@ const AccidentPage = () => {
 
       {/* Other Coverages Available Section */}
       <OtherCoveragesSection />
-    </div>;
+    </div>
+  );
 };
+
 export default AccidentPage;
