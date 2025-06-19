@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -200,7 +201,7 @@ const AccidentPage = () => {
               <CardContent className="p-0">
                 <div className="mb-6">
                   <img 
-                    src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?auto=format&fit=crop&w=400&h=300" 
+                    src="/lovable-uploads/08592e29-42d6-4973-83d0-f1c5f645c6c7.png" 
                     alt="Person slipping on snow" 
                     className="w-full h-48 object-cover rounded-lg mb-4"
                   />
@@ -216,7 +217,7 @@ const AccidentPage = () => {
               <CardContent className="p-0">
                 <div className="mb-6">
                   <img 
-                    src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=400&h=300" 
+                    src="/lovable-uploads/2b91ce04-33ec-46ec-9710-fc26e48b0d57.png" 
                     alt="Person playing sports" 
                     className="w-full h-48 object-cover rounded-lg mb-4"
                   />
@@ -232,8 +233,8 @@ const AccidentPage = () => {
               <CardContent className="p-0">
                 <div className="mb-6">
                   <img 
-                    src="https://images.unsplash.com/photo-1568515045052-f9a854d70bfd?auto=format&fit=crop&w=400&h=300" 
-                    alt="Crime scene" 
+                    src="/lovable-uploads/634f8a52-093f-4273-9811-e56fbf95539a.png" 
+                    alt="Crime victim" 
                     className="w-full h-48 object-cover rounded-lg mb-4"
                   />
                 </div>
