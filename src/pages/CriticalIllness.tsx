@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Heart, DollarSign, Shield, Clock, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import OtherCoveragesSection from "@/components/OtherCoveragesSection";
+
 const fadeIn = {
   hidden: {
     opacity: 0,
@@ -16,6 +17,7 @@ const fadeIn = {
     }
   }
 };
+
 const iconFloat = {
   hidden: {
     opacity: 0,
@@ -30,28 +32,32 @@ const iconFloat = {
     }
   }
 };
+
 const CriticalIllness = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
   const scrollToContact = () => {
     document.getElementById('final-cta')?.scrollIntoView({
       behavior: 'smooth'
     });
   };
-  return <div className="min-h-screen flex flex-col">
-      <main className="flex-grow pt-20">
-        {/* Hero Section */}
+
+  return (
+    <div className="min-h-screen flex flex-col">
+      <main className="flex-grow">
+        {/* Hero Section - removed pt-20 to eliminate gap */}
         <section className="bg-gradient-to-b from-primary-100 to-white relative overflow-hidden">
           {/* Background decorative elements */}
           <div className="absolute inset-0 opacity-10">
             <div className="absolute top-20 left-10 w-20 h-20 bg-primary-300 rounded-full animate-float"></div>
             <div className="absolute top-40 right-20 w-16 h-16 bg-accent-gold rounded-full animate-float" style={{
-            animationDelay: '2s'
-          }}></div>
+              animationDelay: '2s'
+            }}></div>
             <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-primary-400 rounded-full animate-float" style={{
-            animationDelay: '4s'
-          }}></div>
+              animationDelay: '4s'
+            }}></div>
           </div>
           
           <div className="container mx-auto px-4 py-16 md:py-24 relative z-10">
@@ -60,6 +66,19 @@ const CriticalIllness = () => {
                 <h1 className="text-4xl md:text-5xl font-bold mb-4 text-primary-800">
                   When the Diagnosis Comes, Be Ready
                 </h1>
+                
+                {/* Mobile image - shown only on mobile between title and paragraph */}
+                <div className="md:hidden mb-6" initial="hidden" animate="visible" variants={fadeIn} transition={{ delay: 0.2 }}>
+                  <div className="relative rounded-lg overflow-hidden shadow-xl">
+                    <img 
+                      src="/lovable-uploads/26b4e11f-d251-48cb-bd23-d3d1ed4d5e0c.png" 
+                      alt="Hospital room with medical monitoring equipment" 
+                      className="w-full h-auto object-cover max-h-[300px]" 
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-primary-800/30 to-transparent"></div>
+                  </div>
+                </div>
+                
                 <p className="text-xl text-gray-700 mb-8">
                   Heart attacks. Stroke. Cancer. Our Critical Illness plans pay you directly — so you can focus on recovery, not bills.
                 </p>
@@ -69,13 +88,13 @@ const CriticalIllness = () => {
                   </a>
                 </div>
               </motion.div>
-              <motion.div className="md:w-1/2" initial="hidden" animate="visible" variants={fadeIn} transition={{
-              delay: 0.3
-            }}>
+              
+              {/* Desktop image - hidden on mobile, shown on desktop */}
+              <motion.div className="hidden md:block md:w-1/2" initial="hidden" animate="visible" variants={fadeIn} transition={{ delay: 0.3 }}>
                 <div className="relative rounded-lg overflow-hidden shadow-xl">
                   <img src="/lovable-uploads/26b4e11f-d251-48cb-bd23-d3d1ed4d5e0c.png" alt="Hospital room with medical monitoring equipment" className="w-full h-auto object-cover" style={{
-                  minHeight: "350px"
-                }} />
+                    minHeight: "350px"
+                  }} />
                   <div className="absolute inset-0 bg-gradient-to-t from-primary-800/30 to-transparent"></div>
                 </div>
               </motion.div>
@@ -258,6 +277,8 @@ const CriticalIllness = () => {
         {/* Other Coverages Available Section */}
         <OtherCoveragesSection />
       </main>
-    </div>;
+    </div>
+  );
 };
+
 export default CriticalIllness;

@@ -123,11 +123,11 @@ const Contact = () => {
                       <div className="bg-primary-100 p-3 rounded-full">
                         <Mail className="w-6 h-6 text-primary-600" />
                       </div>
-                      <div>
+                      <div className="min-w-0 flex-1">
                         <h3 className="text-xl font-semibold text-gray-900 mb-2">Email Us:</h3>
                         <a 
                           href="mailto:info@qualityfamilybenefits.com"
-                          className="text-lg text-primary-600 hover:text-primary-700 transition-colors"
+                          className="text-lg text-primary-600 hover:text-primary-700 transition-colors break-words"
                         >
                           info@qualityfamilybenefits.com
                         </a>

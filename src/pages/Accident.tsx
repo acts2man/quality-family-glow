@@ -16,6 +16,16 @@ const AccidentPage = () => {
             <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
               Accident Insurance That Pays YOU — Not Just Your Doctor
             </h1>
+            
+            {/* Mobile image - shown only on mobile between title and paragraph */}
+            <div className="lg:hidden mb-6 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+              <img 
+                src="/lovable-uploads/83371fda-d166-41b4-8be2-d26ad26ded5b.png" 
+                alt="Woman with neck pain after car accident" 
+                className="rounded-xl shadow-xl max-h-[300px] w-full object-cover" 
+              />
+            </div>
+            
             <p className="text-xl md:text-2xl mb-8 opacity-90">
               From everyday mishaps to serious emergencies, our plans pay you directly to help with real-life recovery.
             </p>
@@ -25,9 +35,9 @@ const AccidentPage = () => {
               </Button>
             </div>
           </div>
-          <div className="w-full lg:w-1/2 flex justify-center animate-fade-in-up" style={{
-          animationDelay: "0.3s"
-        }}>
+          
+          {/* Desktop image - hidden on mobile, shown on desktop */}
+          <div className="hidden lg:flex w-full lg:w-1/2 justify-center animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
             <img src="/lovable-uploads/83371fda-d166-41b4-8be2-d26ad26ded5b.png" alt="Woman with neck pain after car accident" className="rounded-xl shadow-xl max-h-[500px] object-cover" />
           </div>
         </div>
@@ -40,12 +50,12 @@ const AccidentPage = () => {
       {/* Introductory Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16">
+          <div className="text-left mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-8 text-primary-700">
               OVER TWENTY MILLION PEOPLE A YEAR SUFFER ACCIDENTAL INJURIES, FROM MINOR TO FATAL!
             </h2>
-            <div className="w-20 h-1 bg-accent-gold mx-auto mb-8"></div>
-            <div className="max-w-4xl mx-auto space-y-6 text-lg text-gray-700">
+            <div className="w-20 h-1 bg-accent-gold mb-8"></div>
+            <div className="max-w-4xl space-y-6 text-lg text-gray-700">
               <p>
                 Part of what makes them so devastating is that there is no advance notice or way to prepare.
               </p>
@@ -72,12 +82,12 @@ const AccidentPage = () => {
       {/* Maria's Story Section */}
       <section className="py-20 px-4 bg-gray-50">
         <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-12">
+          <div className="text-left mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary-700">
               Meet Maria: A Real Story of Recovery
             </h2>
-            <div className="w-20 h-1 bg-accent-gold mx-auto mb-6"></div>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            <div className="w-20 h-1 bg-accent-gold mb-6"></div>
+            <p className="text-lg text-gray-600 max-w-3xl">
               When an unexpected accident happens, having the right coverage can make all the difference.
             </p>
           </div>
@@ -197,7 +207,7 @@ const AccidentPage = () => {
           {/* Three Scenario Cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             {/* Scenario 1: Slipped while shoveling snow */}
-            <Card className="text-center p-6">
+            <Card className="text-left p-6">
               <CardContent className="p-0">
                 <div className="mb-6">
                   <img 
@@ -213,7 +223,7 @@ const AccidentPage = () => {
             </Card>
 
             {/* Scenario 2: Fell down while playing amateur sports */}
-            <Card className="text-center p-6">
+            <Card className="text-left p-6">
               <CardContent className="p-0">
                 <div className="mb-6">
                   <img 
@@ -229,7 +239,7 @@ const AccidentPage = () => {
             </Card>
 
             {/* Scenario 3: Were a crime victim */}
-            <Card className="text-center p-6">
+            <Card className="text-left p-6">
               <CardContent className="p-0">
                 <div className="mb-6">
                   <img 
@@ -304,12 +314,12 @@ const AccidentPage = () => {
 
       {/* Final Call to Action Section */}
       <section className="py-16 bg-gradient-to-r from-primary-800 to-primary-600 text-white px-4">
-        <div className="container mx-auto max-w-4xl text-center">
+        <div className="container mx-auto max-w-4xl text-left">
           <h2 className="text-3xl md:text-4xl font-bold mb-8 leading-tight">
             GIVE US A CALL AND A LICENSED EXPERIENCED COUNSELOR WILL HAVE A NO PRESSURE PROFESSIONAL DISCUSSION ABOUT WHAT COVERAGE WILL WORK BEST FOR YOU!
           </h2>
           
-          <div className="flex flex-wrap justify-center gap-4 mb-8">
+          <div className="flex flex-wrap gap-4 mb-8">
             <a href="tel:7083304516" className="glow-button gold-button text-lg px-6 py-3 h-auto inline-block">
               <span>Call 708.330.4516</span>
             </a>
