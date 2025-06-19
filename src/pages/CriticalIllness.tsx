@@ -47,7 +47,7 @@ const CriticalIllness = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <main className="flex-grow">
-        {/* Hero Section - removed pt-20 to eliminate gap */}
+        {/* Hero Section */}
         <section className="bg-gradient-to-b from-primary-100 to-white relative overflow-hidden">
           {/* Background decorative elements */}
           <div className="absolute inset-0 opacity-10">
@@ -68,7 +68,13 @@ const CriticalIllness = () => {
                 </h1>
                 
                 {/* Mobile image - shown only on mobile between title and paragraph */}
-                <div className="md:hidden mb-6" initial="hidden" animate="visible" variants={fadeIn} transition={{ delay: 0.2 }}>
+                <motion.div 
+                  className="md:hidden mb-6" 
+                  initial="hidden" 
+                  animate="visible" 
+                  variants={fadeIn} 
+                  transition={{ delay: 0.2 }}
+                >
                   <div className="relative rounded-lg overflow-hidden shadow-xl">
                     <img 
                       src="/lovable-uploads/26b4e11f-d251-48cb-bd23-d3d1ed4d5e0c.png" 
@@ -77,7 +83,7 @@ const CriticalIllness = () => {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-primary-800/30 to-transparent"></div>
                   </div>
-                </div>
+                </motion.div>
                 
                 <p className="text-xl text-gray-700 mb-8">
                   Heart attacks. Stroke. Cancer. Our Critical Illness plans pay you directly — so you can focus on recovery, not bills.
