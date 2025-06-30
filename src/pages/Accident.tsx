@@ -1,14 +1,11 @@
-
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import OtherCoveragesSection from "@/components/OtherCoveragesSection";
-
 const AccidentPage = () => {
-  return (
-    <div className="w-full">
+  return <div className="w-full">
       {/* Hero Section */}
       <section className="relative bg-gradient-to-r from-primary-800 to-primary-600 text-white py-28 px-4">
         <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between">
@@ -18,12 +15,10 @@ const AccidentPage = () => {
             </h1>
             
             {/* Mobile image - shown only on mobile between title and paragraph */}
-            <div className="lg:hidden mb-6 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-              <img 
-                src="/lovable-uploads/83371fda-d166-41b4-8be2-d26ad26ded5b.png" 
-                alt="Woman with neck pain after car accident" 
-                className="rounded-xl shadow-xl max-h-[300px] w-full object-cover" 
-              />
+            <div className="lg:hidden mb-6 animate-fade-in-up" style={{
+            animationDelay: "0.2s"
+          }}>
+              <img src="/lovable-uploads/83371fda-d166-41b4-8be2-d26ad26ded5b.png" alt="Woman with neck pain after car accident" className="rounded-xl shadow-xl max-h-[300px] w-full object-cover" />
             </div>
             
             <p className="text-xl md:text-2xl mb-8 opacity-90">
@@ -37,7 +32,9 @@ const AccidentPage = () => {
           </div>
           
           {/* Desktop image - hidden on mobile, shown on desktop */}
-          <div className="hidden lg:flex w-full lg:w-1/2 justify-center animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
+          <div className="hidden lg:flex w-full lg:w-1/2 justify-center animate-fade-in-up" style={{
+          animationDelay: "0.3s"
+        }}>
             <img src="/lovable-uploads/83371fda-d166-41b4-8be2-d26ad26ded5b.png" alt="Woman with neck pain after car accident" className="rounded-xl shadow-xl max-h-[500px] object-cover" />
           </div>
         </div>
@@ -188,7 +185,7 @@ const AccidentPage = () => {
                     <a href="https://calendly.com" className="glow-button gold-button inline-block">
                       <span>Get Protected Like Maria</span>
                     </a>
-                    <p className="mt-4 text-sm text-gray-500">Plans start at just $19.95/month</p>
+                    
                   </div>
                 </div>
               </div>
@@ -210,11 +207,7 @@ const AccidentPage = () => {
             <Card className="text-left p-6">
               <CardContent className="p-0">
                 <div className="mb-6">
-                  <img 
-                    src="/lovable-uploads/08592e29-42d6-4973-83d0-f1c5f645c6c7.png" 
-                    alt="Person slipping on snow" 
-                    className="w-full h-48 object-cover rounded-lg mb-4"
-                  />
+                  <img src="/lovable-uploads/08592e29-42d6-4973-83d0-f1c5f645c6c7.png" alt="Person slipping on snow" className="w-full h-48 object-cover rounded-lg mb-4" />
                 </div>
                 <h3 className="text-xl font-semibold text-primary-600 mb-2">
                   Slipped while shoveling snow
@@ -226,11 +219,7 @@ const AccidentPage = () => {
             <Card className="text-left p-6">
               <CardContent className="p-0">
                 <div className="mb-6">
-                  <img 
-                    src="/lovable-uploads/2b91ce04-33ec-46ec-9710-fc26e48b0d57.png" 
-                    alt="Person playing sports" 
-                    className="w-full h-48 object-cover rounded-lg mb-4"
-                  />
+                  <img src="/lovable-uploads/2b91ce04-33ec-46ec-9710-fc26e48b0d57.png" alt="Person playing sports" className="w-full h-48 object-cover rounded-lg mb-4" />
                 </div>
                 <h3 className="text-xl font-semibold text-primary-600 mb-2">
                   Fell down while playing amateur sports
@@ -242,11 +231,7 @@ const AccidentPage = () => {
             <Card className="text-left p-6">
               <CardContent className="p-0">
                 <div className="mb-6">
-                  <img 
-                    src="/lovable-uploads/634f8a52-093f-4273-9811-e56fbf95539a.png" 
-                    alt="Crime victim" 
-                    className="w-full h-48 object-cover rounded-lg mb-4"
-                  />
+                  <img src="/lovable-uploads/634f8a52-093f-4273-9811-e56fbf95539a.png" alt="Crime victim" className="w-full h-48 object-cover rounded-lg mb-4" />
                 </div>
                 <h3 className="text-xl font-semibold text-primary-600 mb-2">
                   Were a crime victim
@@ -332,8 +317,6 @@ const AccidentPage = () => {
 
       {/* Other Coverages Available Section */}
       <OtherCoveragesSection />
-    </div>
-  );
+    </div>;
 };
-
 export default AccidentPage;
