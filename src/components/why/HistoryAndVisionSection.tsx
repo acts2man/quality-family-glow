@@ -1,5 +1,6 @@
 
 import React from "react";
+import { Link } from "react-router-dom";
 import { Landmark, Users, UserCheck, Briefcase } from "lucide-react";
 
 const HistoryAndVisionSection = () => {
@@ -129,9 +130,9 @@ const HistoryAndVisionSection = () => {
             </div>
             
             <div className="relative z-10">
-              <a href="#contact" className="glow-button gold-button inline-block">
+              <Link to="/contact" className="glow-button gold-button inline-block">
                 <span>QUALITY FAMILY BENEFITS IS WAITING TO SERVE YOU!</span>
-              </a>
+              </Link>
             </div>
           </div>
         </div>

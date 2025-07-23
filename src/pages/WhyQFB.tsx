@@ -28,9 +28,9 @@ const WhyQFB = () => {
             <div className="flex justify-center mb-12 animate-fade-in-up" style={{
             animationDelay: "0.4s"
           }}>
-              <a href="#contact" className="glow-button gold-button">
+              <Link to="/contact" className="glow-button gold-button">
                 <span>Get Protected Today</span>
-              </a>
+              </Link>
             </div>
           </div>
           
