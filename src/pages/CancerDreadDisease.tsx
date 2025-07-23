@@ -50,7 +50,7 @@ export default function CancerDreadDisease() {
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 
                 className="bg-accent-gold text-primary-800 hover:bg-accent-gold/90 font-semibold py-3 px-6 text-lg shadow-md hover:shadow-lg transition-all duration-300"
-                onClick={() => window.open('https://calendly.com', '_blank')}
+                onClick={() => window.open('https://calendly.com/srswiftm/30min', '_blank')}
               >
                 Schedule a Consultation
               </Button>
@@ -211,7 +211,7 @@ export default function CancerDreadDisease() {
               <Button 
                 size="lg" 
                 className="bg-white/10 border-white/30 text-white hover:bg-white/20 font-semibold px-8 py-3 text-lg shadow-md hover:shadow-lg transition-all duration-300 border"
-                onClick={() => window.open('https://calendly.com', '_blank')}
+                onClick={() => window.open('https://calendly.com/srswiftm/30min', '_blank')}
               >
                 Schedule a Consultation
               </Button>

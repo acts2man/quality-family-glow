@@ -49,7 +49,7 @@ const IntroductorySection = () => {
             </p>
             <div className="flex justify-center lg:justify-start">
               <a
-                href="https://calendly.com"
+                href="https://calendly.com/srswiftm/30min"
                 className="inline-block bg-primary-500 text-white font-semibold text-lg px-8 py-3 rounded-md transition-transform hover:bg-primary-600"
                 aria-label="Schedule a consultation today"
               >

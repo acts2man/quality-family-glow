@@ -41,7 +41,7 @@ const CtaSection = () => {
                   <a href="tel:7083304516" className="glow-button w-full sm:w-auto text-center">
                     <span>Call Now</span>
                   </a>
-                  <a href="https://calendly.com" className="glow-button gold-button w-full sm:w-auto text-center">
+                  <a href="https://calendly.com/srswiftm/30min" className="glow-button gold-button w-full sm:w-auto text-center">
                     <span>Schedule a Consultation</span>
                   </a>
                 </div>

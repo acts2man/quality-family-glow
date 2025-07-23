@@ -182,7 +182,7 @@ const AccidentPage = () => {
                   </div>
                   
                   <div className="mt-8">
-                    <a href="https://calendly.com" className="glow-button gold-button inline-block">
+                    <a href="https://calendly.com/srswiftm/30min" className="glow-button gold-button inline-block">
                       <span>Get Protected Like Maria</span>
                     </a>
                     
@@ -308,7 +308,7 @@ const AccidentPage = () => {
             <a href="tel:7083304516" className="glow-button gold-button text-lg px-6 py-3 h-auto inline-block">
               <span>Call 708.330.4516</span>
             </a>
-            <a href="https://calendly.com" className="glow-button text-lg px-6 py-3 h-auto inline-block bg-white/10 hover:bg-white/20 border-white">
+            <a href="https://calendly.com/srswiftm/30min" className="glow-button text-lg px-6 py-3 h-auto inline-block bg-white/10 hover:bg-white/20 border-white">
               <span>Schedule My Call</span>
             </a>
           </div>

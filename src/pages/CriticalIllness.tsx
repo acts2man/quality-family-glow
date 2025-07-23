@@ -89,7 +89,7 @@ const CriticalIllness = () => {
                   Heart attacks. Stroke. Cancer. Our Critical Illness plans pay you directly — so you can focus on recovery, not bills.
                 </p>
                 <div className="flex flex-wrap gap-4">
-                  <a href="https://calendly.com" className="glow-button gold-button">
+                  <a href="https://calendly.com/srswiftm/30min" className="glow-button gold-button">
                     <span>Speak With an Advisor</span>
                   </a>
                 </div>
@@ -269,7 +269,7 @@ const CriticalIllness = () => {
                 <a href="tel:7083304516" className="glow-button gold-button">
                   <span>Call 708.330.4516</span>
                 </a>
-                <a href="https://calendly.com" className="glow-button">
+                <a href="https://calendly.com/srswiftm/30min" className="glow-button">
                   <span>Schedule a Call</span>
                 </a>
               </div>

@@ -25,7 +25,7 @@ const HeroSection = () => {
             <a href="tel:7083304516" className="glow-button gold-button">
               <span>Call Now</span>
             </a>
-            <a href="https://calendly.com" className="glow-button">
+            <a href="https://calendly.com/srswiftm/30min" className="glow-button">
               <span>Schedule a Call</span>
             </a>
           </div>

@@ -22,7 +22,7 @@ export default function LifeInsurance() {
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 
                 className="bg-accent-gold text-primary-800 hover:bg-accent-gold/90 font-semibold py-3 px-6 text-lg shadow-md hover:shadow-lg transition-all duration-300"
-                onClick={() => window.open('https://calendly.com', '_blank')}
+                onClick={() => window.open('https://calendly.com/srswiftm/30min', '_blank')}
               >
                 Schedule a No-Pressure Call
               </Button>
@@ -159,7 +159,7 @@ export default function LifeInsurance() {
             </Button>
             <Button 
               className="bg-primary-500 text-white hover:bg-primary-600 font-semibold px-8 py-3 text-lg shadow-md hover:shadow-lg transition-all duration-300"
-              onClick={() => window.open('https://calendly.com', '_blank')}
+              onClick={() => window.open('https://calendly.com/srswiftm/30min', '_blank')}
             >
               Schedule a Call
             </Button>

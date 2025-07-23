@@ -97,7 +97,7 @@ const Footer = () => {
               </p>
             </div>
             <div className="flex space-x-4">
-              <Link to="https://calendly.com" className="glow-button gold-button">
+              <Link to="https://calendly.com/srswiftm/30min" className="glow-button gold-button">
                 <span>Schedule a Call</span>
               </Link>
               <Link to="tel:7083304516" className="glow-button">
