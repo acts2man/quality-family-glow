@@ -5,10 +5,8 @@ import { HandCoins, HandHeart, Clock, Shield, DollarSign } from "lucide-react";
 import { Link } from "react-router-dom";
 import OtherCoveragesSection from "@/components/OtherCoveragesSection";
 import HistoryAndVisionSection from "@/components/why/HistoryAndVisionSection";
-
 const WhyQFB = () => {
-  return (
-    <div className="min-h-screen">
+  return <div className="min-h-screen">
       {/* 1. Hero Section */}
       <section className="relative min-h-[60vh] bg-gradient-to-r from-primary-800 to-primary-700 overflow-hidden">
         <div className="absolute inset-0">
@@ -154,30 +152,7 @@ const WhyQFB = () => {
       </section>
 
       {/* 4. The Grace Story Section */}
-      <section className="section-padding">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center max-w-5xl mx-auto">
-            <div className="md:order-2">
-              <img
-                src="https://images.unsplash.com/photo-1560786499-b5f348f05339?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-                alt="Grace and her family"
-                className="rounded-2xl shadow-lg"
-              />
-            </div>
-            <div className="md:order-1">
-              <h2 className="text-3xl font-bold mb-4 text-gray-900">
-                Meet Grace: A Story of Real Protection
-              </h2>
-              <p className="text-lg text-gray-600 mb-6">
-                When Grace was diagnosed with a critical illness, her Quality Family Benefits plan provided the financial support she needed to focus on recovery, not bills.
-              </p>
-              <Button asChild variant="secondary">
-                <Link to="/stories">Read Grace's Full Story</Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
+      
 
       {/* 5. Coverage You Can Trust Section */}
       <section className="section-padding bg-gray-50">
@@ -308,8 +283,6 @@ const WhyQFB = () => {
 
       {/* Other Coverages Available Section */}
       <OtherCoveragesSection />
-    </div>
-  );
+    </div>;
 };
-
 export default WhyQFB;
