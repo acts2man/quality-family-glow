@@ -25,7 +25,11 @@ const AccidentPage = () => {
               From everyday mishaps to serious emergencies, our plans pay you directly to help with real-life recovery.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Button className="glow-button text-lg px-6 py-3 h-auto" size="lg">
+              <Button 
+                className="glow-button text-lg px-6 py-3 h-auto" 
+                size="lg"
+                onClick={() => window.open('https://calendly.com/srswiftm/30min', '_blank')}
+              >
                 <span>Get Covered Today</span>
               </Button>
             </div>
