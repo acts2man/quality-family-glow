@@ -13,6 +13,7 @@ import CancerDreadDisease from "./pages/CancerDreadDisease";
 import LifeInsurance from "./pages/LifeInsurance";
 import WhyQFB from "./pages/WhyQFB";
 import Contact from "./pages/Contact";
+import ThankYou from "./pages/ThankYou";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
@@ -46,6 +47,7 @@ const App = () => (
               <Route path="/cancer-dread-disease" element={<CancerDreadDisease />} />
               <Route path="/life-insurance" element={<LifeInsurance />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/thank-you" element={<ThankYou />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>
