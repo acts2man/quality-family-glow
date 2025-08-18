@@ -1,5 +1,5 @@
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 
 // Extend Window interface for TypeScript
 declare global {
@@ -11,6 +11,7 @@ declare global {
 const WhyChooseUsSection = () => {
   const [isCalendlyLoaded, setIsCalendlyLoaded] = useState(false);
   const [loadingError, setLoadingError] = useState(false);
+  const calendlyRef = useRef<HTMLDivElement>(null);
   
   useEffect(() => {
     let pollCount = 0;
@@ -18,7 +19,21 @@ const WhyChooseUsSection = () => {
     
     const pollForCalendly = () => {
       if (window.Calendly) {
-        setIsCalendlyLoaded(true);
+        try {
+          // Initialize the Calendly widget
+          if (calendlyRef.current) {
+            window.Calendly.initInlineWidget({
+              url: 'https://calendly.com/srswiftm',
+              parentElement: calendlyRef.current,
+              prefill: {},
+              utm: {}
+            });
+            setIsCalendlyLoaded(true);
+          }
+        } catch (error) {
+          console.error('Error initializing Calendly widget:', error);
+          setLoadingError(true);
+        }
         return;
       }
       
@@ -124,7 +139,10 @@ const WhyChooseUsSection = () => {
           <div className="mt-16 pt-16 border-t border-gray-200">
             <div className="max-w-4xl mx-auto mb-16">
               {isCalendlyLoaded ? (
-                <div className="calendly-inline-widget" data-url="https://calendly.com/srswiftm" style={{minWidth:'320px', height:'700px'}}></div>
+                <div 
+                  ref={calendlyRef}
+                  style={{minWidth:'320px', height:'700px'}}
+                ></div>
               ) : loadingError ? (
                 <div className="flex items-center justify-center h-[700px] bg-gray-50 rounded-lg">
                   <div className="text-center">
