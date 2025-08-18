@@ -10,30 +10,28 @@ declare global {
 
 const WhyChooseUsSection = () => {
   const [isCalendlyLoaded, setIsCalendlyLoaded] = useState(false);
+  const [loadingError, setLoadingError] = useState(false);
   
   useEffect(() => {
-    // Check if Calendly script is already loaded
-    if (window.Calendly) {
-      setIsCalendlyLoaded(true);
-      return;
-    }
-
-    // Load Calendly script dynamically
-    const script = document.createElement('script');
-    script.src = 'https://assets.calendly.com/assets/external/widget.js';
-    script.async = true;
-    script.onload = () => {
-      setIsCalendlyLoaded(true);
-    };
-    document.head.appendChild(script);
-
-    return () => {
-      // Cleanup script if component unmounts
-      const existingScript = document.querySelector('script[src="https://assets.calendly.com/assets/external/widget.js"]');
-      if (existingScript) {
-        document.head.removeChild(existingScript);
+    let pollCount = 0;
+    const maxPolls = 50; // 5 seconds with 100ms intervals
+    
+    const pollForCalendly = () => {
+      if (window.Calendly) {
+        setIsCalendlyLoaded(true);
+        return;
+      }
+      
+      pollCount++;
+      if (pollCount < maxPolls) {
+        setTimeout(pollForCalendly, 100);
+      } else {
+        setLoadingError(true);
       }
     };
+    
+    // Start polling immediately
+    pollForCalendly();
   }, []);
 
   const benefits = [
@@ -127,6 +125,20 @@ const WhyChooseUsSection = () => {
             <div className="max-w-4xl mx-auto mb-16">
               {isCalendlyLoaded ? (
                 <div className="calendly-inline-widget" data-url="https://calendly.com/srswiftm" style={{minWidth:'320px', height:'700px'}}></div>
+              ) : loadingError ? (
+                <div className="flex items-center justify-center h-[700px] bg-gray-50 rounded-lg">
+                  <div className="text-center">
+                    <p className="text-gray-600 mb-4">Unable to load calendar widget</p>
+                    <a 
+                      href="https://calendly.com/srswiftm" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="inline-block bg-primary-500 text-white px-6 py-3 rounded-lg hover:bg-primary-600 transition-colors"
+                    >
+                      Schedule on Calendly →
+                    </a>
+                  </div>
+                </div>
               ) : (
                 <div className="flex items-center justify-center h-[700px] bg-gray-50 rounded-lg">
                   <div className="text-center">
