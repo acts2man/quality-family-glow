@@ -88,6 +88,13 @@ const WhyChooseUsSection = () => {
             </div>
           </div>
 
+          {/* Calendly Widget */}
+          <div className="mt-16 pt-16 border-t border-gray-200">
+            <div className="max-w-4xl mx-auto mb-16">
+              <div className="calendly-inline-widget" data-url="https://calendly.com/srswiftm" style={{minWidth:'320px', height:'700px'}}></div>
+            </div>
+          </div>
+
           {/* New subsection: How Are We Better Than Getting Benefits On The Job? */}
           <div className="mt-16 pt-16 border-t border-gray-200">
             <div className="text-center mb-12">
