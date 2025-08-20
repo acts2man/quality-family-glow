@@ -1,53 +1,7 @@
 
-import React, { useEffect, useState, useRef } from "react";
-
-// Extend Window interface for TypeScript
-declare global {
-  interface Window {
-    Calendly?: any;
-  }
-}
+import React from "react";
 
 const WhyChooseUsSection = () => {
-  const [isCalendlyLoaded, setIsCalendlyLoaded] = useState(false);
-  const [loadingError, setLoadingError] = useState(false);
-  const calendlyRef = useRef<HTMLDivElement>(null);
-  
-  useEffect(() => {
-    let pollCount = 0;
-    const maxPolls = 50; // 5 seconds with 100ms intervals
-    
-    const pollForCalendly = () => {
-      if (window.Calendly) {
-        try {
-          // Initialize the Calendly widget
-          if (calendlyRef.current) {
-            window.Calendly.initInlineWidget({
-              url: 'https://calendly.com/srswiftm',
-              parentElement: calendlyRef.current,
-              prefill: {},
-              utm: {}
-            });
-            setIsCalendlyLoaded(true);
-          }
-        } catch (error) {
-          console.error('Error initializing Calendly widget:', error);
-          setLoadingError(true);
-        }
-        return;
-      }
-      
-      pollCount++;
-      if (pollCount < maxPolls) {
-        setTimeout(pollForCalendly, 100);
-      } else {
-        setLoadingError(true);
-      }
-    };
-    
-    // Start polling immediately
-    pollForCalendly();
-  }, []);
 
   const benefits = [
     {
@@ -135,40 +89,7 @@ const WhyChooseUsSection = () => {
             </div>
           </div>
 
-          {/* Calendly Widget */}
-          <div className="mt-16 pt-16 border-t border-gray-200">
-            <div className="max-w-4xl mx-auto mb-16">
-              {isCalendlyLoaded ? (
-                <div 
-                  ref={calendlyRef}
-                  style={{minWidth:'320px', height:'700px'}}
-                ></div>
-              ) : loadingError ? (
-                <div className="flex items-center justify-center h-[700px] bg-gray-50 rounded-lg">
-                  <div className="text-center">
-                    <p className="text-gray-600 mb-4">Unable to load calendar widget</p>
-                    <a 
-                      href="https://calendly.com/srswiftm" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="inline-block bg-primary-500 text-white px-6 py-3 rounded-lg hover:bg-primary-600 transition-colors"
-                    >
-                      Schedule on Calendly →
-                    </a>
-                  </div>
-                </div>
-              ) : (
-                <div className="flex items-center justify-center h-[700px] bg-gray-50 rounded-lg">
-                  <div className="text-center">
-                    <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary-500 mx-auto mb-4"></div>
-                    <p className="text-gray-600">Loading calendar...</p>
-                  </div>
-                </div>
-              )}
-            </div>
-          </div>
-
-          {/* New subsection: How Are We Better Than Getting Benefits On The Job? */}
+          {/* How Are We Better Than Getting Benefits On The Job? */}
           <div className="mt-16 pt-16 border-t border-gray-200">
             <div className="text-center mb-12">
               <h3 className="text-2xl md:text-3xl font-bold mb-4 text-gray-900">
