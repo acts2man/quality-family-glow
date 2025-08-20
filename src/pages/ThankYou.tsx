@@ -3,10 +3,11 @@ import { CheckCircle, Calendar, Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
-// Facebook Pixel conversion event
+// Global tracking interfaces
 declare global {
   interface Window {
     fbq: any;
+    gtag: any;
   }
 }
 
@@ -21,6 +22,16 @@ const ThankYou = () => {
         currency: 'USD'
       });
       console.log('Facebook pixel Schedule event fired');
+    }
+
+    // Fire Google Ads conversion event
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'conversion', {
+        'send_to': 'AW-17492201375',
+        'event_callback': () => {
+          console.log('Google Ads conversion event fired');
+        }
+      });
     }
 
     // Set page title for SEO
