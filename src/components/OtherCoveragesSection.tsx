@@ -1,5 +1,5 @@
 
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -9,6 +9,7 @@ import { Form, FormControl, FormItem, FormLabel, FormMessage } from "@/component
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
+import { sendEmail, createEmailData } from "@/lib/emailjs";
 
 const questionFormSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
@@ -19,6 +20,8 @@ const questionFormSchema = z.object({
 type QuestionFormValues = z.infer<typeof questionFormSchema>;
 
 const OtherCoveragesSection = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  
   const form = useForm<QuestionFormValues>({
     resolver: zodResolver(questionFormSchema),
     defaultValues: {
@@ -28,9 +31,40 @@ const OtherCoveragesSection = () => {
     },
   });
 
-  function onSubmit(data: QuestionFormValues) {
-    toast.success("Your question has been submitted. We'll get back to you soon!");
-    form.reset();
+  async function onSubmit(data: QuestionFormValues) {
+    setIsSubmitting(true);
+    
+    try {
+      const emailData = createEmailData(data, "Homepage", "question");
+      await sendEmail(emailData);
+      
+      // Fire conversion tracking
+      if (typeof window !== 'undefined') {
+        // Facebook Pixel
+        if (window.fbq) {
+          window.fbq('track', 'Lead', {
+            content_name: 'Homepage Question Form',
+            source: 'homepage'
+          });
+        }
+        
+        // Google Ads
+        if (window.gtag) {
+          window.gtag('event', 'generate_lead', {
+            'currency': 'USD',
+            'value': 1.0
+          });
+        }
+      }
+      
+      toast.success("Your question has been submitted. We'll get back to you soon!");
+      form.reset();
+    } catch (error) {
+      console.error('Form submission error:', error);
+      toast.error("Sorry, there was an error sending your message. Please try again or call us directly at 708.330.4516.");
+    } finally {
+      setIsSubmitting(false);
+    }
   }
   
   return (
@@ -109,8 +143,12 @@ const OtherCoveragesSection = () => {
                     <FormMessage />
                   </FormItem>
                   
-                  <Button type="submit" className="w-full bg-accent-gold text-primary-800 hover:bg-accent-gold/90">
-                    Submit Question
+                  <Button 
+                    type="submit" 
+                    className="w-full bg-accent-gold text-primary-800 hover:bg-accent-gold/90"
+                    disabled={isSubmitting}
+                  >
+                    {isSubmitting ? "Sending..." : "Submit Question"}
                   </Button>
                 </form>
               </Form>

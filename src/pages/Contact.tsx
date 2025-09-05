@@ -13,9 +13,11 @@ import {
 } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
 import { Phone, Mail, Clock } from "lucide-react";
+import { sendEmail, createEmailData } from "@/lib/emailjs";
 
 const Contact = () => {
   const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -39,7 +41,7 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     // Basic validation
@@ -51,20 +53,54 @@ const Contact = () => {
       return;
     }
 
-    // Show success message
-    toast({
-      title: "Thank you! We'll be in touch shortly.",
-      description: "A licensed counselor will contact you soon.",
-    });
+    setIsSubmitting(true);
 
-    // Reset form
-    setFormData({
-      fullName: "",
-      email: "",
-      phone: "",
-      message: "",
-      interestedIn: "",
-    });
+    try {
+      const emailData = createEmailData(formData, "Contact Page", "message");
+      await sendEmail(emailData);
+      
+      // Fire conversion tracking
+      if (typeof window !== 'undefined') {
+        // Facebook Pixel
+        if (window.fbq) {
+          window.fbq('track', 'Lead', {
+            content_name: 'Contact Form',
+            source: 'contact_page'
+          });
+        }
+        
+        // Google Ads
+        if (window.gtag) {
+          window.gtag('event', 'generate_lead', {
+            'currency': 'USD',
+            'value': 1.0
+          });
+        }
+      }
+
+      toast({
+        title: "Thank you! We'll be in touch shortly.",
+        description: "A licensed counselor will contact you soon.",
+      });
+
+      // Reset form
+      setFormData({
+        fullName: "",
+        email: "",
+        phone: "",
+        message: "",
+        interestedIn: "",
+      });
+    } catch (error) {
+      console.error('Form submission error:', error);
+      toast({
+        title: "Sorry, there was an error sending your message.",
+        description: "Please try again or call us directly at 708.330.4516.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const interestOptions = [
@@ -252,8 +288,12 @@ const Contact = () => {
                     />
                   </div>
 
-                  <Button type="submit" className="w-full glow-button">
-                    <span>Request a Callback</span>
+                  <Button 
+                    type="submit" 
+                    className="w-full glow-button"
+                    disabled={isSubmitting}
+                  >
+                    <span>{isSubmitting ? "Sending..." : "Request a Callback"}</span>
                   </Button>
                 </form>
               </div>
