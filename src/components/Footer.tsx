@@ -112,10 +112,6 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="mb-4 md:mb-0">
               <p>© {currentYear} Quality Family Benefits. All rights reserved.</p>
-              <p className="mt-1">
-                Plans underwritten by Allstate Health Solutions and Manhattan Life. 
-                Coverage subject to limitations and exclusions.
-              </p>
             </div>
             <div className="flex space-x-4">
               <a 
