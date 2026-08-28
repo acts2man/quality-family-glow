@@ -266,8 +266,8 @@ const CriticalIllness = () => {
                 Let's build a plan that protects your future.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="tel:7083304516" className="glow-button gold-button">
-                  <span>Call 708.330.4516</span>
+                <a href="tel:7737995524" className="glow-button gold-button">
+                  <span>Call (773) 799-5524</span>
                 </a>
                 <a href="https://calendly.com/srswiftm/30min" className="glow-button">
                   <span>Schedule a Call</span>

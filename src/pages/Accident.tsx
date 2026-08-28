@@ -309,8 +309,8 @@ const AccidentPage = () => {
           </h2>
           
           <div className="flex flex-wrap gap-4 mb-8">
-            <a href="tel:7083304516" className="glow-button gold-button text-lg px-6 py-3 h-auto inline-block">
-              <span>Call 708.330.4516</span>
+            <a href="tel:7737995524" className="glow-button gold-button text-lg px-6 py-3 h-auto inline-block">
+              <span>Call (773) 799-5524</span>
             </a>
             <a href="https://calendly.com/srswiftm/30min" className="glow-button text-lg px-6 py-3 h-auto inline-block bg-white/10 hover:bg-white/20 border-white">
               <span>Schedule My Call</span>

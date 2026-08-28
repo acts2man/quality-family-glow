@@ -95,7 +95,7 @@ const Contact = () => {
       console.error('Form submission error:', error);
       toast({
         title: "Sorry, there was an error sending your message.",
-        description: "Please try again or call us directly at 708.330.4516.",
+        description: "Please try again or call us directly at (773) 799-5524.",
         variant: "destructive",
       });
     } finally {
@@ -146,10 +146,10 @@ const Contact = () => {
                       <div>
                         <h3 className="text-xl font-semibold text-gray-900 mb-2">📞 Call Us:</h3>
                         <a 
-                          href="tel:7083304516" 
+                          href="tel:7737995524" 
                           className="text-2xl font-bold text-primary-600 hover:text-primary-700 transition-colors"
                         >
-                          708.330.4516
+                          (773) 799-5524
                         </a>
                         <p className="text-gray-600 mt-1">(Available Monday–Friday, 9am to 5pm CST)</p>
                       </div>
@@ -192,10 +192,10 @@ const Contact = () => {
                     <strong>Prefer to book a time?</strong>
                   </p>
                   <p className="text-gray-600 mb-6">
-                    We'll soon have online scheduling available — check back soon or call us directly at 708.330.4516.
+                    We'll soon have online scheduling available — check back soon or call us directly at (773) 799-5524.
                   </p>
                   <Button asChild className="glow-button">
-                    <a href="tel:7083304516">
+                    <a href="tel:7737995524">
                       <span>Call to Schedule</span>
                     </a>
                   </Button>

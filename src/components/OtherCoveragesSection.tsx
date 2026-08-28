@@ -61,7 +61,7 @@ const OtherCoveragesSection = () => {
       form.reset();
     } catch (error) {
       console.error('Form submission error:', error);
-      toast.error("Sorry, there was an error sending your message. Please try again or call us directly at 708.330.4516.");
+      toast.error("Sorry, there was an error sending your message. Please try again or call us directly at (773) 799-5524.");
     } finally {
       setIsSubmitting(false);
     }
