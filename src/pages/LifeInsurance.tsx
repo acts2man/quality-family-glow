@@ -152,10 +152,10 @@ export default function LifeInsurance() {
           <div className="flex flex-col sm:flex-row gap-4 w-full justify-center">
             <Button 
               className="bg-accent-gold text-primary-800 hover:bg-accent-gold/90 font-semibold px-8 py-3 text-lg shadow-md hover:shadow-lg transition-all duration-300 flex items-center gap-2"
-              onClick={() => window.open('tel:7083304516', '_blank')}
+              onClick={() => window.open('tel:7737995524', '_blank')}
             >
               <Phone className="w-5 h-5" />
-              Call Now - 708.330.4516
+              Call Now - (773) 799-5524
             </Button>
             <Button 
               className="bg-primary-500 text-white hover:bg-primary-600 font-semibold px-8 py-3 text-lg shadow-md hover:shadow-lg transition-all duration-300"

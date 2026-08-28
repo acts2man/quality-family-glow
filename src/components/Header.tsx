@@ -49,7 +49,7 @@ const Header = () => {
         <div className="container mx-auto flex flex-wrap justify-between items-center">
           <div className="text-sm md:text-base">
             <span className="mr-4">
-              <strong>Call:</strong> 708.330.4516
+              <strong>Call:</strong> (773) 799-5524
             </span>
             <span className="hidden md:inline">
               <strong>Email:</strong> info@qualityfamilybenefits.com
