@@ -223,7 +223,7 @@ const Header = () => {
                 </svg>
               </a>
               <div className="text-sm">
-                <div><strong>Call:</strong> 708.330.4516</div>
+                <div><strong>Call:</strong> (773) 799-5524</div>
                 <div><strong>Email:</strong> info@qualityfamilybenefits.com</div>
               </div>
             </div>

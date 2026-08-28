@@ -46,7 +46,7 @@ const Footer = () => {
                 <svg className="w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                   <path fillRule="evenodd" d="M7 2a2 2 0 00-2 2v12a2 2 0 002 2h6a2 2 0 002-2V4a2 2 0 00-2-2H7zm3 14a1 1 0 100-2 1 1 0 000 2z" clipRule="evenodd"></path>
                 </svg>
-                <span>708.330.4516</span>
+                <span>(773) 799-5524</span>
               </p>
               <p className="flex items-center">
                 <svg className="w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -100,7 +100,7 @@ const Footer = () => {
               <Link to="https://calendly.com/srswiftm/30min" className="glow-button gold-button">
                 <span>Schedule a Call</span>
               </Link>
-              <Link to="tel:7083304516" className="glow-button">
+              <Link to="tel:7737995524" className="glow-button">
                 <span>Call Now</span>
               </Link>
             </div>

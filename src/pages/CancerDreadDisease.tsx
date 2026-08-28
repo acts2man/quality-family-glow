@@ -56,7 +56,7 @@ export default function CancerDreadDisease() {
               </Button>
               <Button 
                 className="bg-primary-500 text-white hover:bg-primary-600 font-semibold py-3 px-6 text-lg shadow-md hover:shadow-lg transition-all duration-300 flex items-center gap-2"
-                onClick={() => window.open('tel:7083304516', '_blank')}
+                onClick={() => window.open('tel:7737995524', '_blank')}
               >
                 <Phone className="w-5 h-5" />
                 Call Now

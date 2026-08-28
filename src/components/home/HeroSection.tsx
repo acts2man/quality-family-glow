@@ -22,7 +22,7 @@ const HeroSection = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center gap-4 mb-12 animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
-            <a href="tel:7083304516" className="glow-button gold-button">
+            <a href="tel:7737995524" className="glow-button gold-button">
               <span>Call Now</span>
             </a>
             <a href="https://calendly.com/srswiftm/30min" className="glow-button">

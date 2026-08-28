@@ -95,7 +95,7 @@ const Contact = () => {
       console.error('Form submission error:', error);
       toast({
         title: "Sorry, there was an error sending your message.",
-        description: "Please try again or call us directly at 708.330.4516.",
+        description: "Please try again or call us directly at (773) 799-5524.",
         variant: "destructive",
       });
     } finally {
